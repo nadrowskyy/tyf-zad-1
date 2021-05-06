@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Magdalena Kruczek" />
+    <title>Specyfikacja adaptacji HTML</title>
+
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/github.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <script src="./lib/highlight.min.js"></script>
+    <script src="./lib/clipboard.min.js"></script>
+    <script src="./lib/deque-patterns.min.js"></script>
+</head>
+
+<body class="scrollspy">
+    <div class="container-fluid">
+        <header>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="./images/img1.jpg" class="img-fluid" alt="Logo laboratorium tyfloinformatycznego">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <h1 id="typora">Pomiary
+                    przewodności elektrycznej cieczy
+                    przy małych częstotliwościach</h1>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sticky-top tfl-side-container">
+                    <div class="tfl-side-navbar">
+                        <nav class="navbar flex-column" id="tableOfContent">
+                            <a class="navbar-brand" role="heading" aria-level="2">Spis treści</a>
+                        </nav>
+                    </div>
+                </div>
+                <nav class="row fixed-bottom col-sm-4 col-md-4 col-lg-3 pb-2">
+                    <div class="tfl-page-navbar">
+                        <form id="goToPageForm" action="#" onsubmit="ctrl.navigateToPage()" class="form-inline">
+                            <div class="form-row">
+                                <button id="prevChaptBtn" type="button" aria-label="Poprzedni rozdział"
+                                    class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top"
+                                    title="Poprzedni rozdział" onclick="ctrl.navigateToPrevChapter()">
+                                    <svg class="bi bi-chevron-bar-left" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.854 3.646a.5.5 0 010 .708L8.207 8l3.647 3.646a.5.5 0 01-.708.708l-4-4a.5.5 0 010-.708l4-4a.5.5 0 01.708 0zM4.5 1a.5.5 0 00-.5.5v13a.5.5 0 001 0v-13a.5.5 0 00-.5-.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <button id="prevPageBtn" type="button" aria-label="Poprzednia strona"
+                                    class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top"
+                                    title="Poprzednia strona" onclick="ctrl.navigateToPrevPage()">
+                                    <svg class="bi bi-chevron-left" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.354 1.646a.5.5 0 010 .708L5.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div>
+                                    <label for="pageInput" class="sr-only">Wprowadź numer strony. Zatwierdź klawiszem
+                                        enter</label>
+                                    <input type="number" class="form-control form-control-sm" id="pageInput"
+                                        name="pageInput">
+                                </div>
+                                <button id="nextPageBtn" type="button" aria-label="Następna strona"
+                                    class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top"
+                                    title="Następna strona" onclick="ctrl.navigateToNextPage()">
+                                    <svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <button id="nextChaptBtn" type="button" aria-label="Następny rozdział"
+                                    class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top"
+                                    title="Następny rozdział" onclick="ctrl.navigateToNextChapter()">
+                                    <svg class="bi bi-chevron-bar-right" width="1em" height="1em" viewBox="0 0 16 16"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.146 3.646a.5.5 0 000 .708L7.793 8l-3.647 3.646a.5.5 0 00.708.708l4-4a.5.5 0 000-.708l-4-4a.5.5 0 00-.708 0zM11.5 1a.5.5 0 01.5.5v13a.5.5 0 01-1 0v-13a.5.5 0 01.5-.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-9">
+                <main>
+                    <span class="nextPage"></span>
+                    <h2>1. Wstęp</h2>
+                    <p>
+                    </p>
+                    <h3>1.1. Geneza, cel i zakres pracy</h3>
+                    <p>Pomiary przewodnictwa elektrycznego cieczy uzyskały w czasie swojej ponad 
+                        stuletniej historii status odrębnej dziedziny pomiarów, zwanej konduktometrią (zakres 
+                        konduktometrii cieczy jest zazwyczaj zawężany do pomiarów przewodników jono- 
+                        wych, tj. roztworów elektrolitów i stopionych soli). Powstał pełny system elementów 
+                        tworzących tę dziedzinę, a w szczególności: 
+                        </p>
+                        <ul>
+                            <li>teoria definiująca przedmiot pomiaru, opisująca jego właściwości i proponująca metodologię jego badań,</li>
+                            <li>metody i techniki pomiarowe,</li>
+                            <li>czujniki i układy pomiarowe (ogólnie — techniczne środki pomiarowe),</li>
+                            <li>wzorce wielkości mierzonej,</li>
+                            <li>zasady i środki analizy metrologicznej,</li>
+                            <li>zbiór odpowiednich regulacji prawnych (norm).</li>
+                        </ul>
+                    <p>Podstawowym zadaniem konduktometrii są pomiary konduktywności elektrycznej, 
+                        tj. zdolności do przewodzenia prądu elektrycznego materiałów mających postać cieczy 
+                        w zakresie temperatur i ciśnień występujących w przyrodzie, w zastosowaniach tech- 
+                        nicznych i w badaniach naukowych. Rozwinięciem konduktometrii są zastosowania 
+                        praktyczne oraz sposoby ich realizacji, a także zasady przetwarzania wyników i uzy- 
+                        skiwania informacji o wielkościach mierzonych pośrednio metodami konduktome- 
+                        trycznymi. Obszar zastosowań konduktometrii jest bardzo rozległy i obejmuje m.in.: 
+                        badania naukowe (przede wszystkim elektrochemiczne metody analizy oraz wyzna- 
+                        czanie wartości stałych fizykochemicznych), przemysł (pomiary stężeń, kontrola my- 
+                        cia i płukania, automatyzacja procesów), gospodarkę wodno-ściekową, rolnictwo 
+                        i związany z nim przemysł przetwórczy, oceanografię, ochronę środowiska, medycynę 
+                        itp. W takim ujęciu np. badania procesów elektrodowych nie wchodzą w podstawowy 
+                        zakres zainteresowań konduktometrii. Rozważania na ten temat są prowadzone 
+                        w konduktometrii kontaktowej (elektrodowej), ale jedynie z punktu widzenia sposo- 
+                        bów eliminacji szkodliwych skutków tych procesów.</p>
+                    <p>Konduktometrii poświęcono dotychczas wiele publikacji, w tym również monogra- 
+                        fii, np. [58, 112, 180, 220, 221]. Do napisania tej pracy skłoniły autora następujące mo- 
+                        tywy: brak podobnego opracowania w języku polskim (jedyna znana autorowi polska 
+                        monografia z dziedziny konduktometrii dotyczy pomiarów wykonywanych przy wiel- 
+                        kich częstotliwościach [196], inne dostępne materiały zwarte to fragmenty książek 
+                        z dziedzin: miernictwo przemysłowe [206], pomiary wielkości nieelektrycznych [l I l], 
+                        chemia fizyczna [232], itp.), potrzeba uwzględnienia najnowszych osiągnięć w tej dzie- 
+                        dzinie, chęć przedstawienia własnego, pod pewnymi względami nowego spojrzenia na tę dziedzinę —
+                        <span class="nextPage"></span> 
+                        ukształtowanego w wyniku trzydziestu lat pracy, które zaowocowały 
+                        licznymi publikacjami, patentami i zastosowaniami praktycznymi. 
+                        </p>
+                    <p>Główny obszar zainteresowań oraz badań autora obejmuje zagadnienia związane 
+                        z pomiarami przewodnictwa elektrycznego, jakie wykazują ciekłe roztwory elektroli- 
+                        łów w zakresie małych częstotliwości (akustycznych i nadakustycznych), tj. w warun- 
+                        kach, w których można pominąć prąd przesunięcia oraz wpływ częstotliwościowej 
+                        dyspersji konduktywności. To przewodnictwo jest wykorzystywane w znacznej więk- 
+                        szości praktycznych zastosowań konduktometrii: laboratoryjnych (głównie analitycz- 
+                        nych), przemysłowych, środowiskowych oraz biomedycznych (źródła prądów gene- 
+                        rowanych w organizmach żywych na podłożu fizjologicznym charakteryzują się tym, 
+                        że ich charakterystyki czasowe leżą w zakresie małych częstotliwości [19]). Więk- 
+                        szość metod i narzędzi pomiarowych rozważanych w tej pracy może mieć zastosowa- 
+                        nie również w paśmie większych częstotliwości — do kilkuset kHz, a nawet pojedyn- 
+                        czych MHz, tj. w zakresie częstotliwości często stosowanych np. w tomografii 
+                        impedancyjnej, badaniach struktur biologicznych. 
+                        </p>
+                    <p>W większości rozważań ośrodek badany jest rozpatrywany jako idealny jednorodny 
+                        przewodnik objętościowy (określenie objętościowy oznacza, iż rozpływ prądu jest trójwy- 
+                        miarowy, w odróżnieniu od ograniczonego do jednego wymiaru przepływu prądu w od- 
+                        izolowanych cienkich przewodach). Zazwyczaj zakłada się, że przewodnik objętościowy 
+                        jest jednodomenowy (ma charakter czysto rezystywny), izotropowy oraz (często) jednorod- 
+                        ny — są to założenia upraszczające. W tej pracy poruszony jest również problem pomiarów 
+                        konduktywności lokalnych w ośrodku niejednorodnym. W zasadzie rozpatrywany jest ośro- 
+                        dek nieruchomy (bez przepływu), z pomijalnym wpływem pola magnetycznego — w pew- 
+                        nych aspektach prowadzone są jednak również rozważania o charakterze ogólniejszym.</p>
+                    <p>W monografii przedstawiono najważniejsze wątki i aspekty prac wykonanych 
+                        przez autora w dziedzinie konduktometrii. Należą do nich w szczególności (podano 
+                        ważniejsze prace wykonane już po obronie pracy doktorskiej)
+                        <ul>
+                            <li>badania i ocena właściwości metrologicznych i użytkowych czujników konduktometrycznych [89, 143, 144, 157, 158, 159, 161, 168, 241],</li>
+                            <li>modelowanie komputerowe czujników i współpracujących z nimi układów pomiarowych [130, 145, 147, 148, 240, 243],</li>
+                            <li>projektowanie i konstruowanie czujników oraz układów pomiarowych stosowanych w konduktometrii [71, 81, 89, 124, 126, 138, 150, 151, 162, 163, 164, 167, 169],</li>
+                            <li>kompensacja temperaturowa w pomiarach przewodnictwa roztworów — metody i sposoby realizacji [82, 89, 125, 128, 129, 138, 140, 142, 169],</li>
+                            <li>pomiary konduktywności metodą bezwzględną, w szczególności badania nad zastosowaniem w konduktometrii liczalnego czujnika czteroelektrodowego według 
+                                koncepcji van der Pauwa [135, 137, 143, 144, 146, 157, 158, 159, 160, 242],</li>
+                            <li>określanie stężeń roztworów metodą konduktometryczną, w tym: wzorcowanie wielowymiarowe, wzory interpolacyjne, metody inkrementowe [82, 87, 131, 132, 133, 
+                                134, 149, 152, 153, 154, 155, 156],</li>
+                            <span class="nextPage"></span>    
+                            <li>praktyczne zastosowania konduktometrii [62, 82, 88, 90, 107, 236, 239, 242],</li>
+                            <li>analiza metrologiczna właściwości czujników i metod pomiarowych stosowanych w konduktometrii [87, 89, 131, 134, 143, 145, 147, 163, 164, 168, 241, 242] 
+                                (w pracy elementy tej analizy są rozproszone — autor uznał za celowe dołączenie ich do omawianych problemów).</li>
+                        </ul>
+                    <p>Najwięcej miejsca poświęcono w monografii sposobom unikania i redukcji błędów związanych ze zjawiskami fizycznymi i fizykochemicznymi towarzyszącymi 
+                        pomiarom przewodnictwa roztworów elektrolitów. Te błędy mają we współczesnej 
+                        konduktometrii znaczenie decydujące, gdyż przy obecnym poziomie rozwoju elektronicznej techniki pomiarowej błędy aparaturowe można uznać za łatwiejsze do 
+                        zredukowania, a przez to i za mniej znaczące. Dlatego też za szczególnie istotną 
+                        i wartościową część pracy autor uważa rozdziały poświęcone czujnikom konduktometrycznym. Elementy te decydują bowiem o jakości pomiarów konduktometrycznych, co jest często niezauważane lub niedoceniane. 
+                        </p>
+                    
+                    
+                    </p>
+                    <h3>1.2. Zarys rozwoju pomiarów przewodności elektrycznej cieczy</h3>
+                    <p>Niekwestionowanym prekursorem nowoczesnej konduktometrii roztworów był 
+                        Kohlrausch (druga połowa XIX w.), który zastosował w pomiarach przewodnictwa 
+                        prąd zmienny, wprowadził pojęcie stałej czujnika i który, ze współpracownikami, do- 
+                        konał pierwszego bezwzględnego określenia wzorców konduktywności roztworów 
+                        elektrolitów. Prace podstawowe z zakresu konduktometrii kontynuowali zwłaszcza 
+                        uczeni niemieccy: Wien, Holborn i inni. Usprawnieniem o doniosłym, jak się później 
+                        okazało, znaczeniu dla konduktometrii było zastosowanie czteroelektrodowej metody 
+                        pomiaru (Newbery, 1918) [112, 258]. Istotny postęp w instrumentalizacji pomiarów 
+                        przewodnictwa roztworów nastąpił w latach dwudziestych i trzydziestych XX w., 
+                        głównie dzięki pracom uczonych amerykańskich: Parkera, Jonesa i Shedlovskiego. 
+                        Przeprowadzili oni m.in. kompleksowe badania właściwości czujników konduktome- 
+                        trycznych i dopracowali układy mostków pomiarowych do zastosowań konduktome- 
+                        trycznych [74, 75, 76, 78, 79, 188, 223]. Zaproponowali nowe konstrukcje czujników, 
+                        zwłaszcza wzorcowych, i dokonali bezwzględnego określenia wzorców konduktyw- 
+                        ności roztworów z dokładnością znacznie lepszą niż wzorce Kohlrauscha [77, 224]. 
+                        O jakości tych prac najlepiej może świadczyć to, iż wzorce demalne KCI Jonesa z lat 
+                        trzydziestych są do dzisiaj uważane w większości krajów świata, również w Polsce, za 
+                        podstawowe wzorce konduktywności [33]. Dokładniejsze określenie wzorców KCI 
+                        nastąpiło dopiero pod koniec lat osiemdziesiątych i w latach dziewięćdziesiątych XX 
+                        wieku [69, 273]. 
+                        </p>
+                    <p>Rozwój zastosowań konduktometrii do celów praktycznych następował wraz 
+                        z rozwojem badań podstawowych w tej dziedzinie, a w pewnych okresach nawet je 
+                        przyśpieszał. Potrzeby praktyczne stały się na przykład inspiracją do wprowadzenia czujników bezelektrodowych typu transformatorowego (Relys, 1951), stosowanych 
+                        w zakresie małych częstotliwości pomiarowych. Czujniki transformatorowe umożli- 
+                        wiły skuteczne rozwiązanie większości problemów związanych z występowaniem im- 
+                        pedancji elektrodowych oraz zanieczyszczeń i korozji elektrod, stanowiących podsta- 
+                        wowe ograniczenia w korzystaniu z tradycyjnych czujników dwuelektrodowych 
+                        w trudnych warunkach pracy narzucanych przez zastosowania przemysłowe [l l, 29, 
+                        54] (bezelektrodowe metody pomiarów przewodnictwa w zakresie wielkich częstotli- 
+                        wości, z wykorzystaniem czujników pojemnościowych i indukcyjnych, były co praw- 
+                        da znane już wcześniej, niemniej w zastosowaniach przemysłowych nigdy nie osią- 
+                        gnęły one znaczącego udziału). Potrzeby praktyczne spowodowały nasilenie badań 
+                        nad specjalnymi konstrukcjami czujników, np. do pomiarów w warunkach występo- 
+                        wania dużych ciśnień [44, 219], do pomiarów fluktuacji konduktywności lokalnych 
+                        [2, 175], a także do pomiarów metodą bezwzględną — realizowaną z użyciem czujni- 
+                        ków o teoretycznie liczalnej geometrii [25, 182, 247].</p>
+                    <p>Rozwój technicznego zaplecza konduktometrii następował zgodnie z prawami 
+                        rozwoju systemów technicznych [3]. Zasadnicze znaczenie miał i ma w nim postęp 
+                        w elektronice i informatyce. Umożliwia on doskonalenie przyrządów i przetworników 
+                        konduktometrycznych w aspekcie funkcjonalnym, użytkowym i metrologicznym — np. 
+                        poprawę dokładności pomiarów konduktywności, finezyjne metody kompensacji tem- 
+                        peraturowej, bezpośredni odczyt wielkości mierzonych pośrednio (np. stężenia, cał- 
+                        kowitego zasolenia), skalowanie dostosowane do wymagań określonych zastosowań, 
+                        automatyczną realizację metod przyrostowych, itp. Również w konduktometrii prze- 
+                        łomem stało się wprowadzenie do przyrządów mikroprocesorów. Możliwość progra- 
+                        mowania i korzystania z coraz większej pamięci dały przyrządom i przetwornikom 
+                        elastyczność funkcjonalną, przy jednoczesnej poprawie parametrów metrologicznych 
+                        i ułatwieniu obsługi. Pojawił się inteligentny przetwornik konduktometryczny, który 
+                        może współpracować z dowolnym innym przyrządem lub komputerem — i dzięki temu 
+                        może być włączony w każdy system pomiarowy [14, 55, 212, 275]. Może on być re- 
+                        alizowany jako urządzenie wirtualne i może działać nawet jako wielofunkcyjny anali- 
+                        zator [267]. Funkcje urządzenia można praktycznie natychmiast, i w sposób dowolny, 
+                        dostosować do indywidualnych potrzeb użytkownika. </p>
+                    <p>Zastosowanie komputerowego modelowania i symulacji znacznie ułatwia i przy- 
+                        śpiesza doskonalenie konstrukcji czujników i układów pomiarowych. Postęp w cyfro- 
+                        wym przetwarzaniu sygnałów oraz implementacja sztucznej inteligencji przyczyniają 
+                        się do istotnej poprawy właściwości metrologicznych i użytkowych aparatury kon- 
+                        duktometrycznej. Umożliwiają one na przykład rozszerzenie zakresu pomiarowego do 
+                        granic fizycznych możliwości czujników, bez pogorszenia lub nawet przy poprawie 
+                        parametrów metrologicznych oraz skróceniu czasu pomiaru. Wprowadzanie nowych 
+                        technologii wpływa na obniżenie kosztów wytwarzania, miniaturyzację urządzeń oraz 
+                        redukcję poboru energii, co umożliwia masowe wytwarzanie tanich przyrządów prze- 
+                        nośnych, np. personalnych analizatorów medycznych. Następuje integracja czujnika 
+                        z przyrządem, a w rozwiązaniach przemysłowych — z przetwornikiem pomiarowym. 
+                        </p>
+                    <h2>2. PRZEWODZENIE PRĄDU ELEKTRYCZNEGO 
+                        PRZEZ CIECZE </h2>
+                        <p>Prąd elektryczny w przewodnikach jest związany z ruchem nośników ładunku 
+                            elektrycznego. Miarą zdolności danego przewodnika do przewodzenia prądu elek- 
+                            trycznego jest konduktywność o (przewodność właściwa), zdefiniowana zgodnie 
+                            z prawem Ohma [66, 80, 229]:
+                        
+                            $$ \sigma=\frac{J}{E}=\frac{1}{\rho} $$
+                        gdzie \( J \) - gęstość prądu, \( E \) - natężenia pola elektrycznego (gęstość prądu i natężenie 
+                        pola są wektorami, ale ponieważ mają taki sam kierunek i zwrot, można w tych roz- 
+                        ważaniach pominąć zapis wektorowy), \( \rho \) - rezystywność. Gęstość prądu w przewod- 
+                        niku, nie przesądzając, jakie nośniki przenoszą ładunek, można wyrazić równaniem 
+
+                            $$ J=e\left(n_{+} v_{+}+n_{-} v_{-}\right) $$</p>
+                        <p>Nośniki ładunków elektrycznych są hamowane oporem ośrodka (opór lepkości 
+                            [235]), w wyniku czego ich ruch odbywa się ze stałą prędkością.</p>
+                        <p>W ośrodkach przewodzących nośnikami ładunków elektrycznych są elektrony 
+                            (przewodniki elektronowe) lub jony (przewodniki jonowe). Przewodnictwo elektro- 
+                            nowe wykazują przede wszystkim metale i ich stopy, w stanie stałym i ciekłym 
+                            [109] (jeżeli metal ulegnie stopieniu, jego konduktywność gwałtownie maleje, ale 
+                            nadal jest bardzo duża [235]). Przewodnictwo jonowe występuje w roztworach 
+                            elektrolitów oraz w stopionych solach, ale także w solach w stanie stałym (czasami 
+                            to przewodnictwo jest znaczne, np. w AgJ) oraz w stałych elektrolitach na bazie 
+                            związków organicznych. Wyjątkami są przypadki, w których obok przewodnictwa 
+                            jonowego występuje w roztworach również pewien udział przewodnictwa elektrono- 
+                            wego — przykładem mogą być pewne roztwory metali alkalicznych w amoniaku lub
+                            w stopionych chlorkach tych metali [190]. Wśród cieczy przewodzących największe 
+                            znaczenie mają roztwory wodne elektrolitów, które stanowią ogromną większość 
+                            wszystkich cieczy i które warunkują wiele najistotniejszych procesów, przede wszyst- 
+                            kim procesy biologiczne. Ze względu na bardzo duże różnice w prędkościach ruchu 
+                            elektronów i jonów (różnią się 105 razy, np. ruchliwość elektronów w miedzi wynosi 
+                            3•ło-3 m •v-l•s-l, podczas gdy ruchliwość jonów Cł- w rozcieńczonych roztworach 
+                            wodnych jest równa tylko m2•V l•s- — i w dodatku maleje ze wzrostem stę- 
+                            żenia), przewodniki elektronowe charakteryzują się dużo większymi wartościami 
+                            konduktywności — wzór (2.3). Dla przykładu, w temperaturze 25 oc: konduktywność 
+                            miedzi wynosi 58•106 S•m-l [83], konduktywność najlepiej przewodzących roztworów 
+                            elektrolitów (stężonych roztworów mocnych kwasów) jest rzędu 100 S•m-l (1 S•cm l), 
+                            a konduktywność chemicznie czystej wody tylko S•m-l [12, 104]. </p>
+                    <h3>2.1. KONDUKTYWNOŚĆ ELEKTRYCZNA, 
+                        CIECZE PRZEWODZĄCE PRĄD ELEKTRYCZNY</h3>
+                    <h3>2.2. Przewodzenie</h3>
+                    <h4>2.2.1. Mechanizm</h4>
+                    <h4>2.2.2. Przewodnictwo</h4>
+
+                    <p>W sekcji header dokumentu HTML należy uzupełnić tytuł oznaczony nagłówkiem pierwszego stopnia.
+                    </p>
+                    <figure id="code1">
+                        <figcaption> kodu w elemencie header dokumentu</figcaption>
+                        <pre><code class="lang-html">&lt;header&gt;
+    &lt;h1&gt;Specyfikacja adaptacji HTML&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+                    </figure>
+                    <h3>Nagłówki</h3>
+                    <p>Ważne jest oznaczanie nagłówków w dokumencie - przez nie zostanie stworzony spis treści za pomocą
+                        skryptu .js. Nagłówek poziomu pierwszego zwyczajowo przypisywany jest do tytułu publikacji,
+                        rozdziały rozpoczynamy numerować od nagłówka
+                        poziomu drugiego. Należy zachować hierarchię nagłówków. Nie należy używać nagłówka poziomu
+                        trzeciego jeśli wcześniej w dokumencie nie został użyty nagłówek poziomu drugiego.</p>
+                    <p>Przykład poprawnie użytej struktury nagłówków:</p>
+                    <ol class="none">
+                        <li>Tytuł dokumentu (Nagłówek 1)
+                            <ol class="none">
+                                <li>Rozdział 1. (Nagłówek 2)
+                                    <ol class="none">
+                                        <li>Podrozdział 1.1. (Nagłówek 3)</li>
+                                        <li>Podrozdział 1.2. (Nagłówek 3)
+                                            <ol class="none">
+                                                <li>Podrozdział 1.2.1. (Nagłówek 4)</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>Rozdział 2. (Nagłówek 2)</li>
+                            </ol>
+                        </li>
+                    </ol>
+
+                    <h3>Tabele</h3>
+                    <p>Tabele możemy utworzyć za pomocą generatora tabel <a
+                            href="https://www.tablesgenerator.com/html_tables">Przejdź do generatora tabel</a>. Tabele
+                        powinny posiadać wiersz nagłówkowy, tytuł, unikalny identyfikator id oraz jeśli jest to
+                        skomplikowana tabela należy rozwinąć jej opis za pomocą znacznika details.</p>
+                    <figure id="code2">
+                        <figcaption class="tfl-center">Przykład kodu dla tabeli</figcaption>
+                        <pre><code class="lang-html">&lt;div class="table-responsive-md"&gt;
+    &lt;table id="tab1" class="table table-bordered table-striped"&gt;
+	&lt;caption&gt;Tytuł tabeli&lt;/caption&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Wiersz nagłówkowy&lt;/th&gt;
+				&lt;th&gt;Wiersz nagłówkowy&lt;/th&gt;
+				&lt;th&gt;Wiersz nagłówkowy&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Dane&lt;/td&gt;
+				&lt;td&gt;Dane&lt;/td&gt;
+				&lt;td&gt;Dane&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Dane 1&lt;/td&gt;
+				&lt;td&gt;Dane 1&lt;/td&gt;
+				&lt;td&gt;Dane 1&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;details id="table"&gt;
+  &lt;summary&gt;Szczegółowy opis tabeli&lt;/summary&gt;
+  &lt;p&gt;Tutaj umieszczamy szczegółowy opis tabeli&lt;/p&gt;
+  &lt;a href="#tab1"&gt;Powrót do tabeli&lt;/a&gt;
+&lt;/details&gt;</code></pre>
+                    </figure>
+
+                    <div class="table-responsive-md">
+                        <table id="tab1" class="table table-bordered table-striped">
+                            <caption>Tytuł tabeli</caption>
+                            <thead>
+                                <tr>
+                                    <th>Wiersz nagłówkowy</th>
+                                    <th>Wiersz nagłówkowy</th>
+                                    <th>Wiersz nagłówkowy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dane</td>
+                                    <td>Dane</td>
+                                    <td>Dane</td>
+                                </tr>
+                                <tr>
+                                    <td>Dane 1</td>
+                                    <td>Dane 1</td>
+                                    <td>Dane 1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <details id="table">
+                        <summary>Szczegółowy opis tabeli</summary>
+                        <p>Tutaj umieszczamy szczegółowy opis tabeli</p>
+                        <a href="#tab1">Powrót do tabeli</a>
+                    </details>
+
+                    <h3>Grafiki</h3>
+                    <p>Każda grafika przedstawiająca informacje powinna posiadać opis alternatywny oraz tytuł. Jeśli
+                        jest skomplikowana i przedstawia dużo treści oprócz krótkiego opisu alternatywnego należy
+                        rozwinąć opis za pomocą znacznika details. Każda
+                        grafika powinna posiadać unikalny identyfikator id. Opisu alternatywnego nie wymagają jedynie
+                        grafiki dekoracyjne.</p>
+                    <figure id="code3">
+                        <figcaption class="tfl-center">Przykład kodu dla grafiki</figcaption>
+                        <pre><code class="lang-html">&lt;figure id="img1" class="tfl-center"&gt;
+    &lt;img src="images/img1.jpg" class="img-fluid"
+       alt="Tutaj umieszczamy opis alternatywny do grafiki"/&gt;
+    &lt;figcaption&gt;
+      Tutaj umieszczamy wyświetlany tytuł grafiki.
+      &lt;details&gt;
+          &lt;summary&gt;Szczegółowy opis grafiki&lt;/summary&gt;
+         &lt;p&gt;
+         Tutaj umieszczamy szczegółowy opis grafiki.
+         &lt;/p&gt;
+      &lt;/details&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                    </figure>
+                    <figure id="img1" class="tfl-center">
+                        <img src="images/img1.jpg" class="img-fluid"
+                            alt="Tutaj umieszczamy opis alternatywny do grafiki" />
+                        <figcaption>
+                            Tutaj umieszczamy wyświetlany tytuł grafiki.
+                            <details>
+                                <summary>Szczegółowy opis grafiki</summary>
+                                <p>
+                                    Tutaj umieszczamy szczegółowy opis grafiki.
+                                </p>
+                            </details>
+                        </figcaption>
+                    </figure>
+
+                    <h3>Numery stron</h3>
+                    Podział na strony stosujemy podczas adaptacji publikacji/dokumentu, jeśli wymaga zachowania
+                    oryginalnej numeracji stron. Strony oddzielamy za pomocą separatora.
+                    <figure id="code4">
+                        <figcaption class="tfl-center">Kod dla numeracji stron</figcaption>
+                        <pre><code class="lang-html">&lt;span class="nextPage"&gt;&lt;/span&gt;</code></pre>
+                    </figure>
+                    <p>Nie dodajemy ręcznie numerów stron - za pomocą skryptu .js zostaną one umieszczone automatycznie.
+                        Pierwsza numerowana strona w publikacji to pierwszy znacznik separatora na górze strony. Gdy w
+                        publikacji występują puste strony w adaptacji
+                        należy taką informację zawrzeć używając zdania: Pusta strona po numerze strony - znaczniku span
+                        z klasą nextPage.</p>
+
+                    <h3>Hiperłącza</h3>
+
+                    <p>Hiperłącza należy oznaczać poprzez a href. Przykład <a href="http://swon.pwr.edu.pl">Czytaj
+                            więcej na stronie Sekcji ds. Wsparcia Osób z Niepełnosprawnością</a></p>
+                    <figure id="code5">
+                        <figcaption class="tfl-center">Kod dla oznaczenia hiperłącza</figcaption>
+                        <pre><code class="lang-html">&lt;a href="http://swon.pwr.edu.pl"&gt;Czytaj więcej na stronie Sekcji ds. Wsparcia Osób z Niepełnosprawnością&lt;/a&gt;</code></pre>
+                    </figure>
+
+                    <h3>Wzory matematyczne</h3>
+                    <p>Wzory matematyczne opisujemy za pomocą LaTeX zamykając je w podwójnych dolarach dla wzoru w nowej
+                        linii,
+                        <code>$$ $$</code> dla wzoru w tej samej linii zamknięcie w znacznikach
+                        <code>\( \)</code>. $$ \partial K(x)=\left\{\gamma \in \mathcal{R}^{n}: K(y) \geqslant
+                        K(x)+\gamma^{T}(y-x), \forall y \in \mathcal{R}^{n}\right\}, x \in \mathcal{X}$$
+                    </p>
+                    <figure id="code6">
+                        <figcaption class="tfl-center">Kod LaTeX dla wzoru w nowej linii</figcaption>
+                        <pre><code class="lang-tex">$$ \partial K(x)=\left\{\gamma \in \mathcal{R}^{n}: K(y) \geqslant K(x)+\gamma^{T}(y-x), \forall y \in \mathcal{R}^{n}\right\}, x \in \mathcal{X}$$.</code></pre>
+                    </figure>
+                    <p>Przykład wzoru w zdaniu \(M_{j}=\left\{: y_{i}-a_{i j} &lt; 0\right\}\)</p>
+                    <figure id="code7">
+                        <figcaption class="tfl-center">Kod LaTeX dla wzoru umieszczonego w ciągu zdania
+                        </figcaption>
+                        <pre><code class="lang-tex">Przykład wzoru w zdaniu \(M_{j}=\left\{: y_{i}-a_{i j} &lt; 0\right\}\)</code></pre>
+                    </figure>
+                    <p>Nie zostawiamy tekstów w indeksie górnym np. liczebniki porządkowe angielskie 6
+                        <sup>th</sup> zapisujemy jako 6th.
+                    </p>
+                    <p>Zastosowana konfiguracja biblioteki JavaScript MathJax może generować problemy z rozpoznaniem
+                        niektórych elementów składni dla zapisu równań matematycznych za pomocą LaTeX. Dlatego jeśli w
+                        składni zapisu równania pojawi się m.in. element
+                        pogrubiający jej składowe (\boldsymbol) należy zamienić go na element o podobnym znaczeniu i
+                        wyglądzie (\mathbf).
+                    </p>
+
+                    <h3>Kod źródłowy</h3>
+                    <p>Zapisując kod źródłowy należy użyć znaczników pre oraz code z odpowiednią klasą biblioteki
+                        highlight.js <a
+                            href="https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md">Zobacz
+                            wykaz wspieranych języków i klas.</a></p>
+                    <p>Zapisując kod źródłowy z języku HTML należy zamienić znak
+                        &lt; oraz &gt; na & lt; oraz & gt;. Można posłużyć się do tego automatycznym narzędziem, np. <a
+                            href="https://www.opinionatedgeek.com/codecs/htmlencoder">HTML Encoder</a>.
+                    </p>
+
+                    <figure id="code8">
+                        <figcaption class="tfl-center">Przykład kodu w języku javascript</figcaption>
+                        <pre>
+    <code class="lang-javascript">function detectStructure() {
+    let parent = model.documentRoot;
+    $(":header:not(h1)").each(function () {
+        let headerLevel = this.nodeName.substring(1);
+        while (headerLevel &lt;= parent.level && parent.parent) {
+            parent = parent.parent;
+        }
+
+        if (headerLevel - parent.level === 1) {
+            parent = _createNewNodeAndAddToParent(this, parent);
+        } else if (headerLevel - parent.level === 0) {
+            parent = _createNewNodeAndAddToParent(this, parent.parent);
+        } else {
+            console.warn('Not consistent document structure');
+        }
+    });
+};</code></pre>
+                    </figure>
+
+                    <figure id="code9">
+                        <figcaption class="tfl-center">Zapis kodu HTML z przykładem w języku javascript
+                        </figcaption>
+                        <pre><code class="lang-html">&lt;figure id="code7"&gt;
+    &lt;figcaption class="tfl-center"&gt;Przykład zapisu kodu &lt;/figcaption&gt;
+    &lt;pre&gt;&lt;code class="lang-javascript"&gt;
+    function detectStructure() {
+        let parent = model.documentRoot;
+        $(":header:not(h1)").each(function () {
+            let headerLevel = this.nodeName.substring(1);
+            while (headerLevel &lt;= parent.level && parent.parent) {
+                parent = parent.parent;
+            }
+
+            if (headerLevel - parent.level === 1) {
+                parent = _createNewNodeAndAddToParent(this, parent);
+            } else if (headerLevel - parent.level === 0) {
+                parent = _createNewNodeAndAddToParent(this, parent.parent);
+            } else {
+                console.warn('Not consistent document structure');
+            }
+        });
+    };
+    &lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;</code></pre>
+                    </figure>
+                    <h3>Oznaczenie języka</h3>
+                    <p>Język fragmentu tekstu należy oznaczyć poprzez umieszczenie wybranego fragmentu w znaczniku span
+                        oraz wybranie skrótu odpowiedniego języka np. en, pl, fr.</p>
+                    <figure id="code10">
+                        <figcaption>Przykład oznaczenia fragmentu tekstu w języku innym niż język dokumentu
+                        </figcaption>
+                        <pre><code class="lang-html">&lt;span lang="en"&gt;This text is in other language than the rest of the document&lt;/span&gt;
+</code></pre>
+                    </figure>
+                    <ul>
+                        <li>Imiona i nazwiska w obcych językach oznaczamy jako język polski, a także nazwy własne (nazwy
+                            uczelni, nazwy miast, rzek).</li>
+                        <li>Odpowiednim językiem oznaczamy tytuły publikacji, występujące np. w bibliografii, w
+                            przypisach.
+                        </li>
+                        <li>Słowa takie jak „Facebook”, „Google”, „mail” itp. zostawiamy jako język polski.</li>
+                        <li>Słowa greckie, które są zapisane alfabetem łacińskim zostawiamy jako język polski, zaś te
+                            napisane alfabetem greckim oznaczamy jako język grecki. Podobnie z językiem rosyjskim,
+                            arabskim itp.</li>
+                    </ul>
+                    <h3>Cytaty</h3>
+                    <p>Cytaty w tej samej linii oznaczamy tagiem q, cytat długi w nowym wierszu za pomocą blockquote.
+                    </p>
+                    <p>Jeżeli cytat zaczyna się na jednej stronie, a kończy na drugiej, przenosimy jego całość na stronę
+                        na której się zaczyna (o ile jego zakończenie nie zajmuje więcej niż około 25% strony). Jeżeli
+                        zajmuje więcej należy zakończyć zdanie
+                        z cytatu zaczynające się na poprzedniej stronie, wpisujemy znacznik podziału strony (span z
+                        klasą nextPage) i kończymy cytat.</p>
+                    <h3>Lista, lista zagnieżdżona</h3>
+                    <p>Listę uporządkowaną tworzymy za pomocą znacznika ol, nieuporządkowane za pomocą znacznika ul.
+                        Listy HTML można dowolnie zagnieżdżać, rozpoczynać od wybranego numeru lub nadać jej klasę none
+                        i samemu dowolnie numerować. </p>
+                    <figure id="code11">
+                        <figcaption>Przykład numerowanej listy zagnieżdżonej</figcaption>
+                        <pre><code class="lang-html">&lt;ol&gt;
+    &lt;li&gt;Pierwszy element listy&lt;/li&gt;
+    &lt;li&gt;Drugi element listy
+        &lt;ul&gt;
+            &lt;li&gt;Pierwszy element listy zagnieżdżonej&lt;/li&gt;
+            &lt;li&gt;Drugi element listy zagnieżdżonej&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Trzeci element listy&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    </figure>
+
+                    <ol>
+                        <li>Pierwszy element listy</li>
+                        <li>Drugi element listy
+                            <ul>
+                                <li>Pierwszy element listy zagnieżdżonej</li>
+                                <li>Drugi element listy zagnieżdżonej</li>
+                            </ul>
+                        </li>
+                        <li>Trzeci element listy</li>
+                    </ol>
+
+                    <h3>Dzielenie list, tabel między stronami</h3>
+                    <p>Jeśli na jednej stronie znajduje się jeden element listy, a na kolejnej następne elementy należy
+                        przenieść listę na jedną stronę.</p>
+                    <figure id="code12">
+                        <figcaption class="tfl-center">Przykład kodu HTML dla dzielenia listy między stronami.
+                        </figcaption>
+                        <pre><code class="lang-html">&lt;ul&gt;
+    &lt;li&gt;Pierwszy element listy&lt;/li&gt;
+    &lt;li&gt;Drugi element listy
+    &lt;span class=”nextPage”&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Trzeci element listy&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </figure>
+
+                    <p>Jeśli tabela znajduje się na wielu stronach należy przed miejscem lokalizacji tabeli wstawić tyle
+                        znaczników podziału strony span z klasą nextPage na ilu stronach znajduje się duża tabela i po
+                        znacznikach dopisać słownie informację:
+                        Tabela nr XX znajduje się na 3 stronach publikacji: 121, 122, 123.</p>
+                    <figure id="code13">
+                        <figcaption class="tfl-center">Przykład kodu HTML dla dzielenia tabeli między stronami.
+                        </figcaption>
+                        <pre><code class="lang-html">&lt;span class=”nextPage”&gt;&lt;/span&gt;
+&lt;span class=”nextPage”&gt;&lt;/span&gt;
+&lt;span class=”nextPage”&gt;&lt;/span&gt;
+&lt;p&gt;Tabela nr XX znajduje się na 3 stronach publikacji: 121, 122, 123.&lt;/p&gt;
+&lt;table&gt;&lt;/table&gt;</code></pre>
+                    </figure>
+                    <h3>Spis treści</h3>
+                    <p>Spis treści tworzony jest skryptem .js z nagłówków - należy zachować odpowiednią hierarchię
+                        nagłówków, aby został stworzony.</p>
+                    <h3>Przypisy</h3>
+                    <p>Przypisy tworzymy poprzez linki, którym nadajemy unikalne id, tak aby można było zrobić odsyłacze
+                        do treści przypisu i z powrotem do treści głównej. </p>
+                    <figure id="code14">
+                        <figcaption class="tfl-center">Przykład kodu dla przypisów</figcaption>
+                        <pre><code class="lang-html">&lt;a href="#1" id="ref1" class="footnote" aria-describedby="goTo"&gt;[1]&lt;/a&gt;
+&lt;h2 id="footnote-label"&gt;Przypisy&lt;/h2&gt;
+&lt;div class="tfl-footer"&gt;
+    &lt;ol class="none"&gt;
+        &lt;li id="1"&gt;1. Rozwinięcie przypisu
+            &lt;a href="#ref1"&gt;&lt;img src=https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/box-arrow-in-up-left.svg alt="Wróć do treści"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+                    </figure>
+                    <p>Jeśli w publikacji występują przypisy harwardzkie również należy nadać im unikalne id,
+                        rozróżnialne od przypisów dolnych. </p>
+                    <figure id="code15">
+                        <figcaption>Przykład kodu dla przyp[isów harwardzkich</figcaption>
+                        <pre><code class="lang-html">&lt;a href="#h1" id="refh1" class="footnote-harvard" aria-describedby="goTo"&gt;[15]&lt;/a&gt;
+&lt;h2 id="footnote-label"&gt;Przypisy harwardzkie&lt;/h2&gt;
+&lt;div class="tfl-footer"&gt;
+    &lt;ol class="none"&gt;
+        &lt;li id="h1"&gt;15. Rozwinięcie przypisu
+            &lt;a href="#refh1"&gt;&lt;img src=https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/box-arrow-in-up-left.svg alt="Wróć do treści"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+                    </figure>
+
+                    <h3>Skróty</h3>
+                    <p>Skróty występujące w tekście należy umieścić w znacznikach abbr, a rozwinięcie skrótu zapisać w
+                        atrybucie title. Dodatkowo na końcu publikacji należy umieścić wykaz skrótów jako nagłówek
+                        poziomu 2.</p>
+                    <p>Wykaz skrótów może być umieszczony np. przy pomocy listy punktowej. Należy przyjąć jeden wzór i
+                        stosować go do wszystkich publikacji.</p>
+                    <p>Skróty których nie rozwijamy:</p>
+                    <ul>
+                        <li>itp.</li>
+                        <li>itd.</li>
+                        <li>m.in.</li>
+                        <li>np.</li>
+                        <li>str.</li>
+                        <li>s. (jeżeli występuje w przypisach, w treści można rozwinąć)</li>
+                        <li>tzn.</li>
+                    </ul>
+                    <figure id="code16">
+                        <figcaption>Przykład listy skrótów</figcaption>
+                        <pre><code class="lang-html">&lt;h2&gt;Spis skrótów&lt;/h2&gt;
+&lt;ol class="none"&gt;
+    &lt;li&gt;&lt;abbr title="rok"&gt;r.&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="kilobajt"&gt;kB&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="kilogram"&gt;kg&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="złoty"&gt;zł&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="volt"&gt;V&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="volt, prąd przemienny"&gt;VAC&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="wat"&gt;W&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="milisekunda"&gt;ms&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="megabajt"&gt;MB&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="volt, prąd stały"&gt;VDC&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="kilovolt"&gt;kV&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="miliamper"&gt;mA&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="megaherc"&gt;MHz&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="kiloherc"&gt;kHz&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="metr"&gt;m&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="jak wyżej"&gt;j.w.&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="nanosekunda"&gt;ns&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="megabajt"&gt;MB&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="kiloom"&gt;k&amp;Omega;&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="megaom"&gt;M&amp;Omega;&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="amper"&gt;A&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="om"&gt;&amp;Omega;&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="mikrosekunda"&gt;&amp;mu;s&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="sekunda"&gt;s&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="herc"&gt;Hz&lt;/abbr&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;abbr title="minuta"&gt;min&lt;/abbr&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    </figure>
+                    <h3>Wyróżnienia w tekście</h3>
+                    <p>Wyróżnienia w tekście należy zachować jak w oryginale. Pismo pochyłe należy oznaczać tagiem em,
+                        pismo pogrubione strong. Jeśli w tekście występuje wyróżnienie jedynie kolorem należy przyjąć
+                        także inny sposób wyróżnienia, np. za pomocą
+                        pogrubienia.
+                    </p>
+                    <h3>Lista tabel</h3>
+                    <p>Należy pamiętać o tworzeniu unikalnych id dla tabel, aby móc stworzyć listę tabel z odnośnikami
+                        do powrotu do nich. </p>
+                    <h3>Lista grafik</h3>
+                    <p>Należy pamiętać o tworzeniu unikalnych id dla grafik, aby móc stworzyć listę grafik z odnośnikami
+                        do powrotu do nich. </p>
+                    <h3>Dialogi</h3>
+                    <p>Zapisując dialogi nie używamy list (ani punktowych, ani numerowanych) chyba, że w oryginale
+                        dialog jest przedstawiony za pomocą listy punktowej. W standardowym dialogu do zapisu używamy
+                        znacznika p oraz br. Osoby mówiące w danym dialogu
+                        wyróżniamy za pomocą strong(jeżeli w oryginale nie ma takiego wyróżnienia to też go nie
+                        stosujemy).
+                    </p>
+                    <figure id="code17">
+                        <figcaption>Przykładowy kod dla dialogu</figcaption>
+                        <pre><code>&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;: Hey, I'm really sorry I'm late. I came as fast as I could.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;: It's OK. Nobody has really come  yet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;: Why? Where are  they?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;: Well, John  is shopping. He is getting some food.&lt;/p&gt;</code></pre>
+                    </figure>
+                    <h3>Wyróżnienie ramką</h3>
+                    <ol>
+                        <li><strong>Ważne informacje (twierdzenia, definicje i inne merytorycznie ważne treści)</strong>
+                            <p>W atrybucie aria-level=" " autor powinien wpisać właściwy poziom zgodny z hierarchią
+                                struktury nagłówków w swoim rozdziale np. aria-level="2", aria-level="5" itd. W
+                                znaczniku
+                                <code>&lt;p class="sr-only"</code>, należy umieścić unikalne id identyczne z
+                                umieszczonym identyfikatorem w atrybucie aria-labelledby=" ". W znaczniku o klasie
+                                sr-only należy zamieścić również informacje zgodną z treścią książki, np. jeżeli ramka
+                                wyróżnia twierdzenie znajdujące się w rozdziale (nagłówek h2) to wtedy przykładowy
+                                fragment kodu może wyglądać następująco:
+                            </p>
+                            <figure id="code18">
+                                <pre><code>&lt;div class="tfl-frame-highlight" role="region" aria-labelledby="region-heading"&gt;
+    &lt;p class="sr-only" id="region-heading" role="heading" aria-level="2"&gt;Czarna ramka wyróżniająca fragment tekstu&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;D. Flexicurity&lt;/strong&gt;&lt;/p&gt;
+    Europejscy partnerzy społeczni uznają, iż dzisiejszy rynek pracy wymaga wdrożenia
+    polityki, która miałaby wymiar zarówno elastyczności jak i bezpieczeństwa zatrudnienia
+    dla pracowników podobnie jak i pracodawców. Właściwie wdrożone, podejście
+    flexicurity może tworzyć sytuację, w której obie strony pracowników i pracodawców
+    równo korzystają (win-win).
+&lt;/div&gt;</code></pre>
+                            </figure>
+                            <p><strong>Rezultat wykonania powyższego kodu:</strong></p>
+                            <div class="tfl-frame-highlight" role="region" aria-labelledby="region-heading">
+                                <p class="sr-only" id="region-heading" role="heading" aria-level="2">Czarna ramka
+                                    wyróżniająca fragment tekstu</p>
+                                <p><strong>D. Flexicurity</strong></p>
+                                Europejscy partnerzy społeczni uznają, iż dzisiejszy rynek pracy wymaga wdrożenia
+                                polityki, która miałaby wymiar zarówno elastyczności jak i bezpieczeństwa zatrudnienia
+                                dla pracowników podobnie jak i pracodawców. Właściwie wdrożone, podejście flexicurity
+                                może tworzyć sytuację, w której obie strony pracowników i pracodawców równo korzystają
+                                (win-win).
+                            </div>
+                        </li>
+                        <li><strong>Wyróżnienie mniej istotnych elementów</strong>
+                            <p>Stałe elementy struktury książki oznaczone ramką, np. cytaty, informacje poboczne,
+                                treści, które nie są bardziej ważne niż pozostała treść, ale wyróżnienie nie występuje
+                                tylko ze względów dekoracyjnych. Tego oznaczenia możemy
+                                używać również do elementów, takich jak treści na marginesie strony lub innych
+                                niestandardowych treści, które posiadają wyróżnienie.
+                            </p>
+                            <p>Przykładowy fragment kodu może wyglądać następująco:</p>
+                            <figure id="code19">
+                                <pre><code>&lt;div class="tfl-highlight" role="region" aria-labelledby="region-heading"&gt;
+    &lt;p class="sr-only" id="region-heading"&gt;Informacja na marginesie strony&lt;/p&gt;
+    &lt;p&gt;&lt;strong>generate&lt;/strong&gt; - generować&lt;br&gt;&lt;strong&gt;generation&lt;/strong&gt; - pokolenie&lt;br&gt;&lt;strong&gt;get&lt;/strong&gt; - dostać&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                            </figure>
+                            <p><strong>Rezultat wykonania powyższego kodu:</strong></p>
+                            <div class="tfl-highlight" role="region" aria-labelledby="region-custom-heading">
+                                <p class="sr-only" id="region-custom-heading">Informacja na marginesie strony</p>
+                                <p><strong>generate</strong> - generować<br><strong>generation</strong> - pokolenie
+                                    <br><strong>get</strong> - dostać
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                    <h3>Reprezentacja złożonych reprezentacji graficznych</h3>
+                    <p>W przypadku gdy w publikacji istnieją złożone reprezentacje graficzne, których opis alternatywny
+                        może być trudny w redakcji, lub zbyt zawiły dla użytkowników czytników technologii asystujących
+                        istnieje możliwość przedstawienia ich
+                        zawartości w postaci multimodalnego narzędzia, które pozwala na aktywną eksploracje za pomocą
+                        klawiatury pomiędzy poszczególnymi poziomami / zależnościami przedstawianymi użytkownikowi.
+                        Rozwiązanie to wskazane jest dla grafik prezentujących
+                        różnego rodzaju zależności, hierarchię poszczególnych elementów, a także w wypadku potrzeby
+                        nadania dodatkowej semantyki redagowanemu opisowi. Mogą to być informacje w postaci grafów,
+                        różnego rodzaju drzew, schematów i zależności
+                        pomiędzy nimi, mapy myśli, itd.</p>
+                    <p>Aby zacząć tworzyć taką postać zagnieżdżonej listy należy rozpocząć jej tworzenie od umieszczenia
+                        elementu korzenia
+                        diagramu wewnątrz znacznika ul z wartością <strong>tree</strong> atrybutu role znacznika. Jeśli
+                        w naszej publikacji zdecydujemy się
+                        na zastosowanie większej ilości tego typu listy to należy pamiętać o zmianie id dla każdej
+                        kolejnej listy w tym
+                        elemencie <code>&lt;div id="tfl-deque-tree-root"&gt;</code> oraz każdym atrybucie
+                        <strong>data-tree-root</strong>, w którym należy wprowadzić
+                        wspomniany identyfikator:</p>
+                    <figure id="code20">
+                        <pre><code>&lt;div class="tfl-deque-tree-no-select tfl-deque-tree tfl-left"&gt;
+    &lt;div id="tfl-deque-tree-root"&gt;
+        &lt;ul role="tree"&gt;
+        &lt;!--Miejsce umieszczenia korzenia wraz z kolejnymi elementami listy reprezentującej diagram--&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </figure>
+                    <p>Następnym krokiem jest zdefiniowanie korzenia grafu. Jeśli korzeń opisywanego diagramu jest
+                        jedynym jego elementem to należy w takim przypadku wewnątrz znacznika ul umieścić poniższy kod:
+                    </p>
+                    <figure id="code21">
+                        <pre><code>&lt;li role="treeitem" aria-label="wartość korzenia" data-tree-root="tfl-deque-tree-root" tabindex="-1" aria-expanded="false"&gt;
+    &lt;div class="tfl-deque-tree-leaf" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;span class="tfl-deque-tree-label"&gt;wartość korzenia&lt;/span&gt;
+&lt;/li&gt;</code></pre>
+                    </figure>
+                    <p>Jest on odpowiednikiem kodu definiującego liście dla takiego grafu, których metoda tworzenia
+                        przedstawiona zostanie w kolejnej części sposobu reprezentacji złożonych reprezentacji
+                        graficznych przy użyciu zagnieżdżonych list. Dla powyższego
+                        kodu w atrybucie aria-level=" " oraz znaczniku span o klasie
+                        <strong>tfl-deque-tree-label</strong> autor powinien wpisać wartość wierzchołka opisywanego
+                        grafu. Operację tą wykonujemy również na przedstawionych w kolejnych etapach przykładach procesu
+                        tworzenia zagnieżdżonych list.
+                    </p>
+                    <p>W procesie tworzenia korzenia grafu może wystąpić przypadek, w którym element będący jego
+                        korzeniem będzie rodzicem kolejnych elementów opisywanego grafu. W takim wypadku należy
+                        pamiętać, że elementy będące dziećmi opisywanego korzenia
+                        należy umieścić w znaczniku ul z wartością group atrybutu role znacznika. Dodatkowo należy nadać
+                        znacznikowi div opisu korzenia wartość reprezentującą wartość wierzchołka klasy o nazwie
+                        <strong>tfl-deque-tree-branch</strong>.
+                    </p>
+                    <figure id="code22">
+                        <pre><code>&lt;li role="treeitem" aria-label="wartość korzenia grafu" data-tree-root="tfl-deque-tree-root" tabindex="-1" aria-expanded="false"&gt;
+    &lt;div class="tfl-deque-tree-branch" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;span class="tfl-deque-tree-label"&gt;wartość korzenia grafu&lt;/span&gt;
+    &lt;ul role="group"&gt;
+        &lt;li role="treeitem" aria-label="wartość wierzchołka grafu" data-tree-root="tfl-deque-tree-root" tabindex="-1" aria-expanded="false"&gt;
+            &lt;div class="tfl-deque-tree-leaf" aria-hidden="true"&gt;&lt;/div&gt;
+            &lt;span class="tfl-deque-tree-label"&gt;wartość wierzchołka grafu&lt;/span&gt;
+        &lt;/li&gt;
+        ....
+    &lt;/ul&gt;
+&lt;li&gt;</code></pre>
+                    </figure>
+                    <p>Ostatnim krokiem opisu diagramów przy użyciu zagnieżdżonych listy jest definiowanie kolejnych
+                        wierzchołków dla takiego grafu. Odbywa się to w identyczny sposób w jaki tworzyliśmy korzeń.
+                        Otóż, jeśli wierzchołek nie posiada dzieci,
+                        a co za tym idzie jest liściem takiego grafu to należy opisać go w następujący sposób:</p>
+                    <figure id="code23">
+                        <pre><code>&lt;li role="treeitem" aria-label="wartość liścia grafu" data-tree-root="tfl-deque-tree-root" tabindex="-1" aria-expanded="false"&gt;
+    &lt;div class="tfl-deque-tree-leaf" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;span class="tfl-deque-tree-label"&gt;wartość liścia grafu&lt;/span&gt;
+&lt;/li&gt;</code></pre>
+                    </figure>
+                    <p>Natomiast jeśli jest rodzicem kolejnych wierzchołków takiego grafu to należy opisać go poniższym
+                        kodem wraz z umieszczeniem kolejnych jego elementów (jego dzieci) w znaczniku ul listy.</p>
+                    <figure id="code24">
+                        <pre><code>&lt;li role="treeitem" aria-label="wartość rodzica" data-tree-root="tfl-deque-tree-root" tabindex="-1" aria-expanded="false"&gt;
+    &lt;div class="tfl-deque-tree-branch" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;span class="tfl-deque-tree-label"&gt;wartość rodzica&lt;/span&gt;
+    &lt;ul role="group"&gt;
+        &lt;li role="treeitem" aria-label="wartość wierzchołka grafu" data-tree-root="tfl-deque-tree-root" tabindex="-1" aria-expanded="false"&gt;
+            &lt;div class="tfl-deque-tree-leaf" aria-hidden="true"&gt;&lt;/div&gt;
+            &lt;span class="tfl-deque-tree-label"&gt;wartość wierzchołka grafu&lt;/span&gt;
+        &lt;/li&gt;
+        ....
+    &lt;/ul&gt;
+&lt;li&gt;</code></pre>
+                    </figure>
+                    <p><strong>Rezultat wykonania wszytskich powyższych etapów tworzenia zagnieżdżonych list umieszczony
+                            został w szczegółowym opisie dla grafiki zamieszczonej poniżej:</strong></p>
+                    <figure id="img2" class="tfl-center">
+                        <img src="images/img2.png" class="img-fluid" alt="Przykład drzewa" />
+                        <figcaption>
+                            <details>
+                                <summary>Szczegółowy opis grafiki</summary>
+                                <p class="tfl-left">
+                                    Korzeniem drzewa jest węzeł 100. Przykład tego, w jaki sposób rozchodzi się drzewo,
+                                    można przedstawić za pomocą poniższej listy:
+                                </p>
+                                <div class="tfl-deque-tree-no-select tfl-deque-tree tfl-left">
+                                    <div id="tfl-deque-tree-root">
+                                        <ul role="tree">
+                                            <li role="treeitem" aria-label="100" data-tree-root="tfl-deque-tree-root"
+                                                tabindex="0" aria-expanded="false">
+                                                <div class="tfl-deque-tree-branch" aria-hidden="true"></div>
+                                                <span class="tfl-deque-tree-label">100</span>
+                                                <ul role="group">
+                                                    <li role="treeitem" aria-label="50"
+                                                        data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                        aria-expanded="false">
+                                                        <div class="tfl-deque-tree-branch" aria-hidden="true"></div>
+                                                        <span class="tfl-deque-tree-label">50</span>
+                                                        <ul role="group">
+                                                            <li role="treeitem" aria-label="12"
+                                                                data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                                aria-expanded="false">
+                                                                <div class="tfl-deque-tree-branch" aria-hidden="true">
+                                                                </div>
+                                                                <span class="tfl-deque-tree-label">12</span>
+                                                                <ul role="group">
+                                                                    <li role="treeitem" aria-label="45"
+                                                                        data-tree-root="tfl-deque-tree-root"
+                                                                        tabindex="-1" aria-expanded="false">
+                                                                        <div class="tfl-deque-tree-leaf"
+                                                                            aria-hidden="true"></div>
+                                                                        <span class="tfl-deque-tree-label">45</span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li role="treeitem" aria-label="1"
+                                                        data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                        aria-expanded="false">
+                                                        <div class="tfl-deque-tree-branch" aria-hidden="true"></div>
+                                                        <span class="tfl-deque-tree-label">1</span>
+                                                        <ul role="group">
+                                                            <li role="treeitem" aria-label="70"
+                                                                data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                                aria-expanded="false">
+                                                                <div class="tfl-deque-tree-leaf" aria-hidden="true">
+                                                                </div>
+                                                                <span class="tfl-deque-tree-label">70</span>
+                                                            </li>
+                                                            <li role="treeitem" aria-label="61"
+                                                                data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                                aria-expanded="false">
+                                                                <div class="tfl-deque-tree-leaf" aria-hidden="true">
+                                                                </div>
+                                                                <span class="tfl-deque-tree-label">61</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li role="treeitem" aria-label="150"
+                                                        data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                        aria-expanded="false">
+                                                        <div class="tfl-deque-tree-branch" aria-hidden="true"></div>
+                                                        <span class="tfl-deque-tree-label">150</span>
+                                                        <ul role="group">
+                                                            <li role="treeitem" aria-label="30"
+                                                                data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                                aria-expanded="false">
+                                                                <div class="tfl-deque-tree-branch" aria-hidden="true">
+                                                                </div>
+                                                                <span class="tfl-deque-tree-label">30</span>
+                                                                <ul role="group">
+                                                                    <li role="treeitem" aria-label="96"
+                                                                        data-tree-root="tfl-deque-tree-root"
+                                                                        tabindex="-1" aria-expanded="false">
+                                                                        <div class="tfl-deque-tree-leaf"
+                                                                            aria-hidden="true"></div>
+                                                                        <span class="tfl-deque-tree-label">96</span>
+                                                                    </li>
+                                                                    <li role="treeitem" aria-label="9"
+                                                                        data-tree-root="tfl-deque-tree-root"
+                                                                        tabindex="-1" aria-expanded="false">
+                                                                        <div class="tfl-deque-tree-leaf"
+                                                                            aria-hidden="true"></div>
+                                                                        <span class="tfl-deque-tree-label">9</span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li role="treeitem" aria-label="5"
+                                                                data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                                aria-expanded="false">
+                                                                <div class="tfl-deque-tree-leaf" aria-hidden="true">
+                                                                </div>
+                                                                <span class="tfl-deque-tree-label">5</span>
+                                                            </li>
+                                                            <li role="treeitem" aria-label="11"
+                                                                data-tree-root="tfl-deque-tree-root" tabindex="-1"
+                                                                aria-expanded="false">
+                                                                <div class="tfl-deque-tree-leaf" aria-hidden="true">
+                                                                </div>
+                                                                <span class="tfl-deque-tree-label">11</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="tfl-left">Na rysunku zaznaczono również czym jest korzeń, węzeł, rodzic,
+                                    dzieci, rodzeństwo, liść, poddrzewo, dziecko.
+                                </p>
+                            </details>
+                        </figcaption>
+                    </figure>
+                    <h3>Uwagi do wersji zaadaptowanej</h3>
+                    <p>Wszystkie zmiany odbiegające od oryginału powinny zostać krótko opisane w uwagach do adaptacji na
+                        początku dokumentu.</p>
+                    <p>Przed adaptacją treści należy uzupełnić dane początkowe tj. „Uwagi do wersji zaadaptowanej:”
+                        występujące na początku szablonu. W razie potrzeby należy dopisywać w miejsce uwag znaczące
+                        różnice, które występują między oryginałem a adaptacją.</p>
+                </main>
+                <footer>
+                    <p>Publikacja została zaadaptowana zgodnie z WCAG 2.1 na poziomie AA. Obecnie wersja v1.1. Szablon
+                        udostępniony na licencji <a
+                            href="https://github.com/tyflolab/szablon-WCAG/blob/master/LICENSE">MIT</a>.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/model.js"></script>
+    <script src="./scripts/view.js"></script>
+    <script src="./scripts/controller.js"></script>
+</body>
+
+</html>
