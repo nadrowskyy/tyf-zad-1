@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Magdalena Kruczek" />
-    <title>Specyfikacja adaptacji HTML</title>
+    <title>Moroń Zbigniew - Pomiary
+        przewodności elektrycznej cieczy
+        przy małych częstotliwościach</title>
 
     <link rel="stylesheet" href="./lib/bootstrap.min.css">
     <link rel="stylesheet" href="./lib/github.css">
@@ -1167,11 +1169,716 @@
                         
                         <figure id="img15" class="tfl-center">
                             <img src="images/rys-3-4.jpg" class="img-fluid"
-                               alt="Ilustracja różnicowej, trójelektrodowej metody pomiaru konduktywności roztworów (l, 2, 3 — elektrody pierścieniowe) [127]"/>
+                               alt="Ilustracja różnicowej, trójelektrodowej metody pomiaru konduktywności roztworów (1, 2, 3 — elektrody pierścieniowe) [127]"/>
                             <figcaption>
-                                Rys. 3.4. Ilustracja różnicowej, trójelektrodowej metody pomiaru konduktywności roztworów (l, 2, 3 — elektrody pierścieniowe) [127]
+                                Rys. 3.4. Ilustracja różnicowej, trójelektrodowej metody pomiaru konduktywności roztworów (1, 2, 3 — elektrody pierścieniowe) [127]
                             </figcaption>
                         </figure>
+                    </p>
+                    <p>
+                        Błąd polaryzacji można w istotnym stopniu ograniczyć, stosując różnicową 
+                        (trójelektrodową) metodę pomiaru (rys. 3.4), w której odejmuje się rezystancje zmierzone 
+                        między dwiema parami jednakowych elektrod umieszczonych w różnych 
+                        odległościach od siebie [40, 75, 101, 122, 127, 273]. Zakłada się, iż impedancje polaryzacji 
+                        tych elektrod, zanurzonych w tym samym roztworze i przez które przepływa 
+                        jednakowy prąd (I1 = I2 = I) powinny być również jednakowe (\( Z_{p} \)). Wtedy 
+
+                        $$ U_{12}-U_{23}=I_{1}\left(R_{12}+Z_{p}\right)-I_{2}\left(R_{23}+Z_{p}\right)=l\left(\frac{K_{12}}{\kappa}-\frac{K_{23}}{\kappa}\right)=I \frac{K_{12}-K_{23}}{\kappa} $$
+                    
+                        gdzie: Rn i R23 — rezystancje zmierzone między parami elektrod 1—2 i 2—3, K12 i 1 K23 — 
+                        stałe czujnika zdefiniowane dla par elektrod 1—2 i 2—3, \( Z_{p} \) — impedancja polaryzacji.    
+                    </p>
+                    <p>
+                        Różnicę stałych obu części czujnika można wyznaczyć doświadczalnie przez 
+                        wzorcowanie i traktować jako różnicową stałą czujnika. Przykładowe porównanie 
+                        zwykłej metody dwuelektrodowej z metodą różnicową pod względem podatności na 
+                        wpływ polaryzacji elektrod przedstawiono na rys. 3.5. Różnica stosunku zmierzonej 
+                        rezystancji próbki (w tym przypadku przy częstotliwości 1000 Hz) do czystej 
+                        rezystancji roztworu jest miarą błędu polaryzacji — w pomiarze różnicowym poprawa
+                        może być wyraźna, bo około 10-krotna. Skuteczność metody różnicowej jest ograniczona 
+                        niemożliwością uzyskania trwałej symetrii impedancji polaryzacyjnych 
+                        poszczególnych elektrod. Metoda różnicowa, trójelektrodowa została szczegółowo przedstawiona 
+                        przez autora [120, 122, 123, 127].
+
+                        <figure id="img16" class="tfl-center">
+                            <img src="images/rys-3-5.jpg" class="img-fluid"
+                               alt="Porównanie wpływu polaryzacji elektrod w pomiarze dwuelektrodowym — mierzona rezystancja 
+                               R12 oraz różnicowym — mierzona różnica rezystancji R12 — R23 (pokazano błąd względny pomiaru 
+                               konduktywności roztworu zmierzonej przy częstotliwości 1000 H, w funkcji 
+                               konduktywności, czujnik jak na rys 3.4, elektrody z Ni) [122]"/>
+                            <figcaption>
+                                Rys. 3.5. Porównanie wpływu polaryzacji elektrod w pomiarze dwuelektrodowym — mierzona rezystancja 
+                                R12 oraz różnicowym — mierzona różnica rezystancji R12 — R23 (pokazano błąd względny pomiaru 
+                                konduktywności roztworu zmierzonej przy częstotliwości 1000 H, w funkcji 
+                                konduktywności, czujnik jak na rys 3.4, elektrody z Ni) [122]
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Najskuteczniejszym sposobem ograniczenia błędu polaryzacji w pomiarach 
+                        kontaktowych jest zastosowanie metody czteroelektrodowej, w której jedna para elektrod 
+                        pełni funkcję elektrod prądowych (1 i 4 na rys. 3.3), a druga napięciowych (2 i 3 na 
+                        rys. 3.3). Te ostatnie służą do pomiaru spadku napięcia Un na części roztworu w 
+                        obszarze występowania stałego gradientu napięcia (obszar EF na rys. 3.3) [4, 57, 112]. 
+                        Wprowadzenie do roztworu elektrod napięciowych nie powinno zaburzać pierwotnego 
+                        rozkładu pola elektrycznego w roztworze, a pomiar napięcia [Jw należy wykonywać 
+                        bez poboru prądu, tj. woltomierzem o odpowiednio dużej impedancji wejściowej. 
+                        Stopień spełnienia tych wymagań wpływa na skuteczność eliminacji wpływu polaryzacji. 
+                        Metoda czteroelektrodowa jest szczególnie przydatna w pomiarach roztworów 
+                        stężonych, dobrze przewodzących [59] oraz w pomiarach wykonywanych
+                        zanieczyszczonymi elektrodami [57]. 
+                    </p>
+                    <h4>3.2.2. METODY BEZELEKTRODOWE</h4>
+                    <p>
+                        W metodach bezelektrodowych korzysta się z czujników indukcyjnych (sprzężenie 
+                        przez pole magnetyczne) lub pojemnościowych (sprzężenie przez pole elektryczne). 
+                        Czujniki indukcyjne mogą być stosowane zarówno w zakresie małych, jak i wielkich 
+                        częstotliwości [112, 196]. W zakresie małych częstotliwości najbardziej 
+                        rozpowszechniona jest metoda transformatorowa, w której naczynie wypełnione mierzonym 
+                        roztworem tworzy zwój zwarty, sprzęgający dwa rdzenie ferromagnetyczne (rys. 3.2) 
+                        [22]. Można stosować również metodę wirującego pola, z wykorzystaniem wahadła 
+                        torsyjnego [181] lub jej odmianę [23]. Inną jeszcze, nową koncepcję 
+                        konduktometrycznego czujnika indukcyjnego małej częstotliwości przedstawiono w pracy [68]. 
+                        Natomiast w zakresie większych częstotliwości, od kilkudziesięciu kHz do kilku 
+                        MHz, w czujnikach indukcyjnych mierzy się straty powodowane przez prądy 
+                        wirowe powstające w próbce roztworu umieszczonej w obszarze działania zmiennego 
+                        pola magnetycznego [102, 196, 276]. Odmianą tej metody jest metoda różnicowego 
+                        pola magnetycznego [118]. Z kolei czujniki pojemnościowe są stosowane tylko 
+                        w zakresie wielkich częstotliwości [253]. Miarą przewodnictwa roztworu są w nich 
+                        straty energii w próbce umieszczonej w obszarze działania pola elektrycznego — 
+                        sprzężenie następuje poprzez pojemności dielektryka tworzącego ścianki naczynia 
+                        pomiarowego. 
+                    </p>
+                    <p>
+                        Metody bezelektrodowe mają w stosunku do kontaktowych tę zaletę, że z zasady 
+                        nie występują w nich problemy związane z bezpośrednią stycznością elektrod z 
+                        mierzonym ośrodkiem, np. uzależnienie wyników pomiarów od wpływów impedancji 
+                        elektrodowych, ani też degradacja elektrod wskutek szkodliwych oddziaływań 
+                        czynników chemicznych i mechanicznych (reakcje, trawienie, ścieranie, zanieczysz- 
+                        czenia — w metodach kontaktowych bardzo szkodliwe jest np. powstawanie na 
+                        elektrodach cienkiej warstwy tłuszczu) [1 12, 178]. Zapewniają one ponadto galwaniczną 
+                        izolację układu pomiarowego od mierzonego ośrodka, nie występuje w nich problem 
+                        szczelności styku elektroda-izolator, itp. Bezpośredni kontakt z mierzonym
+                        ośrodkiem ma tylko osłona czujnika, wykonana z materiału o właściwościach izolatora 
+                        elektrycznego (tworzywo sztuczne lub ceramika), najczęściej mogąca pracować 
+                        w temperaturach do 200 oc i odporna na chemiczne działanie większości
+                        występujących w praktyce substancji, nawet najbardziej agresywnych. Mogą natomiast 
+                        występować w nich inne problemy, np. zmienność sprzężenia pomiędzy próbką i 
+                        obwodem pomiarowym [112]. 
+                    </p>
+                    <h3>3.3. STAŁA CZUJNIKA</h3>
+                    <p>
+                        Załóżmy, że roztwór elektrolitu znajduje się pomiędzy dwiema metalowymi 
+                        elektrodami czujnika o ustalonej geometrii (rys. 3.1 — elektrody umieszczone w
+                        przekrojach 1 i 2) i w całej objętości pomiarowej czujnika jest wytwarzane zmienne pole 
+                        elektryczne 
+                        
+                        $$ \vec{E}=E_{0}(\vec{s}) $$
+
+                        gdzie: \( E_{0} \) — amplituda pola, \( \vec{s} \) — wektor jednostkowy linii sił pola. 
+                    </p>
+                    <p>
+                        Jeżeli roztwór jest izotropowy i jednorodny, to w ustalonym stężeniu i temperaturze ma on stałą wartość konduktywności i przenikalności elektrycznej. 
+                    </p>
+                    <p>
+                        Przy niezbyt wielkich częstotliwościach (&lt; 100 kHz) można przyjąć, że pole 
+                        magnetyczne związane ze zmianami pola elektrycznego w czasie ma pomijalne 
+                        znaczenie, tzn. gęstość prądu w ośrodku jest określona zależnością 
+
+                        $$ \vec{J}=\kappa \vec{E}+\varepsilon \frac{\partial \vec{E}}{\partial t} $$
+
+                        gdzie rozkład pola elektrycznego w przestrzeni i czasie jest określony funkcją
+
+                        $$ \vec{E}(\vec{s})=E_{0} \cdot(\vec{s}) \cdot f(t) $$
+                    </p>
+                    <p>
+                        Przy zasilaniu elektrod przebiegiem sinusoidalnym, tj. f(t) = \( U_{S} \) (t) = \( U_{S0} \) sin\( \omega \)t, 
+                        stosunek amplitud (lub wartości średnich) prądu i napięcia określa moduł admitancji 
+                        systemu czujnik—roztwór [98, 122]:
+
+                        $$ |Y|=\frac{I_{0}}{U_{S 0}}=\frac{\int_{0}^{T}\left|\iint_{S} \vec{J} \cdot d \vec{S}\right| d t}{\left.\int_{0}^{T}\right|_{P_{1}} ^{P_{2}} \vec{E} \cdot d \vec{s} \mid d t}=\frac{\sqrt{\kappa^{2}+\left(\frac{2 \pi}{T} \varepsilon\right)^{2}}}{K}=\frac{\sqrt{\kappa^{2}+(\omega \varepsilon)^{2}}}{K} $$
+                        
+                        gdzie: T — okres sygnału pomiarowego, \( \omega \) = 2\( \pi \)/T — pulsacja sygnału, S — powierzchnia elektrod, P1 i P2 — punkty na elektrodach 1 i 2. 
+                    </p>
+                    <p>
+                        Dla T \( \rightarrow \infty \), tj. \( \omega \rightarrow 0\), uzyskuje się konduktancję
+                        
+                        $$ G=\frac{1}{R}=\frac{\kappa}{K} . $$
+                    </p>
+                    <p>
+                        Wielkość K jest stałą proporcjonalności zarówno dla konduktancji, jak i 
+                        pojemności próbki roztworu mierzonej czujnikiem. Jest to stała czujnika opisana wzorem (3.1), 
+                        charakteryzująca geometrię czujnika [98]: 
+                        
+                        $$ K=\frac{\int_{P_{2}}^{P_{1}} \vec{E} \cdot d \vec{s}}{\iint_{S} \vec{J} \cdot d \vec{S}}=\frac{\kappa}{G}=\frac{\varepsilon}{C} $$
+                    </p>
+                    <p>
+                        Wzór całkowy (3.14) określający stałą czujnika bywa podawany również w innych postaciach [47, 74, 112, 122]. 
+                    </p>
+                    <p>
+                        Z przedstawionych rozważań wynika, że stałą czujników konduktometrycznych 
+                        kontaktowych (elektrodowych) oblicza się z takich samych wzorów jak pojemność 
+                        kondensatorów o takiej samej geometrii. Dzięki temu w teoretycznym oszacowaniu 
+                        wartości stałej czujników konduktometrycznych można korzystać ze wzorów
+                        znanych z elektrostatyki [116]. Zasadnicza różnica między czujnikami konduktome- 
+                        trycznymi i pojemnościowymi (kondensatorami) polega na tym, iż w czujnikach 
+                        konduktometrycznych występuje pole przepływowe, a w pojemnościowych —
+                        elektrostatyczne. W pewnych przypadkach (dokładniej: tam, gdzie potrafimy pozbyć się 
+                        pola rozproszonego — np. przez odpowiednie ekranowanie, oraz zminimalizować 
+                        wpływ polaryzacji elektrod — np. stosując różnicową metodę pomiaru) można 
+                        wzorcować czujniki konduktometryczne, wypełniając je dielektrykiem o dokładnie
+                        znanych właściwościach i mierząc ich pojemność [101].
+                    </p>
+                    <p>
+                        Podstawiając do równania (3.12): C = \( \epsilon \)/K oraz R = K/\( \kappa \), uzyskuje się zależność 
+                        określającą moduł impedancji czujnika (samego czujnika, bez przewodów łączących):
+
+                        $$ |Z|=\frac{1}{|Y|}=\frac{R}{\sqrt{1+(\omega C R)^{2}}} $$
+                    </p>
+                    <p>
+                        Impedancja Z reprezentuje równoległy układ połączeń elementów RC (R = Re — 
+                        rezystancja roztworu wypełniającego czujnik, C = Cg — pojemność geometryczna
+                        czujnika) przy zasilaniu napięciem sinusoidalnie zmiennym. Z zależności (3.12) 
+                        i (3.13) wynika, iż różnica między admitancją i konduktancją (impedancją i 
+                        rezystancją) układu czujnik-roztwór zależy od stosunku (DE /K — i jedynym sposobem 
+                        zmniejszenia wpływu pojemności roztworu bocznikującej mierzoną konduktancję roztworu 
+                        jest obniżenie częstotliwości pomiarowej (wbrew czasami spotykanemu, błędnemu 
+                        poglądowi, nie da się zmieniać stosunku pojemności międzyelektrodowej czujnika do 
+                        jego konduktancji międzyelektrodowej poprzez zmianę geometrii czujnika). 
+                    </p>
+                    <p>
+                        Należy zauważyć, że:
+                        <ul>
+                            <li>wzór (3.14), definiujący stałą czujnika, teoretycznie uwzględnia nie tylko geo- 
+                            metrię czujnika, ale również właściwości elektrod w warunkach wykonywania pomia- 
+                            ru, w szczególności: występowanie pola rozproszonego, niejednorodności powierzch- 
+                            ni elektrod, polaryzację elektrod itp., jednakże w praktyce korzystanie z niego nie jest 
+                            możliwe ze względu na nieznajomość poszczególnych czynników — i dlatego rzeczy- 
+                            wiste czujniki wymagają wzorcowania doświadczalnego,</li>
+                            <li>zmienne warunki pomiaru powodują zmienność stałej czujnika (i nie jest to 
+                            zmienność pozorna, jak można znaleźć w niektórych publikacjach),</li>
+                            <li>stałą czujnika czteroelektrodowego definiuje się dla elektrod napięciowych, 
+                            tzn. punkty PI i P2 występujące we wzorze definicyjnym (3.14) należą do przekro- 
+                            jów I i 2 — rys. 3.1, w których umieszczono elektrody napięciowe (na rys. 3.3 są to 
+                            elektrody 2 i 3),</li>
+                            <li> wzór całkowy (3.14) definiuje geometrię przewodnika (rezystora) przestrzennego 
+                                i ma charakter ogólny — nie ma więc znaczenia, w jaki sposób wytworzono w roztwo- 
+                                rze pole elektryczne E (można ten wzór stosować również do obliczania stałej czujni- 
+                                ków bezelektrodowych).</li>
+                        </ul>
+                    </p>
+                    <h3>3.4. WZORCE I WZORCOWANIE </h3>
+                    <p>
+                        Stałą czujnika, której znajomość, jak wynika z poprzednich rozważań, jest 
+                        niezbędna w pomiarach konduktywności cieczy, można określić na trzy sposoby [31, 34, 
+                        184, 195, 272, 273]: 
+                        <ul>
+                            <li>doświadczalnie, przy użyciu wzorca konduktywności,</li>
+                            <li>doświadczalnie, przez porównanie z czujnikiem o znanej wartości stałej,</li>
+                            <li>teoretycznie, przez obliczenie z wymiarów geometrycznych czujnika (metoda 
+                            bezwzględna).</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Teoretycznie liczalne są tylko czujniki o szczególnych kształtach (w praktyce 
+                        rzadko stosowane) —jest o nich mowa w rozdziałach 3.7 oraz 6. Większość czujników 
+                        użytkowych wymaga wzorcowania doświadczalnego. Najczęściej wykonuje się je 
+                        sposobem pierwszym, tj. przez pomiar rezystancji czujnika wypełnionego cieczą 
+                        o dokładnie znanej konduktywności — wzór (3.2). Ten sposób jest zalecany przez 
+                        normy międzynarodowe jako najdokładniejszy [184, 67]. Sposób drugi, również 
+                        przewidziany w przepisach metrologicznych [34], jest wygodny i łatwy w realizacji, 
+                        ale wymaga posiadania stosunkowo drogiego czujnika wzorcowego, o zbliżonej war- 
+                        tości stałej. Jakość czujnika wzorcowego ma tu zasadnicze znaczenie, gdyż 
+                        niepewność wartości jego stałej jest przenoszona na czujnik wzorcowany. Ponieważ 
+                        rzeczywiste czujniki mogą wykazywać pewną zmienność stałej, w zależności od mierzonego 
+                        ośrodka i od warunków pomiaru, wzorcowanie należy wykonywać w warunkach 
+                        zbliżonych do przewidywanego zastosowania.
+                    </p>
+                    <p>
+                        Wzorcowanie czujników konduktometrycznych oraz sprawdzanie 
+                        konduktometrów i czujników są przedmiotem odpowiednich przepisów normalizacyjnych [34, 66, 
+                        67, 184]. Przepisy te podają szczegółowe procedury wzorcowania i sprawdzania oraz 
+                        zasady obliczania niepewności występujących we wzorcowaniu i sprawdzaniu.
+                    </p>
+                    <h4>
+                        3.4.1. WZORCE KONDUKTOMETRYCZNE
+                    </h4>
+                    <p>
+                        Jako materialne wzorce konduktywności przewodników jonowych przyjęto
+                        roztwory chemicznie czystych substancji, o znanym stężeniu [69, 80], których wartość 
+                        konduktywności została określona metodą bezwzględną, tj. w nawiązaniu do czujnika 
+                        liczalnego [69, 77, 188, 195, 273]. Dokładność wzorców pierwotnych zależy przede 
+                        wszystkim od stabilności chemicznej, czystości substancji rozpuszczonej i 
+                        rozpuszczalnika oraz od stężenia roztworu. Jako substancję rozpuszczoną przyjęto chlorek 
+                        potasu, ponieważ KCI jest stabilny i łatwy do oczyszczenia. Korzystając z tak 
+                        określonych wzorców pierwotnych (podstawowych), tworzy się wzorce wtórne. Przyjęcie 
+                        takiego rozwiązania ma dwie podstawowe zalety:
+                        <ul>
+                            <li>wzorce są stosunkowo łatwo odtwarzalne z wymaganą dokładnością,</li>
+                            <li>unika się trudności i kosztów związanych z realizacją metody bezwzględnej (ta 
+                            uwaga dotyczy klasycznej realizacji czujników liczalnych, swoją koncepcję autor 
+                            przedstawił w rozdz. 6).</li>
+                        </ul>
+                    </p>
+                    <p>    
+                        Ma jednak i wady, gdyż: 
+                        <ul>
+                            <li>poważnym problemem może być uwzględnianie wpływu temperatury (rozdz. 7),</li>
+                            <li>dokładność wzorców jest uzależniona od wyników wcześniejszych badań, w których 
+                            dysponowano gorszymi środkami technicznymi. Wartość wzorców musi zatem 
+                            podlegać stosunkowo częstej weryfikacji.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Pierwszego bezwzględnego określenia wzorców konduktywności (przewodności 
+                        elektrycznej) elektrolitów dokonali w 1898 r. Kohlrausch, Holborn i Diessselhorst 
+                        [96]. W ciągu minionych stu lat wzorce konduktywności kilkakrotnie podlegały 
+                        rewizji metodą bezwzględną, uzasadnionej postępem w nauce i technice — np. w latach 
+                        1923 [188], 1933 [77], 1989 [273], 1994 [69]. Przy okazji dokonano również 
+                        przeliczeń związanych ze zmianą litra na dm , oma międzynarodowego na bezwzględny 
+                        oraz z trzykrotną zmianą skali temperatur [273]. Zmieniono również liczbę wzorców 
+                        uważanych za podstawowe oraz sposób ich definiowania (7 wzorców molowych 
+                        Kohlrauscha, 3 wzorce demalne KCl [77, 188], 3 wzorce molalne KCI [69, 272, 2731).
+                    </p>
+                    <p>
+                        Wzorce konduktywności roztworów elektrolitów (wzorce konduktometryczne) są 
+                        przedmiotem norm i zaleceń międzynarodowych, np. [183, 195]. Obecnie jako 
+                        pierwotne wzorce konduktywności zalecane są przez IUPAC trzy wzorce molalne KCl
+                        (molalność, mol/kg, jest zdefiniowana jako ilość substancji rozpuszczonej w I
+                        kilogramie rozpuszczalnika, ważone w próżni): 0,01 m, 0,1 m i 1,0 m [195]. Wartości tych 
+                        wzorców oraz niepewności rozszerzone ich określenia podano w tablicy 3.1, w Dodatku 1.
+                    </p>
+                    <p>
+                        W Polsce obowiązuje nadal Zarządzenie nr 118 Prezesa Głównego Urzędu Miar, 
+                        z dnia 6 października 1995 r. [33], w którym za wzorce podstawowe przyjmuje się 
+                        sześć wzorców demalnych KCI (roztwór demalny KCI zawiera określoną masę czy- 
+                        stego KCI, rozpuszczoną w 1000 g roztworu, ważone w próżni). Według ww. doku- 
+                        mentu, niepewność rozszerzona odtwarzania wartości konduktywności przez wzorce 
+                        podstawowe jest nie gorsza niż ±0,2%, a przez wzorce wtórne — nie gorsza niż ±2%. 
+                        Pierwotne wzorce demalne [77], na których bazuje wymieniony dokument, zostały 
+                        określone z dokładnością lepszą niż 0,1%. W latach dziewięćdziesiątych XX wieku 
+                        poprawiono dokładność tych wzorców, powtarzając ich pomiary z wykorzystaniem 
+                        czujników i całego wyposażenia użytego do określania najnowszych, molalnych 
+                        wzorców. Uzyskano niepewności względne: 0,03% dla roztworu 0,01 demalnego oraz 
+                        0,04% — dla roztworów 0,1 i I demalnego [195]. Przykładowe przeliczenie błędu 
+                        określenia wzorców według klasycznej teorii błędu [273] na niepewność według zale- 
+                        ceń ISO [60] można znaleźć w pracach [69, 197]. 
+                    </p>
+                    <p>
+                        Kierując się potrzebami praktycznymi, występującymi zwłaszcza w
+                        monitorowaniu jakości czystej wody używanej w procesach przemysłowych, opracowano 
+                        specjalne wzorce małych konduktywności, w zakresie 5&divide;25 \( \mu \)S/cm [271]. W tym zakresie 
+                        konduktywności niezbędne jest staranne uwzględnianie wpływu kwaśnych gazów 
+                        spalinowych oraz dwutlenku węgla. 
+                    </p>
+                    <h3>3.5. POMIAR KONDUKTYWNOŚCI CIECZY 
+                        W SPOSÓB BEZWZGLĘDNY</h3>
+                    <p>
+                        Pomiar konduktywności cieczy metodą bezwzględną odbywa się bez korzystania 
+                        z materialnego wzorca konduktywności [137, 160, 161, 179, 273]. Mierzy się 
+                        rezystancję cieczy wypełniającej naczynie pomiarowe czujnika skonstruowanego i 
+                        stosowanego w odpowiedni sposób — tak, że rzeczywista stała czujnika jest równa pod 
+                        względem wartości stałej obliczonej teoretycznie z wymiarów geometrycznych. 
+                        Podstawowym przeznaczeniem takich czujników, nazywanych liczalnymi, jest określanie 
+                        pierwotnych wzorców konduktywności. W niektórych przypadkach stosuje się je
+                        również jako czujniki użytkowe, tj. wprost do wykonywania pomiarów. Przykładami
+                        mogą tu być: pomiary roztworów niewodnych [247] i stopionych soli, pomiary
+                        wykonywane w wysokich temperaturach [182], pomiary farb i lakierów [25] itp.
+                        Wspólnymi 
+                        cechami tych zastosowań są: brak wzorców materialnych o właściwościach 
+                        zbliżonych do tych, jakie mają badane substancje oraz (lub) potrzeba znajomości
+                        bezwzględnych wartości konduktywności w aktualnych warunkach pomiaru. 
+                    </p>
+                    <p>
+                        Zbiór cech, jakimi powinien charakteryzować się czujnik liczalny: 
+                        <ul>
+                            <li>
+                            geometria umożliwiająca dokładne określenie wartości stałej z wymiarów czuj- 
+                            nika [273],</li>
+                            <li>ustalona, niezależna od rodzaju i konduktywności mierzonego roztworu, a także 
+                            i od częstotliwości pomiarowej, wartość stałej czujnika [74, 273] (ten warunek odpo- 
+                            wiada ustalonemu oraz niezmiennemu rozpływowi prądu i rozkładowi potencjału 
+                            w mierzonym ośrodku), </li>
+                            <li>dobre uśrednianie konduktywności w próbce mierzonej cieczy [99], </li>
+                            <li>mały wpływ temperatury na wartość stałej.</li>
+                        </ul>
+                        Czujniki liczalne do pomiaru konduktywności metodami kontaktowymi można 
+                        wykonać na co najmniej trzy sposoby (rys.3.6): 
+                        <ul>
+                            <li>z jednorodnym polem elektrycznym, do pomiaru metodą dwuelektrodową [101, 
+                            273] (rys. 3.6a) lub czteroelektrodową [247],</li>
+                            <li>z niejednorodnym polem elektrycznym, według twierdzenia van der Pauwa [182, 
+                            255, 256] (rys. 3.6b),</li>
+                            <li>z niejednorodnym polem elektrycznym, według twierdzenia Thompsona—Lamparda 
+                            [203, 249] (rys. 3.6c). </li>
+                        </ul>
+                    </p>
+                    <p>
+                        Czujnik dwuelektrodowy z jednorodnym polem elektrycznym, w którym rezystancję roztworu mierzy się
+                        metodą różnicową, jest najdoskonalszą z dotychczas znanych autorowi realizacji czujnika liczalnego [69, 273]. Został on zaproponowany w NIST 
+                        (National Institute for Standards and Technology, USA) do określania pierwotnych 
+                        wzorców konduktywności roztworów elektrolitów. 
+
+                        <figure id="img17" class="tfl-center">
+                            <img src="images/rys-3-6.jpg" class="img-fluid"
+                               alt="Ilustracja pomiarów konduktywności cieczy metodą bezwzględną [144]: a) czujnik z polem 
+                               jednorodnym, b) czujnik van der Pauwa, c) czujnik Thompsona—Lamparda "/>
+                            <figcaption>
+                                Rys. 3.6. Ilustracja pomiarów konduktywności cieczy metodą bezwzględną [144]: a) czujnik z polem 
+                                jednorodnym, b) czujnik van der Pauwa, c) czujnik Thompsona—Lamparda 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Dwa następne rodzaje czujników liczalnych, zrealizowane według dualnych metod 
+                        van der Pauwa oraz Thompsona—Lamparda, mają tę unikatową właściwość, że ich 
+                        stała zależy tylko od jednego wymiaru geometrycznego — wysokości h (czujniki są 
+                        zatem łatwe do dokładnego wykonania). Wynika to z geometrii tych czujników, która, 
+                        przy równomiernej wysokości h, daje płasko-równoległy rozkład potencjału w
+                        przestrzeni pomiarowej wypełnionej przez ciecz. Problem określenia stałej czujnika
+                        sprowadza się zatem do analizy pola elektrycznego w płaszczyźnie przekroju
+                        poprzecznego czujnika [179, 255]. Można stosować w tym celu przekształcenia konforemne oraz 
+                        teorię potencjału zespolonego [179, 218]. W czujniku typu van der Pauwa elektrody 
+                        mają szerokość pomijalnie małą w porównaniu z obwodem czujnika, podczas gdy 
+                        w czujniku typu Thompsona—Lamparda pokrywają one prawie cały obwód, a 
+                        pomijalnie małe są odległości między elektrodami [173]. Metoda van der Pauwajest z zasady 
+                        czteroelektrodowa, a Thompsona—Lamparda dwuelektrodowa. Pierwotnym 
+                        zastosowaniem metody Thompsona—Lamparda były pomiary pojemności elektrycznej [249]. 
+                    </p>
+                    <p>
+                        Podstawowe wzory definiujące stałą trzech wymienionych czujników liczalnych są 
+                        następujące:
+                        <ul>
+                            <li>z polem jednorodnym — zgodnie z równaniem (3.1)
+                                    
+                                $$ K = \frac{L}{S} $$
+                            </li>
+                            <li>typu vad der Pauwa
+                                    
+                                $$ \exp \left(-\pi h R_{A B, C D} \kappa\right)+\exp \left(-\pi h R_{B C, D A} \kappa\right)=1 $$
+
+                                dla
+                                
+                                $$
+                                    \begin{aligned}
+                                    R_{A B, C D} &=R_{B C, D A}=R, \\
+                                    K &=\frac{\ln 2}{\pi h}
+                                    \end{aligned} 
+                                $$
+
+                            </li>
+                            <li>
+                                typu Thompsona—Lamparda
+
+                                $$ \exp \left(\frac{-\pi \mathrm{h} G_{A C}}{\kappa}\right)+\exp \left(\frac{-\pi \mathrm{h} G_{B D}}{\kappa}\right)=1 $$
+
+                                dla 
+
+                                $$
+                                    \begin{array}{l}
+                                    G_{A C}=G_{B D}=G \\
+                                    K=\frac{\pi h}{\ln 2}
+                                    \end{array}
+                                $$
+                            </li>
+                        </ul>
+                        gdzie \( \kappa \)— konduktywność, \( R_{AB,CD} = U_{CD}/I_{AB} \)  — rezystancja roztworu zmierzona gdy 
+                        elektrody A i B służą do zasilania, a C i D są elektrodami napięciowymi (rys. 3.6b), 
+                        \( R_{BC,DA} = U_{DA}/I_{BC} \) — analogiczna rezystancja przy zasilaniu przez elektrody B i C, gdy D 
+                        i A są elektrodami napięciowymi, \( G_{AC} = I_{AC}/U_{AC} \) — konduktancja roztworu mierzona po- 
+                        między elektrodami A i C (rys. 3.6c), \( G_{BD} = I_{BD}/U_{BD} \) — konduktancja roztworu zmierzona 
+                        pomiędzy elektrodami B i D. Należy zauważyć, że w symetrycznym układzie elektrod 
+                        (przy symetrii osiowej poprzecznego przekroju czujnika) odpowiednie wzory ulegają 
+                        znacznemu uproszczeniu i do określenia konduktywności w każdym przypadku wystar- 
+                        cza pojedynczy pomiar rezystancji lub konduktancji. Jeżeli wszystkie czujniki przed- 
+                        stawione na rys. 3.6 są regularnymi sześcianami o wysokości h = 1 cm, stałe poszcze- 
+                        gólnych czujników wynoszą odpowiednio: 1 c\( m^{-1} \), 0,220636 c\( m^{-1} \) oraz 4,53236 c\( m^{-1} \) 
+                        Dzięki czteroelektrodowej metodzie pomiaru czujnik van der Pauwa jest mało wrażliwy 
+                        na wpływy impedancji elektrodowych, ponadto dzięki bardzo małej powierzchni elek- 
+                        trod jest również mało wrażliwy na niejednorodności i zmiany stanu powierzchni elek- 
+                        trod. Jako czujnik liczalny jest więc korzystniejszy od czujnika Thompsona—Lamparda, 
+                        mimo iż przy tych samych wymiarach ma 20,542 razy mniejszą od niego wartość stałej. 
+                        Metodzie van der Pauwa, w zastosowaniu do pomiarów roztworów, poświęcono cały 
+                        rozdział 6. Istotną zaletą obu metod: van der Pauwa i Thompsona—Lamparda jest uśred- 
+                        nianie wyników uzyskanych w dwóch różnych konfiguracjach elektrod czujnika — co 
+                        m.in. umożliwia uniknięcie błędów spowodowanych występowaniem obszarów z ujem- 
+                        nymi wagami [99] (zalety tej nie ma uproszczona wersja metod, z pojedynczym pomia- 
+                        rem rezystancji lub konduktancji). Wadą czujnika typu Thompsona—Lampardajest to, iż 
+                        większość prądu pomiarowego przepływa między elektrodami w pobliżu dzielących je 
+                        szczelin, przez co uśrednianie następuje tylko w tej niewielkiej części roztworu (te same 
+                        elektrody wymuszają prąd i służą do pomiaru spadku napięcia). 
+                    </p>
+                    <h3>
+                        3.6. MODELOWANIE CZUJNIKÓW
+                    </h3>
+                    <p>
+                        Z rozważań poprzedzających wynika, iż pomiar konduktywności cieczy zawsze 
+                        wymaga znajomości stałej czujnika — kluczowe znaczenie ma więc możliwość 
+                        przewidywania a priori, jaką wartość przyjmie ta stała w określonych, rzeczywistych
+                        warunkach pomiaru. Temu celowi służy analiza modeli czujników — modeli 
+                        zbudowanych na podstawie rozważań teoretycznych oraz wyników badań doświadczalnych 
+                        [58, 130, 145, 146, 148, 243, 280]. Z takiej analizy korzysta się w projektowaniu 
+                        czujników, ich konstrukcji i technologii wykonania, w projektowaniu układów 
+                        pomiarowych, ustalaniu sposobów i warunków zasilania czujników oraz w analizie
+                        metrologicznej. Potrzebne są do tego dwa rodzaje modeli: o parametrach rozłożonych, tj. 
+                        rozkłady pola elektrycznego w czujnikach i ich otoczeniu oraz o parametrach skupionych, 
+                        tj. elektryczne układy zastępcze czujników. Pierwsze umożliwiają analizę wpływów 
+                        geometrii i struktury czujnika oraz jego otoczenia na właściwości czujnika. W tym 
+                        celu powszechnie stosuje się metodę elementów skończonych. Z modeli drugiego
+                        rodzaju korzysta się w badaniach zachowania czujników w funkcji czasu i częstotliwo- 
+                        ści, zarówno w stanach ustalonych, jak i nieustalonych. Do tego celu przydatne są 
+                        metody analizy obwodów elektrycznych. Dysponując odpowiednimi modelami, 
+                        można projektować czujniki o założonych właściwościach, przy niewielkim udziale 
+                        czasochłonnych i kosztownych badań doświadczalnych. Poszczególne modele oraz sposoby 
+                        ich tworzenia przedstawiono w rozdziałach poświęconych właściwościom czujników 
+                        (rozdz. 4, 5 i 6).
+                    </p>
+                    <h3>
+                        3.7. NAJWAŽNIEJSZE ŹRÓDŁA BŁĘDÓW METODY 
+                        W POMIARACH KONDUKTOMETRYCZNYCH
+                    </h3>
+                    <p>
+                        Z przedstawionych wcześniej rozważań wynika, iż praktyczny sposób określania 
+                        konduktywności K roztworu elektrolitu polega na pomiarze rezystancji Rc
+                        (konduktancji Gc) czujnika o znanej wartości K stałej, wypełnionego tym roztworem. Zakłada się 
+                        przy tym, że rezystancja czujnika jest równa rezystancji Re roztworu, a stała czujnika 
+                        ma niezmienną wartość, niezależnie od rodzaju i stężenia mierzonego roztworu, jak 
+                        i innych warunków wykonywania pomiaru. Wtedy
+                    
+                        $$ \kappa=\frac{K}{R_{c}}=K G_{c} \approx \frac{K}{R_{e}}=K G_{e} . $$
+
+                    </p>
+                    <p>
+                        Wymienione założenia mają znaczenie zasadnicze — stopień ich spełnienia 
+                        decyduje o dokładności określenia konduktywności. Z tego punktu widzenia należy preferować 
+                        pomiar metodą czteroelektrodową lub bezelektrodową i stosować czujnik 
+                        z zamkniętym elektrycznie naczyniem pomiarowym. W rutynowych pomiarach 
+                        użytkowych, wykonywanych przyrządami firmowymi, użytkownik często nie jest nawet 
+                        świadomy istnienia tych założeń, gdyż nie są one ujawniane przez producenta 
+                        (nie ma takiej potrzeby, jeżeli zestaw konduktometr-czujnik jest dobrze zaprojektowa- 
+                        ny i prawidłowo użytkowany). W pomiarach precyzyjnych jest jednak wskazane 
+                        sprawdzić, jak dokładnie są te założenia spełnione.
+                    </p>
+                    <p>
+                        Uzyskany w omawiany sposób wynik pomiaru jest konduktywnością w aktualnej 
+                        temperaturze wykonywania pomiaru. Jeżeli użytkownika interesuje również wartość 
+                        konduktywności w temperaturze odniesienia (a tak najczęściej jest), potrzebna jest 
+                        odpowiednia kompensacja temperaturowa (korekcja temperaturowa wyniku). Do tego 
+                        z kolei niezbędna jest dokładna znajomość zależności konduktywności mierzonego 
+                        roztworu od temperatury oraz dokładny pomiar temperatury — ze względu na to, że w 
+                        przypadku roztworów elektrolitów wpływ temperatury na konduktywność jest 
+                        wyjątkowo silny. Niedokładna kompensacja temperaturowa jest kolejnym z 
+                        najistotniejszych składników błędu określenia konduktywności roztworów — może to być nawet 
+                        największy ze składników tego błędu, zwłaszcza jeżeli temperatura wykonywania 
+                        pomiaru znacznie różni się od temperatury odniesienia.
+                    </p>
+                    <p>
+                        Pomiary konduktywności roztworów elektrolitów są proste i nie sprawiają
+                        trudności, jeżeli dysponuje się konduktometrem firmowym (zakłada się, że producent prze- 
+                        strzega aktualnych norm i zaleceń ISO, IEC i IUPAC), który współpracuje z jednym, 
+                        na trwale przyłączonym czujnikiem konduktometrycznym, jest wyposażony w czujnik 
+                        temperatury oraz realizuje kompensację temperaturową. Użytkownik uzyskuje wtedy, 
+                        jako wynik końcowy, wartość konduktywności skorygowaną do temperatury 
+                        odniesienia (obecnie zalecana: 25 oc) — już z uwzględnieniem wartości stałej czujnika oraz 
+                        temperatury roztworu (zazwyczaj istnieje możliwość wyłączenia funkcji kompensacji 
+                        temperaturowej). Stosując taki przyrząd zgodnie z zaleceniami producenta, w 
+                        warunkach pomiaru nie odbiegających od typowych, niepewność uzyskiwanych wyników 
+                        pomiarów oblicza się w sposób wskazany przez producenta. 
+                    </p>
+                    <p>
+                        Pewien kłopot może sprawiać szacowanie błędu kompensacji temperaturowej, 
+                        ponieważ producenci najczęściej podają jedynie błąd pomiaru temperatury. Poza tym, 
+                        wykonując pomiary w szerokim zakresie zmian temperatury, należy zachować dużą 
+                        ostrożność w korzystaniu z kompensacji temperaturowej wykonywanej automatycznie 
+                        przez konduktometr — ze względu na możliwość występowania dużej zmienności 
+                        współczynników temperaturowych w zależności od rodzaju i stężenia roztworu. Ten 
+                        problem nie występuje, jeżeli dysponuje się przyrządem wyspecjalizowanym, 
+                        przystosowanym do pomiarów ściśle określonych cieczy (np. do czystej wody [14], H2S04, 
+                        NaOH [84, 85] itp.).
+                    </p>
+                    <p>
+                        Sytuacja jest bardziej skomplikowana, jeżeli używa się konduktometru z
+                        czujnikami wymiennymi, zwłaszcza jeżeli pochodzą one od różnych producentów. Wtedy 
+                        niezbędne jest uważne przestudiowanie (w razie potrzeby i przebadanie) właściwości 
+                        metrologicznych samego konduktometru oraz każdego z czujników. Niestety, 
+                        właściwości metrologiczne konduktometrów i czujników nie są podawane jednolicie. Część 
+                        producentów podaje jedynie łączny błąd (niepewność) pomiaru konduktywności 
+                        wykonywanego danym konduktometrem, z użyciem określonego czujnika, a część wyróżnia 
+                        błąd (niepewność) pomiaru rezystancji czujnika traktowanego jako dwójnik lub 
+                        czwórnik elektryczny. Jeżeli chodzi o czujnik, najczęściej podawana jest tylko wartość 
+                        jego stałej, czasami łącznie z zakresem konduktywności, w jakim może być 
+                        stosowany. Raczej rzadko udostępniane są, w notach aplikacyjnych, pełne charakterystyki 
+                        czujnika, w różnych warunkach wykonywania pomiaru — jak np. w [210]. W razie 
+                        wątpliwości należy zawsze sprawdzić poprawność wskazań konduktometru oraz
+                        wyznaczyć stałą czujnika, kierując się odpowiednimi przepisami i zaleceniami 
+                        metrologicznymi [33, 34]. 
+                    </p>
+                    <p>
+                        W najtrudniejszej sytuacji jest użytkownik konduktometru lub/i czujnika bez 
+                        odpowiedniej dokumentacji metrologicznej, np. wykonanego przez siebie. Wtedy do 
+                        prawidłowego zorganizowania i wykonywania pomiarów niezbędna jest, poza 
+                        znajomością oficjalnych przepisów metrologicznymi, bardziej szczegółowa i
+                        zaawansowana wiedza z zakresu konduktometrii. 
+                    </p>
+                    <p>
+                        Pomoc w rozwiązywaniu wymienionych problemów metrologicznych oraz innych 
+                        problemów, z jakimi mogą się spotkać użytkownicy oraz projektanci aparatury 
+                        konduktometrycznej, jestjednym z głównych celów niniejszej monografii. 
+                    </p>
+                    <h3>
+                        3.8. WPŁYW TEMPERATURY 
+                        NA APARATURĘ KONDUKTOMETRYCZNĄ
+                    </h3>
+                    <p>
+                        W konduktometrii błąd instrumentalny powodowany wpływami zmian
+                        temperatury na urządzenie pomiarowe (w tym i czujnik) jest na ogół znacznie mniejszy od 
+                        błędu wynikającego z niewłaściwego uwzględniania wpływu temperatury na zmiany 
+                        mierzonego przewodnictwa. Błąd instrumentalny ma dwa podstawowe źródła: od 
+                        zmian stałej czujnika oraz od zmian parametrów układu pomiarowego — w stosunku 
+                        do wartości, jakie miały one w temperaturze kalibracji. Wpływ temperatury na stałą 
+                        czujnika konduktometrycznego polega na zmianie jego geometrii wskutek 
+                        rozszerzalności cieplnej materiałów, z których jest wykonany. Jeżeli czujnik pracuje w 
+                        wąskim przedziale temperatur, to na ogół można ten wpływ pominąć. Ogólny sposób 
+                        postępowania jest taki, że dobiera się odpowiednie materiały konstrukcyjne, o 
+                        bardzo małym współczynniku rozszerzalności liniowej [205, 273]. Jeżeli czujnik jest 
+                        zbudowany z kilku różnych materiałów, stosuje się materiały o możliwie zbliżonych 
+                        wartościach tego współczynnika. W przypadku znacznych zmian temperatury 
+                        pomiaru należy rozważyć, czy powodowane nimi zmiany właściwości warstwy
+                        elektrodowej nie mają istotnego znaczenia. Jeżeli chodzi o wpływ temperatury na układ 
+                        pomiarowy, to minimalizuje się go — tak jak w innych elektronicznych przyrządach 
+                        pomiarowych — przez stosowanie elementów odpowiedniej jakości, dobór 
+                        odpowiedniej techniki pomiarowej oraz odpowiednio częste wykonywanie kalibracji. 
+                    </p>
+                    <h2>
+                        4. METODY KONTAKTOWE POMIARU 
+                        KONDUKTYWNOŚCI CIECZY 
+                    </h2>
+                    <p>
+                        W podejściu praktycznym czujniki konduktometryczne rozpatruje się w dwóch 
+                        głównych aspektach: ich przeznaczenia oraz dokładności pomiarów wykonywanych 
+                        za ich pomocą [l, 35, 58, 122, 208, 254]. Przez przeznaczenie rozumie się klasę 
+                        przewidywanych zastosowań, określającą: zakres mierzonych konduktywności, 
+                        rodzaje mierzonych cieczy — ich konsystencję i stopień czystości oraz agresywność 
+                        chemiczną i mechaniczną, warunki pomiaru (np. bez przepływu czy w przepływie), 
+                        wymagane wymiary i kształt czujnika, zakres temperatury pracy itp. Wymienione 
+                        czynniki rzutują na wybór wartości stałej czujnika, sposobu pomiaru 
+                        (dwuelektrodowy, czteroelektrodowy), konstrukcji czujnika oraz zastosowanych w czujniku 
+                        materiałów, zwłaszcza materiału elektrod i stanu ich powierzchni. 
+                    </p>
+                    <h3>
+                        4.1. WŁAŚCIWOŚCI RZECZYWISTYCH CZUJNIKÓW
+                    </h3>
+                    <p>
+                        Wyznaczona doświadczalnie wartość stałej czujnika konduktometrycznego 
+                        zazwyczaj różni się od przewidywanej teoretycznie, a ponadto wykazuje pewną zależność od 
+                        rodzaju i właściwości mierzonego ośrodka, zwłaszcza od jego konduktywności, oraz od 
+                        warunków wykonywania pomiaru, w tym od częstotliwości sygnału pomiarowego [86, 
+                        89, 165, 168, 210] — w związku z czym niezbędne jest doświadczalne wzorcowanie 
+                        czujnika (rozdz. 3.6). Zależność stałej danego czujnika od właściwości mierzonego 
+                        ośrodka bezpośrednio ogranicza dokładność pomiarów, wykonywanych tym czujnikiem 
+                        w różnych ośrodkach i w szerokich granicach zmian konduktywności. 
+                    </p>
+                    <p>
+                        W ocenie jakości czujników konduktometrycznych najczęściej korzysta się z 
+                        charakterystyk przedstawiających zmienność stałej czujnika lub wartość wynikającego 
+                        ści, określonej częstotliwości pomiarowej, tj. \( \delta K=\left.f(\kappa)\right|_{f=\mathrm{const}} \) lub 
+                        \( \delta \kappa=\left.f(\kappa)\right|_{f=\mathrm{const}} \)
+                        Wszelkie obserwowane zmiany wartości stałej czujnika sygnalizują występowanie 
+                        zauważalnego wpływu polaryzacji elektrod lub/i pasożytniczych parametrów układu 
+                        pomiarowego. Przykłady typowych charakterystyk 
+                        \( \delta \kappa=\left.f(\kappa)\right|_{f=\mathrm{const}} \) czujników 
+                        dwuelektrodowych przedstawiono na rys. 4.1a (czujniki pokazano na rys. 4. lb).
+                        Charakterystyki wyznaczono przy dwóch częstotliwościach pomiarowych: 40 HZ dla małych 
+                        konduktywności i 4 kHz — dla większych [196]. Płaska część charakterystyk (ôK = 0) 
+                        odpowiada zakresowi poprawnego pomiaru konduktywności. Dobrze zaprojektowany 
+                        i wykonany czujnik ma ten zakres odpowiednio szeroki. W zakresie małych
+                        konduktywności o błędzie pomiaru decydują pojemności pasożytnicze i rozproszone pole 
+                        elektryczne, w zakresie dużych konduktywności — polaryzacja elektrod [58, 122, 207, 
+                        208]. Wymienione charakterystyki można modyfikować, zmieniając kształt i wymiary 
+                        czujnika oraz pole powierzchni i materiał elektrod.
+                        <p>
+                        a)
+                        <figure id="img18" class="tfl-center">
+                            <img src="images/rys-4-1a.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                                Rys. 4.1 a) Błąd pomiarów konduktywności wykonywanych czujnikami dwuelektrodowymi, 
+                                w zależności od mierzonej konduktywności [210] (czujniki firmy WT W, podano materiał elektrod 
+                                i wartość stałej): LTA 0,1 — Pt, gładkie, \( 0,1cm^{-1} \), LTA 100 — Pt, czernione, \( 1cm^{-1} \) 
+                                LTA 10 — Pt, czernione, \( 10cm^{-1} \), LTA/S — Pt, czernione i spiekane, \( 1cm^{-1} \)
+                            </figcaption>
+                        </figure>
+                        b)
+                        <figure id="img19" class="tfl-center">
+                            <img src="images/rys-4-1b1.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figure id="img20" class="tfl-center">
+                            <img src="images/rys-4-1b2.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figure id="img21" class="tfl-center">
+                            <img src="images/rys-4-1b3.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figure id="img22" class="tfl-center">
+                            <img src="images/rys-4-1b4.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figcaption>
+                            Rys. 4.1 b) czujniki, których charakterystyki przedstawiono [210] 
+                        </figcaption>
+                        </p>
+                    </p>
+                    <p>
+                        Drugim powszechnie stosowanym kryterium oceny jakości czujników 
+                        konduktometrycznych jest wpływ częstotliwości pomiarowej na wartość stałej czujnika.
+                        Korzysta się w tym celu z charakterystyk częstotliwościowych czujnika, tj. z zależności 
+                        \( K=\left.f(f)\right|_{\kappa=\mathrm{const}} \)
+                        lub \( R_{c}=\left.f(f)\right|_{\kappa=\mathrm{const}} \). Przykładowe charakterystyki 
+                        \( K=\left.f(f)\right|_{\kappa=\mathrm{const}} \)
+                        czujnika czteroelektrodowego [164], zmierzone w dwóch roztworach KCI o stężeniach 
+                        różniących się 10-krotnie, przedstawiono na rys. 4.2. Na wykresie zaznaczono pasmo 
+                        częsłotliwości (500Hz—4kHz), w którym obie charakterystyki są zgodne w założonych 
+                        granicach \( \pm \)1%. 
+
+                        <figure id="img23" class="tfl-center">
+                            <img src="images/rys-4-2.jpg" class="img-fluid"
+                               alt="Zmienność stałej czujnika czteroelektrodowego w funkcji częstotliwości pomiarowej [164] (wyniki własne) "/>
+                            <figcaption>
+                                Rys. 4.2. Zmienność stałej czujnika czteroelektrodowego w funkcji częstotliwości pomiarowej [164] (wyniki własne) 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Zmienność stałej czujnika obserwuje się również w przypadku zmniejszenia 
+                        efektywnej powierzchni elektrod (zanieczyszczenia — przez osady lub przyklejone większe 
+                        fragmenty ciał stałych), co pokazano na rys. 4.3. Przedstawione tam charakterystyki 
+                        czujnika czteroelektrodowego ukazują jednocześnie zalety czteroelektrodowej metody 
+                        pomiaru — zmiana powierzchni elektrod prądowych 0 50% powoduje zmianę 
+                        mierzonej konduktancji jedynie 0 2%, w dodatku istnieje duża swoboda w doborze 
+                        częstotliwości pomiarowej (w paśmie 200 Hz—12 kHz). W przypadku czujnika
+                        dwuelektrodowego wpływ zmniejszenia powierzchni elektrod byłby wielokrotnie większy.
+                    </p>
+                    <p>
+                        Przedstawione niedoskonałości charakterystyk czujników konduktometrycznych 
+                        można przypisać [53, 58, 122, 207, 208]:
+                        <ul>
+                            <li>polaryzacji elektrod,</li>
+                            <li>występowaniu pola rozproszonego poza naczynie pomiarowe czujnika, </li>
+                            <li>zmienności rozkładu pola elektrycznego wytwarzanego w mierzonej próbce 
+                            (ogólniej — rozkładowi pola innemu niż zakładano), </li>
+                            <li>wpływowi niepożądanych pojemności i rezystancji występujących w czujniku, 
+                            w stosunku do otoczenia oraz połączeń czujnika z układem pomiarowym. </li>
+                        </ul>
                     </p>
                 </main>
                 <footer>
