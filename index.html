@@ -1880,6 +1880,304 @@
                             w stosunku do otoczenia oraz połączeń czujnika z układem pomiarowym. </li>
                         </ul>
                     </p>
+                    <p>
+                        W większości przypadków praktycznych zachodzi wzajemne nakładanie się skutków wymienionych przyczyn.
+
+                        <figure id="img24" class="tfl-center">
+                            <img src="images/rys-4-3.jpg" class="img-fluid"
+                               alt="Wpływ zmian powierzchni elektrod prądowych czujnika czteroelektrodowego na mierzoną 
+                               konduktancję czujnika — w funkcji częstotliwości pomiarowej: (l) — obie elektrody czyste, 
+                               (2) — zakryte 50% jednej elektrody, (3) — zakryte 50% obu elektrod [163]; G1000 — konduktancja 
+                               zmierzona przy 1 kHz (wyniki własne)"/>
+                            <figcaption>
+                                Rys. 4.3. Wpływ zmian powierzchni elektrod prądowych czujnika czteroelektrodowego na mierzoną 
+                                konduktancję czujnika — w funkcji częstotliwości pomiarowej: (l) — obie elektrody czyste, 
+                                (2) — zakryte 50% jednej elektrody, (3) — zakryte 50% obu elektrod [163]; G1000 — konduktancja 
+                                zmierzona przy 1 kHz (wyniki własne) 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <h3>4.2. MODELE OBWODOWE CZUJNIKÓW</h3>
+                    <p>
+                        Do celów analizy obwodowej czujniki kontaktowe modeluje się za pomocą 
+                        układów zastępczych o parametrach skupionych, zawierających elementy reprezentujące 
+                        impedancję mierzonej cieczy, impedancje elektrodowe oraz impedancje związane 
+                        z konstrukcją czujnika i jego połączeniami z układem pomiarowym. Najczęściej 
+                        stosowane elektryczne układy zastępcze czujników dwuelektrodowych pokazano na 
+                        rys. 4.4a) — w postaci uproszczonej [208, 210] oraz b) — w postaci szczegółowej [17]. 
+                    </p>
+                    <p>
+                        W układzie z rys. 4.4a poszczególne elementy reprezentują: \( R_{e}\) — rezystancję 
+                        roztworu, \( R_{p}\) i \( C_{p}\) — rezystancję i pojemność polaryzacji (elementy zastępcze 
+                        impedancji elektrodowej \( Z_{e}\)), \( C_{g}\) — pojemność międzyelektrodową czujnika, 
+                        \( C_{k}\) i \( R_{k}\) — 
+                        pojemność i rezystancję elementów konstrukcyjnych czujnika i przewodów. 
+                        Impedancja dwójnika reprezentującego czujnik jest sumą składowych: rezystancji 
+                        \( R_{S}(\omega) \)
+                        i reaktancji pojemnościowej \( 1/j(\omega)C_{s}(\omega) \).Charakterystyki czujników przedstawione 
+                        na rys. 4.1 odpowiadają temu modelowi. Taki układ zastępczy wystarcza na ogół do 
+                        oceny jakości czujnika oraz do zaprojektowania układu pomiarowego współpracuj 
+                        ącego z czujnikiem.
+                    </p>
+                    <p>
+                        W układzie zastępczym z rys. 4.4b impedancje elektrodowe przedstawiono w 
+                        sposób powszechnie stosowany w elektrochemii [53], dzięki czemu umożliwia on analizę
+                        wpływów zjawisk mających największy udział w tworzeniu warstwy elektrodowej. 
+                        Poszczególne elementy reprezentują w nim, odpowiednio: \( C_{d} \) — pojemność warstwy 
+                        podwójnej, \( R_{F} \) — proces wymiany ładunków na elektrodzie, \( Z_{W} \) (impedancja Warburga) 
+                        dyfuzję jonów z głębi roztworu do elektrody. W pomiarach roztworów mocno 
+                        rozcieńczonych czasami trzeba uwzględniać również pojemność \( C_{a} \) reprezentującą 
+                        adsorpcję, włączoną szeregowo z impedancją Warburga [58]. Wymienione składowe 
+                        impedancji elektrodowej zależą od rodzaju elektrolitu, właściwości rozpuszczalnika, 
+                        stężenia roztworu, materiału elektrod i stanu ich powierzchni oraz od warunków
+                        pomiaru, zwłaszcza od temperatury. Przedstawianie układu elektroda—roztwór—elektroda 
+                        za pomocą liniowych obwodów elektrycznych jest poprawne przy małych wartościach 
+                        sygnału pomiarowego (kilka do kilkadziesiąt m V), tzn. kiedy można przyjąć iż zmiana 
+                        potencjału elektrody zależy prawie liniowo od natężenia prądu płynącego przez 
+                        elektrodę [53]. W układzie z rys. 4.4b uwzględniono ponadto elementy reprezentujące 
+                        pojemnościowo-rezystancyjne sprzężenia elektryczne, jakie mogą występować
+                        pomiędzy przechodzącymi przez roztwór, izolowanymi elektrycznie, przewodami
+                        doprowadzeń czujnika lub też między tymi przewodami i elektrodami czujnika (efekt 
+                        Parkera), bądź też między roztworem i ziemią — np. przez termostat. 
+                        <p>
+                        a)
+                        <figure id="img25" class="tfl-center">
+                            <img src="images/rys-4-4a.jpg" class="img-fluid"
+                               alt="Elektryczne układy zastępcze dwuelektrodowego czujnika konduktometrycznego: a) układ 
+                               uproszczony — według [210], b) układ szczegółowy — według [17] (oznaczenia objaśniono w tekście)"/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+
+                        b)
+                        <figure id="img26" class="tfl-center">
+                            <img src="images/rys-4-4b.jpg" class="img-fluid"
+                               alt="Elektryczne układy zastępcze dwuelektrodowego czujnika konduktometrycznego: a) układ 
+                               uproszczony — według [210], b) układ szczegółowy — według [17] (oznaczenia objaśniono w tekście)"/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figcaption>
+                            Rys. 4.4. Elektryczne układy zastępcze dwuelektrodowego czujnika konduktometrycznego: a) układ 
+                            uproszczony — według [210], b) układ szczegółowy — według [17] (oznaczenia objaśniono w tekście)
+                        </figcaption>
+                        </p>
+                    </p>
+                    <p>
+                        Elementy RP i CP układu z rys. 4.4a, reprezentujące polaryzację elektrod, przyjmują 
+                        wartości wynikające z przeliczenia szeregowo-równoległego układu zastępczego
+                        impedancji elektrodowej ZE z rys.4.4b na równoważny układ szeregowy, zależą więc od 
+                        tych samych czynników co impedancja ZE i są funkcją częstotliwości. Odpowiednie 
+                        przekształcenie postaci układu zastępczego czujnika pokazano na rys. 4.5a i b
+                        (pominięto pojemności i rezystancje pasożytnicze, związane z konstrukcją czujnika i jego 
+                        połączeniami). Podobne przekształcenie na równoważny układ równoległy, który jest 
+                        przydatny np. w pomiarach wykonywanych mostkiem z równoległą gałęzią
+                        równoważenia składowej pojemnościowej, pokazano na rys. 4.5c. W konduktometrii częściej 
+                        stosowany jest szeregowy układ zastępczy czujnika, głównie dlatego, że jest zalecany 
+                        jako bardziej adekwatny do występujących zjawisk fizykochemicznych [58].
+                        <figure id="img27" class="tfl-center">
+                            <img src="images/rys-4-5.jpg" class="img-fluid"
+                               alt="Przekształcenia szeregowo-równoległego układu modelującego 
+                               czujnik dwuelektrodowy a) na równoważny układ szeregowy b) i równoległy c) "/>
+                            <figcaption>
+                                Rys. 4.5. Przekształcenia szeregowo-równoległego układu modelującego 
+                                czujnik dwuelektrodowy a) na równoważny układ szeregowy b) i równoległy c) 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        W podobny sposób modeluje się czujniki czteroelektrodowe — rys. 4.6 [57, 112, 
+                        122]. W układzie przedstawionym na tym rysunku \( R_{en} \) reprezentuje rezystancję tej 
+                        części roztworu, na której jest mierzony spadek napięcia, \( Z_{En} \) — impedancję
+                        elektrodową elektrod napięciowych, a \( R_{V} \) i \( C_{V} \) — rezystancję i pojemność wejściową
+                        woltomierza oraz przewodów połączeniowych woltomierza (dla uproszczenia pominięto inne 
+                        elementy pasożytnicze). Pozostałe elementy układu mają oznaczenia jak poprzednio. 
+                        <figure id="img28" class="tfl-center">
+                            <img src="images/rys-4-6.jpg" class="img-fluid"
+                               alt="Elektryczny układ zastępczy czteroelektrodowego czujnika konduktometrycznego [122, 166]: 
+                               1 i 4 — elektrody prądowe, 2 i 3 — elektrody napięciowe (pozostałe oznaczenia w tekście)"/>
+                            <figcaption>
+                                Rys. 4.6. Elektryczny układ zastępczy czteroelektrodowego czujnika konduktometrycznego [122, 166]: 
+                                1 i 4 — elektrody prądowe, 2 i 3 — elektrody napięciowe (pozostałe oznaczenia w tekście)
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <h3>4.3. ELEKTRODY I ICH WŁAŚCIWOŚCI </h3>
+                    <p>
+                        Elektrody czujników konduktometrycznych dobiera się według trzech podstawowych kryteriów [122, 208, 210]: 
+                        <ul>
+                            <li>odporności chemicznej, </li>
+                            <li>impedancji polaryzacji, </li>
+                            <li>wytrzymałości mechanicznej.</li>
+                        </ul> 
+                    </p>
+                    <p>
+                        Problem polega na tym, iż nie ma elektrod dobrze spełniających wszystkie 
+                        kryteria. Materiał elektrod powinien wykazywać dużą odporność na korozję (elektrody 
+                        zbliżone do idealnie polaryzowalnych) oraz możliwie małą rezystancję polaryzacji (RP 
+                        —90). Pod tym względem najlepsze są: Pt, Pd, Ti, monel, Ni, stal nierdzewna [112] 
+                        oraz hastelloy. Z punktu widzenia minimalizacji wpływu polaryzacji korzystne jest 
+                        stosowanie elektrod mocno porowatych, np. pokrytych czernią platynową [76] lub 
+                        wykonanych ze specjalnego gatunku węgla aktywowanego [210]. Jest to z kolei 
+                        niewskazane ze względu na adsorpcję jonów i możliwość działania katalitycznego [58, 
+                        247]. Również właściwości mechaniczne elektrod mocno porowatych są niekorzystne. 
+                        Takie elektrody są słabo odporne na ścieranie i wrażliwe na zaklejanie porów — 
+                        niezbędne jest zapewnienie możliwości ich okresowego mycia i regeneracji powierzchni. 
+                        W zastosowaniach przemysłowych, wymagających dużej odporności mechanicznej, 
+                        często używa się elektrod tylko lekko porowatych, np. grafitowych albo metalowych 
+                        z powierzchnią trawioną lub pokrytą odpowiednim spiekiem [210]. 
+                    </p>
+                    <p>
+                        Wpływ materiału i stanu powierzchni elektrod na wypadkową rezystancję czujnika 
+                        jest wyraźnie zauważalny w pomiarach małych rezystancji roztworu, przy małych
+                        częsłotliwościach — wtedy można więc, dla uproszczenia rozważań, pominąć
+                        pasożytnicze pojemności równoległe i w analizie wykorzystać układy zastępcze z rys. 4.5. 
+                        Elementy \( R_{S}(\omega) \) i \( C_{S}(\omega) \) impedancji dwójnika modelującego czujnik w szeregowym 
+                        układzie zastępczym (rys. 4.5 b) można opisać równaniami [53]:
+
+                        $$ R_{s}(\omega)=R_{e}+\Delta R_{s}(\omega)=R_{e}+\frac{R_{F}+\frac{W_{f}}{\sqrt{\omega}}}{\left(1+C_{d} W_{f} \sqrt{\omega}\right)^{2}+\left[\omega C_{d}\left(R_{F}+\frac{W_{f}}{\sqrt{\omega}}\right)\right]^{2}}=R_{e}+R_{p} $$
+                    
+                        oraz
+
+                        $$ C_{s}(\omega)=\frac{C_{d}^{2}\left(R_{F}+\frac{W_{f}}{\sqrt{\omega}}\right)^{2}+\frac{\left(1+C_{d} W_{f} \sqrt{\omega}\right)^{2}}{\omega^{2}}}{C_{d}\left(R_{F}+\frac{W_{f}}{\sqrt{\omega}}\right)^{2}+\frac{C_{d} W_{f}^{2}}{\omega}+\frac{W_{f}}{\omega \sqrt{\omega}}}=C_{p} $$
+
+                        gdzie:  \( \omega = 2\pi f \) — pulsacja, \( C_{d} \) — pojemność warstwy podwójnej, \( Z_{W} \) — impedancja Warburga,
+                        \( Z_{W}=(1-j) W_{f} / \sqrt{\omega}=R_{W}+1 /\left(j \omega C_{W}\right) \), \( W_{f} \) - stała Warburga, \( R_{W} =  W_{f} / \sqrt{\omega} \),
+                        \( C_{W} =  1/(W_{f} / \sqrt{\omega}) \)
+                    </p>
+                    <p>
+                        Analogiczne zależności można wyprowadzić dla równoległego układu zastępczego czujnika.
+                    </p>
+                    <p>
+                        Przyrost rezystancji \( \Delta R_{S}(\omega) \) we wzorze (4. l) reprezentuje wprost rezystancję \( R_{p} \)
+                        polaryzacji, opisaną wzorem (3.5). Ze wzrostem częstotliwości rezystancja polaryzacji 
+                        maleje, a rezystancja \( R_{S}(\omega) \) czujnika zmierza do rezystancji \( R_{e} \) roztworu. Z kolei pojemność 
+                        \( C_{S}(\omega) \) czujnika ze wzrostem częstotliwości zmierza do pojemności warstwy podwójnej 
+                        \( C_{d} \). Rezystancję \( R_{e} \) roztworu (przedmiot pomiaru) oraz pojemność warstwy podwójnej 
+                        \( C_{d} \) można określić doświadczalnie, mierząc przy kilku częstotliwościach składowe \( R_{S}(\omega) \)
+                        i \( C_{S}(\omega) \) impedancji czujnika i ekstrapolując wyniki do częstotliwości nieskończenie 
+                        duŻej [76]. Przykłady takich ekstrapolacji, wykonanych dla czujnika z elektrodami z
+                        gładkiej platyny, w funkcji \( \omega^{-1/2} \) pokazano na rys. 4.7. Z kolei na rys. 4.8 przedstawiono 
+                        podobne ekstrapolacje samej rezystancji polaryzacji \( \Delta R_{S}(\omega) \) i pojemności polaryzacji 
+                        zmierzonych w czujniku z elektrodami z czernionej platyny. Wykres \( \Delta R_{S}(\omega) \)
+                        z rys. 4.8 jest ilustracją słuszności teoretycznego wniosku, iż zwiększaniu
+                        częstotliwości pomiarowej towarzyszy redukcja (teoretycznie do zera) rezystancji polaryzacji. 
+                        Przedstawione przypadki dotyczą sytuacji, kiedy impedancja elektrodowa zawiera 
+                        prawie wyłącznie pojemność \( C_{d} \) warstwy podwójnej oraz impedancję Warburga,
+                        reprezentującą dyfuzję. Z punktu widzenia konduktometrii, w której preferowane są 
+                        elektrody idealnie polaryzowalne, jest to sytuacja typowa.
+
+                        <figure id="img29" class="tfl-center">
+                            <img src="images/rys-4-7.jpg" class="img-fluid"
+                               alt="Elektryczny układ zastępczy czteroelektrodowego czujnika konduktometrycznego [122, 166]: 
+                               1 i 4 — elektrody prądowe, 2 i 3 — elektrody napięciowe (pozostałe oznaczenia w tekście)"/>
+                            <figcaption>
+                                Rys. 4.7. Przykład ekstrapolacji rezystancji i pojemności 
+                                czujnika konduktometrycznego w funkcji \( \omega^{-1/2} \), do \( \omega \rightarrow \infty \) (wyniki własne)
+                            </figcaption>
+                        </figure>
+                        <figure id="img30" class="tfl-center">
+                            <img src="images/rys-4-8.jpg" class="img-fluid"
+                               alt="Przykład ekstrapolacji rezystancji i pojemności polaryzacji 
+                               (impedancji warstwy elektrodowej) czujnika konduktometrycznego 
+                               w funkcji \( \omega^{-1/2} \), do \( \omega \rightarrow \infty \) (elektrody z platyny czernionej, 
+                               o powierzchni 0,32 c\( m^{2} \) — dane z [210])"/>
+                            <figcaption>
+                                Rys. 4.8. Przykład ekstrapolacji rezystancji i pojemności polaryzacji 
+                                (impedancji warstwy elektrodowej) czujnika konduktometrycznego 
+                                w funkcji \( \omega^{-1/2} \), do \( \omega \rightarrow \infty \) (elektrody z platyny czernionej, 
+                                o powierzchni 0,32 c\( m^{2} \) — dane z [210]) 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        W literaturze można znaleźć informacje na temat innych sposobów wykonywania 
+                        ekstrapolacji, np. w funkcji \( \omega^{-1} \) [251] lub \( \omega^{-1/2} \) i \( \omega^{-1} \) [18] 
+                        — stosownych w przypadkach, gdy model warstwy elektrodowej zawiera więcej elementów niż pokazano na 
+                        rys. 4.5a (funkcja ekstrapolująca ma ogólną postać \( a \omega^{-1/2} \) + \( b \omega^{-1} \) + \( c \omega^{-3/2} \) + ..., gdzie a, 
+                        b, c — stałe empiryczne).
+                    </p>
+                    <p>
+                        Znając \( R_{e}\) i \( C_{d}\), można obliczyć wartości \( R_{p} = \Delta R_{S}(\omega) \) oraz wyznaczyć stałą \( W_{f} \)
+                        Warburga i rezystancję \( R_{F} \) Faradaya. Stosując dopasowanie metodą najmniejszych 
+                        kwadratów i równanie (4.1) jako funkcję dopasowującą, autor wyznaczył w ten
+                        sposób parametry modeli czujników z elektrodami z gładkiej platyny (wyniki własne), 
+                        z platyny czernionej oraz z grafitu (dane z [2101) — wszystkie w roztworach wodnych 
+                        KCl. Wyniki, przeliczone na 1 c\( m^{2} \) powierzchni jednej elektrody, zestawiono w
+                        tablicy 4.1 (Dodatek 2) — dla porównania podano także wartości znane z literatury. Można 
+                        uznać, że pomiędzy wynikami uzyskanymi przez autora i tymi z literatury nie ma
+                        zasadniczych rozbieżności, gdyż: 
+                        <ul>
+                            <li>wartości parametrów elektrod różnych egzemplarzy czujników tego samego lub 
+                            podobnego typu mogą się znacznie różnić, nawet o ponad ± 50%,</li>
+                            <li>istotne znaczenie ma stopień wygładzenia powierzchni elektrod, historia
+                            użytkowania czujnika oraz czas moczenia czujnika w roztworze, </li>
+                            <li>czujniki z elektrodami wykonanymi z jednakowego materiału, o tej samej 
+                            powierzchni, lecz o wyraźnie innym kształcie mogą w tych samych warunkach 
+                            wykazywać różne wartości rezystancji polaryzacji — ze względu na różny rozkład gęstości 
+                            prądu na elektrodach [53, 1 12] (większość analizowanych tu czujników nie ma pola 
+                            jednorodnego).</li>
+                        </ul>
+                    </p>
+                    <p>
+                        W przypadku elektrod porowatych różnice mogą być jeszcze większe, gdyż
+                        pojemność warstwy podwójnej elektrody pokrytej czernią platynową mocno zależy od składu 
+                        stosowanego roztworu czerniącego oraz od ładunku elektrycznego dostarczonego 
+                        w procesie czernienia (czernienie odbywa się elektrochemicznie) [76], a w przypadku 
+                        grafitu — od jego rodzaju. Griliches podaje na przykład, iż mocne pokrycie elektrod 
+                        czernią platynową może zmniejszyć rezystancję polaryzacji nawet 600—700 razy,
+                        
+                        <figure id="img31" class="tfl-center">
+                            <img src="images/rys-4-9.jpg" class="img-fluid"
+                               alt="Rezystancja polaryzacji na jednostkę powierzchni 
+                               pojedynczej elektrody wykonanej z różnych materiałów, 
+                               w funkcji konduktywności roztworu (wyniki własne)"/>
+                            <figcaption>
+                                Rys. 4.9. Rezystancja polaryzacji na jednostkę powierzchni 
+                                pojedynczej elektrody wykonanej z różnych materiałów, 
+                                w funkcji konduktywności roztworu (wyniki własne)  
+                            </figcaption>
+                        </figure>
+
+                        <figure id="img32" class="tfl-center">
+                            <img src="images/rys-4-10.jpg" class="img-fluid"
+                               alt="Rezystancja polaryzacji elektrod grafitowych i platynowych 
+                               czernionych (powierzchnia elektrody 0,32 c\( m^{2} \) ), w funkcji częstotliwości [210]  "/>
+                            <figcaption>
+                                Rys. 4.10. Rezystancja polaryzacji elektrod grafitowych i platynowych 
+                                czernionych (powierzchnia elektrody 0,32 c\( m^{2} \) ), w funkcji częstotliwości [210]  
+                            </figcaption>
+                        </figure>
+
+                        podczas gdy lekkie pokrycie („szare” elektrody) — tylko 60—70 razy [58]. Z kolei
+                        według Rommela rezystancja polaryzacji elektrod wykonanych z różnego rodzaju grafitu 
+                        może się różnić nawet 2\( 1/2 \) razy [208]. Rezystancja polaryzacji zależy również od
+                        rodzaju elektrolitu — dla kwasów i zasad jest średnio o około 50% mniejsza niż dla soli 
+                        [58, 210]. Przykładowe zależności rezystancji polaryzacji typowych elektrod 
+                        stosowanych w konduktometrii od konduktywności roztworu i od częstotliwości sygnału 
+                        pomiarowego przedstawiono na rysunkach 4.9 i 4.10.
+                    </p>
+                    <p>
+                        Adekwatność przedstawionych modeli czujników elektrodowych można sprawdzić, 
+                        porównując charakterystyki częstotliwościowe rezystancji polaryzacji \( R_{p} = \Delta R_{S}(\omega) \) czuj- 
+                        ników, zmierzone i obliczone według wzoru (4.1) — rys. 4.11 (wykorzystano dane 
+                        z tablicy 4.1 — Dodatek 2). Dla wszystkich trzech rodzajów badanych przez autora 
+                        elektrod: platynowych gładkich, grafitowych i platynowych czernionych zgodność 
+                        wyników obliczonych z wynikami pomiarów jest bardzo dobra.
+
+                        <figure id="img3" class="tfl-center">
+                            <img src="images/rys-4-11.jpg" class="img-fluid"
+                               alt="Rezystancja polaryzacji elektrod grafitowych i platynowych 
+                               czernionych (powierzchnia elektrody 0,32 c\( m^{2} \) ), w funkcji częstotliwości [210]  "/>
+                            <figcaption>
+                                Rys. 4. 11. Rezystancja polaryzacji na jednostkę powierzchni pojedynczej elektrody 
+                                wykonanej z różnych materiałów, w funkcji częstotliwości: (A) elektrody z platyny gładkiej 
+                                (wyniki własne), (B) z grafitu, (C) z platyny czernionej (B i C według danych z [210). 
+                                Punkty — wyniki pomiarów, linie — wartości obliczone z (4. l). W celu umożliwienia 
+                                prezentacji na jednym wykresie, zastosowano podane na wykresie mnożniki
+                            </figcaption>
+                        </figure>
+                    </p>
                 </main>
                 <footer>
                     <p>Publikacja została zaadaptowana zgodnie z WCAG 2.1 na poziomie AA. Obecnie wersja v1.1. Szablon
