@@ -2165,7 +2165,7 @@
                         elektrod: platynowych gładkich, grafitowych i platynowych czernionych zgodność 
                         wyników obliczonych z wynikami pomiarów jest bardzo dobra.
 
-                        <figure id="img3" class="tfl-center">
+                        <figure id="img33" class="tfl-center">
                             <img src="images/rys-4-11.jpg" class="img-fluid"
                                alt="Rezystancja polaryzacji elektrod grafitowych i platynowych 
                                czernionych (powierzchnia elektrody 0,32 c\( m^{2} \) ), w funkcji częstotliwości [210]  "/>
@@ -2177,6 +2177,922 @@
                                 prezentacji na jednym wykresie, zastosowano podane na wykresie mnożniki
                             </figcaption>
                         </figure>
+                    </p>
+                    <p>
+                        Autor badał zależność rezystancji polaryzacji elektrod z gładkiego metalu, platyny 
+                        i niklu od stężenia elektrolitu. Na rysunkach 4.12a i 4.12b oprócz wyników pomiarów 
+                        (punkty) pokazano także krzywe aproksymujące o postaci \( a_{1}/(a_{2} + c^{1/3}) \), gdzie \( a_{1} \), \( a_{2} \)— 
+                        stałe empiryczne (zależność znaleziona przez autora). Krzywa na wykresie 4.12a jest 
+                        wynikiem aproksymacji wałtości średnich z pomiarów trzech jednakowych czujników 
+                        z elektrodami platynowymi (\( a_{1} \) = 1,073, \( a_{2} \) = 0,0307), natomiast krzywa na wykresie 
+                        4.12b — wynikiem aproksymacji wykonanej dla jednego czujnika z elektrodami 
+                        nikłowymi (\( a_{1} \) = 1,820,\( a_{2} \) = -0,064). 
+                        
+                        <figure id="img34" class="tfl-center">
+                            <img src="images/rys-4-12a.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figure id="img35" class="tfl-center">
+                            <img src="images/rys-4-12b.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figcaption>
+                            Rys. 4.12. Rezystancja polaryzacji na jednostkę powierzchni pojedynczej elektrody: 
+                            a) z gładkiej platyny: krzywa ciągła przedstawia wynik aproksymacji funkcją \( a_{1}/(a_{2}+c^{1/2}) \)
+                            średnich z wyników pomiaru trzech egzemplarzy czujnika, punkty reprezentują wyniki 
+                            pomiarów dwóch czujników typu PS-2 (wyniki własne), b) z gładkiego niklu: 
+                            krzywa przedstawia wynik aproksymacji, punkty reprezentują wyniki 
+                            pomiarów (wyniki własne)
+                        </figcaption>
+                    </p>
+                    <p>
+                        Uzyskane charakterystyki elektrod platynowych i niklowych mają bardzo 
+                        zbliżony kształt, z tym że rezystancja polaryzacji elektrod niklowych jest około dwa razy większa.
+                    </p>
+                    <p>
+                        Przedstawione modele elektrod oraz sposób ich analizy można stosować również w pomiarach stopionych soli [204]. 
+                    </p>
+                    <p>PODSUMOWANIE</p>
+                    <p>
+                        <ul>
+                            <li>Najlepszym sposobem zmniejszenia wpływu rezystancji polaryzacji jest stoso- 
+                            wanie elektrod o dużej i rozwiniętej powierzchni, mniej skutecznym — zwiększenie 
+                            częstotliwości pomiarowej. Prowadzone są prace nad wykorzystaniem w kondukto- 
+                            metrii sygnałów poliharmonicznych [238] (za szczególny tego przypadek można 
+                            uznać stosowanie w konduktometrii sygnałów o przebiegu prostokątnym [213, 216]). </li>
+                            <li>Ze względu na duże rozrzuty parametrów elektrod, w praktyce nie ma możliwo- 
+                            ści uwzględniania wpływu rezystancji polaryzacji w formie poprawek (takie sugestie 
+                            można spotkać w literaturze). W przyrządach mikroprocesorowych możliwe jest na- 
+                            tomiast stosowanie częstotliwościowej ekstrapolacji wyników uzyskanych przy kilku 
+                            częstotliwościach pomiarowych [237]. </li>
+                            <li>Rezystancję polaryzacji elektrod można oszacować znając podstawowe parame- 
+                            try warstwy elektrodowej: pojemność \( C_{d} \) warstwy podwójnej, stałą Wf Warburga oraz 
+                            rezystancję \( R_{F} \) Faradaya (wpływ tej ostatniej jest często pomijalnie mały). 
+                            Do celów praktycznych w większości przypadków wystarczają modele czujników 
+                            zawierające uproszczone przedstawienie impedancji elektrodowej — jak na rys. 4.4a. 
+                            Rozbudowane modele warstwy elektrodowej oraz wyrafinowane metody ich anali- 
+                            zy, stosowane w elektrochemii i w spektroskopii impedancyjnej [15, 114], w konduk- 
+                            tometrii rzadko są niezbędne. Potrzeba ich użycia może być oznaką, iż czujnik kon- 
+                            duktometryczny ma w rozpatrywanych warunkach pomiaru słabe właściwości 
+                            metrologiczne.</li>
+                    </ul>
+                    </p>
+                    <h4>4.3.1. ZASADY DOBORU WARTOŚCI STAŁEJ CZUJNIKA 
+                        I CZĘSTOTLIWOŚCI POMIAROWEJ</h4>
+                    <p>
+                        Wykonując pomiar konduktywności za pomocą czujnika dwuelektrodowego, 
+                        w praktyce mierzy się rezystancję lub moduł impedancji dwójnika reprezentującego 
+                        czujnik — i na tej podstawie wnioskuje się o rezystancji roztworu. Pomiar należy więc 
+                        tak wykonywać, żeby mierzony parametr odpowiadał, z wymaganą dokładnością, 
+                        rezystancji roztworu. Z analizy obwodowych modeli czujników (rys. 4.4 a i b) wynika, 
+                        że istotne są dwa czynniki:
+                            <ul>
+                                <li>w zakresie małych wartości mierzonych rezystancji — impedancja polaryzacji 
+                                elektrod oraz rezystancja (i w mniejszym stopniu indukcyjność) połączeń, tj. elementy 
+                                włączone szeregowo w stosunku do mierzonej rezystancji, </li>
+                                <li>w zakresie dużych wartości mierzonych rezystancji — pojemności pasożytnicze, 
+                                tj. elementy włączone równolegle w stosunku do mierzonej rezystancji. </li>
+                            </ul>
+                    </p>
+                    <p>
+                        Pierwszy przypadek odpowiada pomiarom cieczy bardzo dobrze przewodzących. 
+                        Z tego punktu widzenia korzystnie jest stosować czujniki o możliwie dużej wartości 
+                        stałej (zazwyczaj tak dobieranej, żeby mierzona rezystancja nie była mniejsza od 10 \( \Omega \); 
+                        w przypadku bardzo krótkich połączeń i dopuszczając gorszą dokładność pomiarów, 
+                        można tę wartość zmniejszyć do ok. 2 \( \Omega \)), z elektrodami o małej impedancji
+                        polaryzacji. Z kolei małą wartość impedancji polaryzacji można uzyskać, stosując
+                        elektrody mocno porowate lub/i zwiększając częstotliwość pomiarową. Sytuacja jest o tyle 
+                        niekorzystna, że rezystancja polaryzacji maleje ze stężeniem roztworu znacznie 
+                        wolniej (tablica 4.1) niż wzrasta konduktywność (a więc i konduktancja) roztworu. 
+                        Również zwiększanie częstotliwości słabo redukuje rezystancję polaryzacji (tylko 
+                        z \( f^{1/2} \)). Rozwiązaniem najprostszym i najskuteczniejszym, dlatego też najczęściej 
+                        spotykanym [24, 187, 266], jest stosowanie elektrod porowatych oraz średnio dużej 
+                        częstotliwości pomiarowej (3—4 kHz). Jeżeli jednak, ze względu na specyfikę
+                        zastosowania, konieczne jest używanie elektrod z gładkiego metalu, redukcję wpływu 
+                        polaryzacji można uzyskać zwiększając znacznie częstotliwość pomiarową — nawet 
+                        do 50 kHz [198, 199]. Ten sposób jest jednak trudny w realizacji i ma ograniczoną 
+                        skuteczność (wymagane zwiększenie częstotliwości może się okazać tak duże, iż 
+                        wpływy elektrycznych efektów pasożytniczych staną się zauważalne). Należy tu 
+                        podkreślić iż, wbrew błędnemu przekonaniu, spotykanemu nawet w niektórych
+                        publikacjach, zastosowanie detekcji fazoczułej nie umożliwia wyeliminowania, a 
+                        nawet zmniejszenia wpływu rezystancji polaryzacji — w ten sposób można 
+                        wyeliminować jedynie wpływ składowej pojemnościowej impedancji czujnika (ale np. efektu 
+                        Parkera już nie!).
+                    </p>
+                    <p>
+                        W drugim przypadku, odpowiadającym pomiarom cieczy słabo przewodzących, 
+                        należy stosować czujniki o możliwie małej wartości stałej (zazwyczaj przyjmuje się, 
+                        że mierzona rezystancja nie powinna przekraczać 100 kQ) i odpowiednio małą 
+                        częsłotliwość pomiarową. Wskazane jest zmniejszenie do minimum pojemności 
+                        elemenłów konstrukcyjnych czujnika, pojemności połączeń oraz pojemnościowych sprzężeń 
+                        pasożytniczych przez otoczenie i z otoczeniem. Ważne jest również zapewnienie 
+                        możliwie dobrej jednorodności pola elektrycznego w próbce (będzie o tym mowa 
+                        w rozdziale 4.4). Wpływ pojemności połączeń można istotnie zmniejszyć dzięki
+                        zastosowaniu odpowiedniego ekranowania oraz detekcji fazoczułej. Jak wykazano 
+                        w rozdz. 3.4, nie da się zmniejszyć wartości pojemności geometrycznej 
+                        (międzyelektrodowej) czujnika nie zmieniając stałej czujnika, gdyż konduktancja i 
+                        pojemność czujnika są określone tą samą stałą czujnika (wzór (3.14)). 
+                    </p>
+                    <h3>4.4. EFEKTY POLOWE W CZUJNIKACH </h3>
+                    <p>
+                        Dokładne obliczanie stałej czujnika konduktometrycznego bezpośrednio z
+                        teoretycznego wzoru (3.14) jest w praktyce niemożliwe, poza wąską klasą czujników
+                        liczalnych. Wytłumaczenie rozbieżności obserwowanych pomiędzy wartością stałej,
+                        obliczoną teoretycznie i wyznaczoną doświadczalnie, oraz zmienności tej ostatniej, 
+                        w zależności od aktualnych warunków pomiaru, wymaga uwzględniania w
+                        rozważaniach wielu czynników mogących mieć wpływ na wartość stałej. Najważniejsze z nich 
+                        to: niekontrolowany wypływ prądu poza naczynie pomiarowe (wpływ pola 
+                        rozproszonego) oraz zmiany rozpływu strug prądu w samym naczyniu pomiarowym, związane 
+                        z występowaniem dużych i zmiennych impedancji elektrodowych oraz
+                        niejednorodności powierzchni elektrod. Zmiana rozpływu strug prądu i rozkładu potencjału w 
+                        próbce wpływa na dokładność pomiaru konduktywności, gdyż zmienia wartość stałej
+                        czujnika oraz sposób uśredniania lokalnych konduktywności w całej objętości próbki. 
+                        Uwagi te dotyczą wszystkich czujników kontaktowych, a więc zarówno tych do
+                        pomiaru dwuelektrodowego, jak i czteroelektrodowego. Ocena wpływu wymienionych 
+                        czynników wymaga analizy rozkładu pola elektrycznego w czujnikach.
+                    </p>
+                    <h4>4.4.1. WPŁYW POLA ROZPROSZONEGO, EKRANOWANIE </h4>
+                    <p>
+                        W większości praktycznych zastosowań konduktometrii niezbędna jest swobodna 
+                        wymiana roztworu pomiędzy próbką ograniczoną naczyniem pomiarowym czujnika 
+                        i całą resztą ośrodka. Z kolei otwory w naczyniu pomiarowym mogą powodować, 
+                        w zależności od aktualnego położenia czujnika względem otaczających go przedmiotów 
+                        (np. ścian i dna zbiornika z roztworem — rys. 4.13a), niekontrolowany rozpływ części 
+                        prądu pomiarowego poza objętość próbki. Występowanie dużych impedancji 
+                        elektrodowych zwiększa udział prądu wypływającego poza czujnik, gdyż pokrycie elektrod 
+                        warstwą rezystancyjną powoduje wypychanie pola elektrycznego na zewnątrz elektrod 
+                        (rys. 4.13b). Problem dotyczy czujników z elektrodami o powierzchni słabo rozwiniętej, 
+                        z otwartym naczyniem pomiarowym (tj. głównie zanurzeniowych), zarówno dwu-, jak 
+                        i czteroelektrodowych. W czujnikach do pomiaru czteroelektrodowego efekt
+                        wypychania pola elektrycznego może mieć w pewnych przypadkach większe znaczenie, jako że 
+                        w tych czujnikach dopuszcza się występowanie bardzo dużych impedancji elektrod 
+                        prądowych, nawet wielokrotnie większych od mierzonych rezystancji roztworu.
+
+                        <figure id="img36" class="tfl-center">
+                            <img src="images/rys-4-13.jpg" class="img-fluid"
+                               alt="Pole rozproszone w czujniku: a) wypływ prądu poza naczynie pomiarowe, 
+                               b) pole bez deformacji, c) deformacja pola elektrycznego powodowana 
+                               występowaniem rezystancji elektrodowych (wynik modelowania) "/>
+                            <figcaption>
+                                Rys. 4.13. Pole rozproszone w czujniku: a) wypływ prądu poza naczynie pomiarowe, 
+                                b) pole bez deformacji, c) deformacja pola elektrycznego powodowana 
+                                występowaniem rezystancji elektrodowych (wynik modelowania) 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Czujnik zanurzeniowy pokazany na rys. 4.13a, mimo iż ma stosunkowo małe 
+                        otwory, wykazuje zmiany wartości stałej sięgające 2%. W czujnikach o konstrukcji 
+                        bardziej „otwartej” mogą być one znacznie większe. Problem rozwiązuje się na dwa 
+                        sposoby: stosując symetryczny układ elektrod oraz umieszczając otwory w
+                        płaszczyźnie zerowego potencjału (wymaga to symetrycznego, względem zera układu, zasilania 
+                        elektrod) — rys. 4.14a [257], lub wykorzystując efekt ekranowania — rys. 4.14b i 4.14c. 
+                        Drugi sposób jest bardziej uniwersalny i skuteczny, dlatego też bywa częściej 
+                        stosowany. Można stosować ekranowanie pasywne, polegające na utrzymywaniu elektrody 
+                        ekranującej na stałym potencjale (np. przez połączenie jej z zerem układu 
+                        pomiarowego — jak na rys. 4.14b i 4.14c), lub aktywne — z elektrodą ekranującą podtrzymywaną 
+                        na potencjale elektrody ekranowanej („pływający ekran”) — jak na rys. 4.15. W
+                        pokazanych na rys. 4.14b i c przykładach ekranowania pasywnego elektroda ekranująca ma 
+                        dwa, połączone z sobą elektrycznie, elementy (l i 3), umieszczone na zewnątrz
+                        elektrody „gorącej” (2), i jest jednocześnie jedną z elektrod zasilających. Elektroda
+                        „gorąca” jest drugą elektrodą zasilającą i służy do pomiaru prądu. Takie rozwiązanie czyni 
+                        czujnik otwartym dla wymiany cieczy (rys. 4.14b), a także umożliwia pomiary 
+                        roztworów przepływających w metalowych rurociągach (rys. 4.14c).
+                    
+                    <figure id="img37" class="tfl-center">
+                        <img src="images/rys-4-14.jpg" class="img-fluid"
+                           alt="Sposoby zapobiegania rozpływowi prądu poza próbkę roztworu: 
+                           a) przez umieszczenie otworów wzdłuž linii zerowego potencjału, 
+                           b) i c) przez zastosowanie ekranowania (b — czujnik zanurzeniowy, 
+                           c — czujnik przepływowy do rurociągów metalowych) "/>
+                        <figcaption>
+                            Rys. 4.14. Sposoby zapobiegania rozpływowi prądu poza próbkę roztworu: 
+                            a) przez umieszczenie otworów wzdłuž linii zerowego potencjału, 
+                            b) i c) przez zastosowanie ekranowania (b — czujnik zanurzeniowy, 
+                            c — czujnik przepływowy do rurociągów metalowych) 
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Przykłady rozwiązań ekranowania aktywnego w czujnikach do pomiaru 
+                    dwuelektrodowego i czteroelektrodowego pokazano na rys. 4.15a, b i c. W czujniku z rys. 4.15a 
+                    elektrody ekranujące jednocześnie poprawiają jednorodność pola elektrycznego 
+                    w próbce. Podobna sytuacja zachodzi w czujniku z rys. 4.15b, w którym elektrody 
+                    ekranujące otaczają odpowiadające im elektrody prądowe, pomiędzy którymi z kolei 
+                    umieszczono elektrody napięciowe.
+                </p>
+                <p>
+                    W rozwiązaniu przedstawionym na rys. 4.15c aktywna elektroda ekranująca 
+                    E jest utrzymywana na potencjale sąsiadującej z nią elektrody prądowej \( P_{2} \) za pomocą 
+                    wtórnika napięciowego, dzięki czemu przez elektrodę P2 przepływa cały prąd pomiarowy 
+                    \( I_{2} \). Sposoby ekranowania próbki roztworu w czujnikach konduktometrycznych są 
+                    przedmiotem licznych patentów i wzorów użytkowych, np. [25, 36, 49, 50, 126, 262].
+
+                    <div class="flex-container">
+                        
+                        <figure id="img38" class="tfl-left flex-item-left">
+                            <img src="images/rys-4-15a.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>              
+                            </figcaption>
+                        </figure>
+                        
+                        <figure id="img39" class="tfl-left flex-item-">
+                            <img src="images/rys-4-15b.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        </div>
+                        
+                        <figure id="img40" class="tfl-center">
+                            <img src="images/rys-4-15c.jpg" class="img-fluid"
+                               alt=" "/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figcaption>
+                            Rys. 4.15. Przykłady czujników konduktometrycznych z ekranowaniem aktywnym: a) czujnik 
+                            do pomiaru dwuelektrodowego [126], b) i c) czujniki do pomiaru czteroelektrodowego [126, 36, 262]
+                        </figcaption>
+                    </p>
+                    <p>
+                        Możliwe jest również podejście odwrotne — zupełne zrezygnowanie z naczynia 
+                        pomiarowego ograniczającego przestrzeń pomiarową czujnika i korzystanie z pola 
+                        elektrycznego wytwarzanego wprost w cieczy wypełniającej zbiornik [268]. W takim 
+                        przypadku zasadnicze znaczenie ma odpowiednie umieszczenie czujnika w zbiorniku
+                        rys. 4.16. Tego rodzaju czujniki są szczególnie przydatne w pomiarach cieczy 
+                        gęstych, kleistych, mocno zanieczyszczonych.
+
+                        <figure id="img41" class="tfl-center">
+                            <img src="images/rys-4-16.jpg" class="img-fluid"
+                               alt="Czteroelektrodowy czujnik konduktometryczny bez własnego naczynia pomiarowego — 
+                               decydujące znaczenie mają minimalne odległości czujnika od ścian naczynia 
+                               i głębokość zanurzenia [268]"/>
+                            <figcaption>
+                                Rys. 4.16. Czteroelektrodowy czujnik konduktometryczny bez własnego naczynia pomiarowego — 
+                                decydujące znaczenie mają minimalne odległości czujnika od ścian naczynia 
+                                i głębokość zanurzenia [268]
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <h4>
+                        4.4.2. WPŁYW ELEKTROD PRĄDOWYCH 
+                        NA ROZKŁAD POLA ELEKTRYCZNEGO W CZUJNIKU 
+                    </h4>
+                    <p>
+                        Dwa rodzaje czujników konduktometrycznych są szczególnie korzystne ze 
+                        względu na stałość rozpływu strug prądowych w próbce: czujniki z polem 
+                        elektrycznym zbliżonym do jednorodnego oraz czujniki typu van der Pauwa. Należy tu 
+                        zauważyć, że sama geometria czujnika, teoretycznie umożliwiająca wytwarzanie 
+                        pola jednorodnego, nie wystarcza, jeżeli warstwa elektrodowa ma impedancję dużą 
+                        w stosunku do rezystancji roztworu i nie jest jednorodna na całej powierzchni 
+                        elektrod [53, 58]. Można uzyskać znaczną poprawę, stosując w czujniku długie naczynie 
+                        pomiarowe, o przekroju poprzecznym dużo mniejszym od pola powierzchni 
+                        elektrod, jak np. w czujniku Jonesa [74] — rys. 4.17. Skrajnie odmiennym rozwiązaniem 
+                        jest czujnik typu van der Pauwa [146], w którym minimalizuje się pole powierzchni 
+                        elektrod. Pole elektryczne w próbce jest z zasady niejednorodne, ale kształt strug 
+                        prądu oraz rozkład potencjału jest ustalony, gdyż decyduje o nim tylko geometria 
+                        naczynia pomiarowego i rozmieszczenie elektrod.
+                        <figure id="img42" class="tfl-center">
+                            <img src="images/rys-4-17.jpg" class="img-fluid" alt="Czujnik z jednorodnym polem elektrycznym według [74]"/>
+                            <figcaption>
+                                Rys. 4.17. Czujnik z jednorodnym polem elektrycznym według [74]
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Drugie rozwiązanie nie było wcześniej opisane w literaturze w przedstawianym 
+                        aspekcie, dlatego też autor sprawdził je, modelując rozkład potencjału w czujniku 
+                        cylindrycznym, o symetrycznie rozmieszczonych elektrodach, z zasilaniem ze źródła 
+                        prądowego [243]. Zastosowano program FEA LUSAS [39] do analizy pól metodą 
+                        elementów skończonych. Przekrój czujnika podzielono na nieregularne trójkąty i
+                        obliczono przebieg linii ekwipotencjalnych (rys. 4.18). Wyniki modelowania
+                        przedstawiono graficznie na rys. 4.19 — dla przypadku z idealnie przewodzącymi elektrodami 
+                        i na rys. 4.20 — gdy występują bardzo duże impedancje elektrodowe (około 100 razy 
+                        większe od rezystancji roztworu). W drugim przypadku do regionów elektrod dodano 
+                        rezystancje reprezentujące te impedancje. W obu przypadkach uzyskany rozkład linii 
+                        ekwipotencjalnych w roztworze ma podobny kształt, z tym że w czujniku z dużymi 
+                        impedancjami elektrodowymi do napięcia występującego między elektrodami
+                        napięciowymi dodaje się duża stała składowa sumacyjna (rys. 4.20). Od urządzenia 
+                        mierzącego to napięcie wymagane jest zatem bardzo dobre tłumienie sygnału współbieżnego 
+                        (duży CMMR).
+
+                        <figure id="img43" class="tfl-center">
+                            <img src="images/rys-4-18.jpg" class="img-fluid" alt="Fragment modelu czujnika typu van der Pauwa — 
+                            metoda elementów skończonych, nieregularny podział 
+                            na elementy trójkątne (C — elektroda napięciowa, C, D, 
+                            E, F ... — linie ekwipotencjalne) [243]"/>
+                            <figcaption>
+                                Rys. 4.18. Fragment modelu czujnika typu van der Pauwa — 
+                                metoda elementów skończonych, nieregularny podział 
+                                na elementy trójkątne (C — elektroda napięciowa, C, D, 
+                                E, F ... — linie ekwipotencjalne) [243]
+                            </figcaption>
+                        </figure>
+
+                        <figure id="img44" class="tfl-center">
+                            <img src="images/rys-4-19.jpg" class="img-fluid" alt="Pole elektryczne w czujniku typu van der Pauwa z symetrycznie rozmieszczonymi 
+                            elektrodami, przy niewystępowaniu impedancji elektrodovch (sposób zasilania elektrod prądowych 
+                            dowolny) [243]: a) linie ekwipotencjalne, b) rozkład potencjału wzdłuż linii B—D (A i B — elektrody 
+                            prądowe, C i D — elektrody napięciowe) — program LUSAS "/>
+                            <figcaption>
+                                Rys. 4.19. Pole elektryczne w czujniku typu van der Pauwa z symetrycznie rozmieszczonymi 
+                                elektrodami, przy niewystępowaniu impedancji elektrodovch (sposób zasilania elektrod prądowych 
+                                dowolny) [243]: a) linie ekwipotencjalne, b) rozkład potencjału wzdłuż linii B—D (A i B — elektrody 
+                                prądowe, C i D — elektrody napięciowe) — program LUSAS 
+                            </figcaption>
+                        </figure>
+
+                        <figure id="img45" class="tfl-center">
+                            <img src="images/rys-4-20.jpg" class="img-fluid" alt="Pole elektryczne w czujniku typu van der Pauwa z bardzo dużymi impedancjami 
+                            elektrodowymi, przy zasilaniu elektrod prądowych ze źródła prądowego [243]: a) linie ekwipotencjalne, 
+                            b) rozkład potencjału wzdłuż linii B—D (A i B — elektrody prądowe, C i D — elektrody napięciowe) 
+                            — program LUSAS"/>
+                            <figcaption>
+                                Rys. 4.20. Pole elektryczne w czujniku typu van der Pauwa z bardzo dużymi impedancjami 
+                                elektrodowymi, przy zasilaniu elektrod prądowych ze źródła prądowego [243]: a) linie ekwipotencjalne, 
+                                b) rozkład potencjału wzdłuż linii B—D (A i B — elektrody prądowe, C i D — elektrody napięciowe) 
+                                — program LUSAS
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <h4>
+                        4.4.3. WPŁYW ELEKTROD NAPIĘCIOWYCH NA ROZKŁAD POLA 
+                        ELEKTRYCZNEGO W CZUJNIKU CZTEROELEKTRODOWYM
+                    </h4>
+                    <p>
+                        Jednym z podstawowych założeń czteroelektrodowej metody pomiaru konduktyw- 
+                        ności jest pomijalny wpływ elektrod napięciowych na pierwotny rozkład pola
+                        elektrycznego wytwarzanego w próbce przez elektrody prądowe. Skutkiem niespełnienia 
+                        tego założenia może być niezgodność rzeczywistej stałej czujnika w stosunku do
+                        obliczonej teoretycznie oraz zmienność tej stałej, zarówno w funkcji mierzonej
+                        konduktywności (rodzaju i stężenia roztworu), jak i w funkcji częstotliwości sygnału
+                        pomiarowego (rys. 4.2). Teoretycznie, dwie identyczne elektrody, wykonane z tego samego 
+                        materiału powodują jednakowe zniekształcenia rozkładu potencjału i dlatego ich 
+                        wpływy powinny się wzajemnie kompensować (nie powinny wpływać na różnicę
+                        potencjału między elektrodami). Jednakże w praktyce uzyskanie elektrod identycznych 
+                        niezależnie od warunków pomiaru jest trudne, jeżeli w ogóle jest możliwe. Różnice 
+                        między impedancjami elektrodowymi elektrod napięciowych, zwłaszcza jeżeli te 
+                        elektrody są duże, mogą powodować zmiany wartości stałej czujnika — taką hipotezę 
+                        przyjął autor po przebadaniu wielu czujników czteroelektrodowych, o różnych 
+                        konstrukcjach. W celu sprawdzenia tej hipotezy, jak również ilościowego zbadania wpły 
+                        wu rozmiarów elektrod napięciowych, autor zamodelował metodą elementów 
+                        skończonych rozkład pola elektrycznego w czujniku przedstawionym na rys. 4.21. Jest to 
+                        czujnik cylindryczny typu przepływowego, z pierścieniowymi elektrodami, w którym 
+                        elektrody napięciowe są duże w stosunku do pozostałych elementów czujnika (czujnik 
+                        wykonano w kilku egzemplarzach, istniała więc możliwość sprawdzenia 
+                        powtarzalności wyników). Do modelowania zastosowano dwa programy — APPLE oraz PE2D 
+                        [130, 147, 148].
+                        <figure id="img46" class="tfl-center">
+                            <img src="images/rys-4-21.jpg" class="img-fluid" alt="Przemysłowy czujnik czteroelektrodowy typu przepływowego (przekrój wzdłużny), 
+                            \( P_{1} \) i \( P_{2} \) — elektrody prądowe (elektroda prądowa PI składa się z dwóch złączonych razem części — 
+                            co tworzy ekran zapobiegający rozpływowi prądu poza czujnik), NI i IV2 — elektrody napięciowe 
+                            (dwuczęściowe); wszystkie elektrody ze stali kwasoodpornej, izolacja teflonowa, wymiary w mm [167] "/>
+                            <figcaption>
+                                Rys. 4.21. Przemysłowy czujnik czteroelektrodowy typu przepływowego (przekrój wzdłużny), 
+                                \( P_{1} \) i \( P_{2} \) — elektrody prądowe (elektroda prądowa PI składa się z dwóch złączonych razem części — 
+                                co tworzy ekran zapobiegający rozpływowi prądu poza czujnik), NI i IV2 — elektrody napięciowe 
+                                (dwuczęściowe); wszystkie elektrody ze stali kwasoodpornej, izolacja teflonowa, wymiary w mm [167] 
+                            </figcaption>
+                        </figure>                        
+                    </p>
+                    <p>
+                        Dzięki występowaniu symetrii osiowej i wzdłużnej czujnika wystarczyło
+                        zamodelować jego 1/4 część (fragment zaznaczony punktami A, B, C, D na rys. 4.21). 
+                        Modelowany fragment dzielono na elementy trójkątne, w liczbie od kilkuset do około 
+                        2000. Do modelu wprowadzano rzeczywiste wymiary czujnika, a do regionów 
+                        elektrod dodawano rezystancje odpowiadające wyznaczonym doświadczalnie 
+                        impedancjom elektrodowym — rys. 4.22. Wyniki modelowania rozkładu potencjału wzdłuż 
+                        osi AB czujnika przedstawiono na rys. 4.23. Doskonale potwierdzają one 
+                        przewidywania teoretyczne — w miejscach, gdzie znajdują się elektrody napięciowe występują 
+                        wyraźne zniekształcenia rozkładu potencjału. W przypadku przyjęcia elektrod 
+                        bezwymiarowych (zerowa szerokość w) rozkład potencjału jest liniowy, poza 
+                        niewielkim obszarem w bezpośrednim sąsiedztwie elektrod prądowych.
+                        
+                        <figure id="img47" class="tfl-center">
+                            <img src="images/rys-4-22.jpg" class="img-fluid" alt="Ilustracja sposobu tworzenia polowego modelu czujnika z rys. 4.21. 
+                            Pokazano fragment siatki oraz punkty (x), w których zadano warunki brzegowe (potencjał) [147]"/>
+                            <figcaption>
+                                Rys. 4.22. Ilustracja sposobu tworzenia polowego modelu czujnika z rys. 4.21. 
+                                Pokazano fragment siatki oraz punkty (x), w których zadano warunki brzegowe (potencjał) [147] 
+                            </figcaption>
+                        </figure>
+
+                        <figure id="img48" class="tfl-center">
+                            <img src="images/rys-4-23.jpg" class="img-fluid" alt="Ilustracja sposobu tworzenia polowego modelu czujnika z rys. 4.21. 
+                            Pokazano fragment siatki oraz punkty (x), w których zadano warunki brzegowe (potencjał) [147]"/>
+                            <figcaption>
+                                Rys. 4.23. Rozkład potencjału wzdłuż osi AB czujnika czteroelektrodowego 
+                                z rys. 4.21 (wykres sporządzono na podstawie wyników modelowania) — 
+                                zniekształcenia pola elektrycznego występują dokładnie w miejscach, 
+                                gdzie znąjdują się elektrody
+                            </figcaption>
+                        </figure>
+
+                        <figure id="img49" class="tfl-center">
+                            <img src="images/rys-4-24.jpg" class="img-fluid" alt="Zależność stałej czujnika z rys. 4.21 od impedancji elektrodowych 
+                            elektrod napięciowych — porównanie wyników modelowania i doświadczalnych [147]"/>
+                            <figcaption>
+                                Rys. 4.24. Zależność stałej czujnika z rys. 4.21 od impedancji elektrodowych 
+                                elektrod napięciowych — porównanie wyników modelowania i doświadczalnych [147]
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        W podobny sposób zbadano wpływ szerokości elektrod napięciowych 
+                        (zachowując stałą odległość h między nimi) oraz wpływ rezystancji elektrodowych na wartość 
+                        stałej K czujnika. Wartość stałej obliczano z wyników modelowania na dwa sposoby: 
+                        metodą względną (APPLE, PE2D) oraz z całkowitej energii pola elektrycznego
+                        rozpraszanej w roztworze wypełniającym czujnik (PE2D). Uzyskane wyniki 
+                        przedstawiono syntetycznie na rys. 4.24. Na osi poziomej wykresu podany jest stosunek Rp/Re
+                        rezystancji polaryzacji do rezystancji roztworu, a na osi pionowej wartość stałej K czujnika. 
+                        Wyniki uzyskane metodą względną przedstawiono liniami ciągłymi, natomiast te
+                        obliczone z energii — liniami przerywanymi. Na tle wyników modelowania pokazano
+                        przykładowe wyniki doświadczalne, uzyskane dla dwóch egzemplarzy czujnika, A i B, 
+                        w roztworach wodnych KCl o stężeniach 0,1 i 1 kmol/\( m^{3} \) (pomiary wykonano przy 
+                        częstotliwościach 200—3200 Hz). Lewa część rysunku odpowiada dobrze 
+                        przewodzącym elektrodom (pomijalnie mała rezystancja polaryzacji elektrod), prawa część 
+                        odwrotnie. Srodkowy obszar odpowiada rzeczywistym warunkom pracy badanego 
+                        czujnika. Poszczególne krzywe reprezentują różne szerokości w elektrod 
+                        napięciowych. Przedstawiane wyniki modelowania jednoznacznie potwierdzają tezę, że duże 
+                        elektrody napięciowe, pokryte warstwą międzyfazową o stosunkowo dużej
+                        rezystancji, mogą znacząco zmieniać wartość stałej czujnika czteroelektrodowego. Istotnym
+                        wnioskiem z przedstawionych rozważań jest wskazówka, iż jedynym skutecznym
+                        sposobem uniknięcia wpływu elektrod napięciowych na wartość stałej czujnika
+                        czteroelektrodowego jest minimalizacja pola powierzchni tych elektrod — tylko wtedy
+                        wartość impedancji elektrodowych przestaje mieć znaczenie. Poza tym tylko wtedy 
+                        czujnik o regularnej geometrii jest liczalny [247]. Czym większe elektrody, tym 
+                        wpływ impedancji elektrodowych jest większy. Badane czujniki, w rzeczywistych
+                        warunkach pracy, odpowiadają sytuacji najmniej korzystnej, bo ich charakterystyki 
+                        znajdują się w obszarze największej zmienności stałej. Alternatywnym sposobem
+                        zmniejszenia wpływu polaryzacji na zmienność stałej czujnika jest wykonanie elektrod 
+                        z materiału o słabym przewodnictwie elektrycznym — wtedy ich szerokość może być 
+                        duża (ale jest to niepraktyczne i czujnik nie jest liczalny).
+                    </p>
+                    <p>
+                        Przedstawione modelowanie umożliwia lepsze zrozumienie efektów polowych 
+                        występujących w czujnikach konduktometrycznych, a ponadto może być źródłem
+                        informacji ilościowej o tych efektach. Wyniki modelowania mogą być przydatne 
+                        zarówno dla konstruktorów, jak i użytkowników takich czujników — również czujników 
+                        używanych w tomografii impedancyjnej [107]. Dzięki modelowaniu można 
+                        ograniczyć do minimum pracochłonne i kosztowne badania doświadczalne.
+                    </p>
+                    <h3>4.5. UKŁADY POMIAROWE STOSOWANE 
+                        W KONDUKTOMETRII KONTAKTOWEJ</h3>
+                    <p>
+                        Impedancję dwójnika elektrycznego definiuje się jako stosunek spadku napięcia na 
+                        dwójniku do natężenia prądu płynącego przez ten dwójnik. Ponieważ trudno jest
+                        mierzyć, z dobrą dokładnością, napięcie i prąd w szerokim zakresie ich zmian, bardzo 
+                        często korzysta się z porównawczej metody pomiaru. Polega ona na porównaniu
+                        nieznanej impedancji Zx dwójnika z wzorcową impedancją \( Z_{m} \), za pomocą odpowiedniego 
+                        układu, najczęściej mostka. Wtedy zamiast bezwzględnych wartości napięcia i prądu 
+                        wystarczy określić ich stosunki — co łatwiej wykonać z dobrą dokładnością. 
+                        Oznaczając wielkość nieznaną i znaną odpowiednio subskryptami x i m, można zapisać 
+                        
+                        $$ Z_{x}=\frac{U_{x}}{I_{x}} \quad \text { oraz } \quad Z_{m}=\frac{U_{m}}{I_{m}} $$
+
+                        lub, po podzieleniu stronami
+
+                        $$ Z_{x}=\frac{U_{x}}{U_{m}} \frac{I_{m}}{I_{x}} Z_{m} $$
+                    </p>
+                    <p>
+                        Wzór (4.3) jest podstawowym równaniem opisującym pomiar impedancji, 
+                        niezależnie od zastosowanej metody. Ponieważ występują w nim dwa stosunki: \( U_{x}/U_{m} \) oraz 
+                        \( I_{m}/I_{x} \), istnieje więc duża swoboda w określeniu zakresu pomiarowego uzyskiwanego 
+                        przy użyciu danego wzorca \( Z_{m} \) impedancji.
+                    </p>
+                    <p>
+                        Impedancja czujnika kontaktowego, oprócz mierzonej rezystancji roztworu, 
+                        zawsze zawiera również pewną niepożądaną i jednocześnie nieuniknioną impedancję 
+                        (rezystancję oraz pojemność) polaryzacji (rozdz. 3.2, 4.2 i 4.3). Układy pomiarowe 
+                        stosowane w konduktometrii powinny zatem, z zasady, umożliwiać dokładne 
+                        określanie czystej rezystancji roztworu — z minimalizacją (najlepiej: eliminacją) udziału 
+                        impedancji polaryzacji [58, 78]. Podstawowe znaczenie ma więc: w metodzie
+                        dwuelektrodowej — pomiar przy odpowiednio dużej częstotliwości (rozdz. 4.3. l), w razie 
+                        potrzeby z możliwością oddzielenia składowej reaktancyjnej, w metodzie czteroelektro- 
+                        dowej — pomiar z pomijalnym poborem prądu z elektrod napięciowych, a w metodzie 
+                        różnicowej — pomiar w warunkach możliwie dobrej symetrii odejmowanych 
+                        impedancji czujnika.
+                    </p>
+                    <p>
+                        Pierwszymi układami pomiarowymi stosowanymi w konduktometrii były mostki 
+                        równoważone ręcznie. W miarę rozwoju elektroniki w większości zastosowań 
+                        wyparły je przetworniki elektroniczne, tj. układy przetwarzające konduktancję na 
+                        napięcie lub prąd, rzadziej na częstotliwość lub czas. Obecnie układy mostkowe w czystej, 
+                        klasycznej postaci są stosowane wyłącznie jako przyrządy wzorcowe, w pomiarach 
+                        precyzyjnych. Jednakże zasada mostka została zachowana w wielu elektronicznych 
+                        układach przetwornikowych.
+                    </p>
+                    <h4>4.5.1. UKŁADY MOSTKOWE</h4>
+                    <p>
+                        Klasyczny mostek Wheatstone'a, wprowadzony do konduktometrii przez
+                        Kohlrauscha w XIX w., przeszedł długą drogę ewolucji — był usprawniany kolejno przez
+                        Wiena, Washburna, Parkera, Jonesa i Josephsa, Shedlovskiego, Robbinsa, Featesa, Ivesa 
+                        oraz Pryora i innych. Spośród licznych modyfikacji, jakim podlegał, warto wymienić 
+                        te najistotniejsze. Wien opracował na przykład sposób równoważenia mostka gałęzią 
+                        złożoną z równolegle połączonych elementów RC, a Jones zastąpił drut ślizgowy 
+                        przełączanymi rezystorami o ustalonych wartościach [79]. Jones wprowadził również 
+                        do mostka konduktometrycznego zmodyfikowany układ „ziemi Wagnera”, 
+                        umożliwiający symetryzację mostka i dzięki temu minimalizację wpływu pasożytniczych 
+                        pojemności „do ziemi”. Zalecił także stosowanie w termostacie oleju zamiast wody, 
+                        w celu minimalizacji pasożytniczych sprzężeń pojemnościowych z czujnikiem („efekt 
+                        Parkera”). Z kolei Shedlovsky zastosował w mostku ekranowanie elektrostatyczne 
+                        poszczególnych elementów, eliminując w ten sposób szkodliwe sprzężenia 
+                        pojemnościowe między nimi — co umożliwiło istotną poprawę czułości mostka [223]. Feates, 
+                        Ives i Pryor zaproponowali zastosowanie w konduktometrii zapożyczonego z
+                        termometrii rezystancyjnej czteroprzewodowego sposobu pomiaru rezystancji dwójników, 
+                        eliminującego wpływ rezystancji przewodów [40]. Oni również rozwinęli pomiar
+                        rezystancji roztworów metodą różnicową oraz zwrócili uwagę na potrzebę 
+                        uwzględniania w warunkach równowagi mostka odpowiedniego modelu czujnika.
+                    </p>
+                    <p>
+                        Mostek Jonesa należy zaliczyć do konstrukcji wyjątkowo udanych. Przez kilka 
+                        dziesięcioleci był podstawowym przyrządem stosowanym w precyzyjnych pomiarach
+                        konduktometrycznych, zwłaszcza do określania wzorców przewodnictwa. W zakresie 
+                        rezystancji od kilkuset omów do kilkudziesięciu kiloomów umożliwia on uzyskiwanie 
+                        dokładności ±0,01%, w paśmie częstotliwości do pojedynczych kiloherców. Tego 
+                        typu mostki były przez wiele lat dostępne na rynku — w wersji komercyjnej zapewniały 
+                        dokładność ±0,05% [13]. O zaletach mostka Jonesa najlepiej może świadczyć fakt, iż 
+                        jeszcze w 1990 roku został on użyty w NIST, USA, do określenia nowego wzorca 
+                        konduktywności [273]. Jedyne zmiany w stosunku do oryginalnego mostka Jonesa 
+                        polegały na zmodyfikowaniu generatora zasilającego mostek oraz na dołączeniu do 
+                        pomiarowej przekątnej mostka, jako wskaźnika zera, układu złożonego z
+                        przedwzmacniacza z wejściem różnicowym, wzmacniacza selektywnego i oscyloskopu. 
+                        Stwierdzono, że po ponownej kalibracji mostek umożliwia uzyskanie dokładności 
+                        pomiaru rezystancji ±0,005%, a po zastosowaniu korekcji — nawet ±0,001 %.
+
+                        <figure id="img50" class="tfl-center">
+                            <img src="images/rys-4-25.jpg" class="img-fluid" alt="Zależność stałej czujnika z rys. 4.21 od impedancji elektrodowych 
+                            elektrod napięciowych — porównanie wyników modelowania i doświadczalnych [147]"/>
+                            <figcaption>
+                                Rys. 4.25. Schemat ideowy oraz warunki równowagi mostka konduktometrycznego 
+                                z szeregowym (a) i równoległym (b) ramieniem równoważącym, przy równych ramionach 
+                                stosunkowych — w mostku (b), pomimo spełnienia warunku \( Z_{w} = Z_{s} \) występuje \( R_{w}^{\prime} \neq R_{s} \) 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Mostek Jonesa, wśród wielu zalet, ma jednak i pewną wadę — do równoważenia 
+                        szeregowego dwójnika RC, reprezentującego czujnik konduktometryczny, używana 
+                        jest regulowana równoległa gałąź RC — rys. 4.25b. Rezystancja wzorcowa potrzebna 
+                        do zrównoważenia rezystancji \( R_{s} \) czujnika jest zatem funkcją częstotliwości
+                        pomiarowej [17, 40], a prawdziwa wartość rezystancji \( R_{s} \) powinna być obliczana z 
+                        odpowiedniego wzoru. Tylko przy dużych wartościach \( \omega R_{s} C_{s} \) można przyjąć wprost \( R_{s} = R_{w}^{\prime} \). 
+                        Odpowiada to pomiarom niezbyt stężonych roztworów, przy odpowiednio dużych 
+                        częstotliwościach, za pomocą elektrod o dużej pojemności elektrodowej. W 
+                        pomiarach dużych konduktancji (roztwory stężone, stopione sole) oraz gdy pojemność 
+                        elektrodowa jest mała (gładkie elektrody), pomijanie wymienionych przeliczeń może
+                        prowadzić do poważnych błędów. W ostatnio wymienionych sytuacjach korzystniej jest 
+                        stosować mostek z szeregowym ramieniem równoważącym — 4.25a [17, 170], który 
+                        lepiej odpowiada elektrycznemu modelowi czujnika konduktometrycznego.
+                        Przykładem takiego rozwiązania jest mostek stosowany w pracach autora [170, 171].
+                    </p>
+                    <p>
+                        To, iż mostki z równoległą gałęzią równoważącą były w przeszłości bardziej
+                        rozpowszechnione wynikało głównie ze względów konstrukcyjnych i technologicznych. 
+                        Do zrównoważenia dużej pojemności szeregowej wystarcza w takim mostku
+                        kondensator o znacznie mniejszej pojemności. W pomiarze rezystancji około 1000 \( \Omega \), do 
+                        zrównoważenia szeregowej pojemności czujnika 100 \( \mu F \) (wartość typowa dla elektrod 
+                        czernionych) przy częstotliwości 1000 HZ wystarcza na przykład równoległa 
+                        pojemność 300 pF. W alternatywnym mostku z równoważeniem gałęzią szeregową 
+                        potrzebna byłaby pojemność równoważąca równa pojemności czujnika, tj. 100 \( \mu F \).
+                    </p>
+                    <p>
+                        Istotną cechą mostków przeznaczonych do precyzyjnych pomiarów dużych 
+                        konduktancji jest możliwość eliminacji rezystancji połączeń, tj. przewodów, zacisków 
+                        i przełączników. Przykład takiego mostka opisano w pracach [40, 70]. Istota
+                        rozwiązania polega na zastosowaniu czteroprzewodowego połączenia czujnika z mostkiem, 
+                        za pośrednictwem specjalnego przełącznika rewersyjnego (rys. 4.26). Rezystancje a, 
+                        b, c i d reprezentują cztery przewody, a \( R_{X} \) jest rezystancją czujnika. \( R_{2}^{\prime} \) i \( R_{2}^{\prime\prime} \) są 
+                        wartościami rezystancji równoważącej \( R_{2} \), uzyskanymi dla dwóch połączeń pokazanych 
+                        na rys. 4.26. Jeśli \( R_{3} = R_{4} \), to spełnione są wtedy zależności:
+
+                        $$ a+R_{X}=d+R_{2}^{\prime} \quad \text { oraz } \quad d+R_{X}=a+R_{2}^{\prime \prime}, $$
+                        
+                        a średnia z wartości \( R_{2}^{\prime} \) i \( R_{2}^{\prime\prime} \) jest prawdziwą wartością \( R_{X} \)
+                    </p>
+                    <p>
+                        Inny sposób eliminacji wpływu rezystancji przewodów polega na zastosowaniu 
+                        mostka mierzącego z zasady impedancję w układzie czteroprzewodowym, np. mostka 
+                        Thomsona. Takie układy bywają stosowane, np. w pomiarach stopionych soli [204] — 
+                        ale raczej rzadko, ze względu na trudne równoważenie.
+
+                        <figure id="img51" class="tfl-center">
+                            <img src="images/rys-4-26.jpg" class="img-fluid" alt="Eliminacja rezystancji przewodów czujnika przez zamianę 
+                            czteroprzewodowego połączenia czujnika z mostkiem [40, 70]"/>
+                            <figcaption>
+                                Rys. 4.26. Eliminacja rezystancji przewodów czujnika przez zamianę 
+                                czteroprzewodowego połączenia czujnika z mostkiem [40, 70]
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <h4>4.5.2. PRZETWORNIKI KONDUKTOMETRYCZNE 
+                        DO CZUJNIKÓW DWUELEKTRODOWYCH</h4>
+                    <p>
+                        Obecnie w praktycznych zastosowaniach konduktometrii powszechnie stosuje się 
+                        przetworniki konduktancji (rezystancji) na napięcie lub prąd elektryczny. Mogą one 
+                        występować jako układy pomiarowe konduktometrów lub jako samodzielnie
+                        działające systemowe przetworniki pomiarowe. Porównuje się w nich mierzoną konduktancję 
+                        \( G_{x} \) z wzorcową rezystancją \( R_{m} \) — przy jednakowej wartości prądów \( I_{x} \) i \( I_{m} \) lub przy
+                        jednakowej wartości napięć \( U_{x} \) i \( U_{m} \) (wzór 4.3). W zależności od rodzaju zastosowanego 
+                        detektora, mierzy się albo moduł admitancji (impedancji) — z użyciem detektora 
+                        aperiodycznego, albo konduktancję (rezystancję) — jeśli używa się synchronicznego
+                        detektora fazoczułego. Istotnym parametrem takiego przetwornika jest czas jego odpo- 
+                        wiedzi na zmiany wielkości mierzonej, który decyduje o możliwości wykonywania 
+                        pomiarów w warunkach dynamicznych [95, 98, 215]. Podstawowy układ przetwornika 
+                        równoprądowego (jednakowe wartości prądów \( I_{x} \) i \( I_{m} \)) przedstawiono na rys.4.27a, 
+                        a jego rozwinięcia na rys. 4.27b oraz c.
+
+                        <figure id="img52" class="tfl-center">
+                            <img src="images/rys-4-27.jpg" class="img-fluid" alt="Układy pomiarowe do czujników dwuelektrodowych: a) układ podstawowy, b) układ do 
+                            pomiaru małych konduktancji [1 19], c) układ do pomiaru dużych konduktancji [119, 124, 150] 
+                            (\( G_{x} \) — mierzona konduktancja, \( R_{m} \) — rezystancja wzorcowa, \( E_{g} \) — SEM źródła, \( R_{g} \) — rezystancja źródła)"/>
+                            <figcaption>
+                                Rys. 4.27. Układy pomiarowe do czujników dwuelektrodowych: a) układ podstawowy, b) układ do 
+                                pomiaru małych konduktancji [1 19], c) układ do pomiaru dużych konduktancji [119, 124, 150] 
+                                (\( G_{x} \) — mierzona konduktancja, \( R_{m} \) — rezystancja wzorcowa, \( E_{g} \) — SEM źródła, \( R_{g} \) — rezystancja źródła)
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>Po przyjęciu oznaczeń z rys. 4.27a mierzona konduktancja jest równa
+
+                        $$ G_{x}=\frac{U_{m}}{U_{x}} \frac{1}{R_{m}}=\frac{U_{m}}{U_{g}-U_{m}} \frac{1}{R_{m}} $$
+                    </p>
+                    <p>
+                        Wzór (4.4) można stosować bezpośrednio do obliczania wartości Gx w
+                        przyrządach mikroprocesorowych [191]. W przyrządach, których nie wyposażono w środki 
+                        obliczeniowe postępuje się inaczej [119]. Jeżeli wystarcza niewygórowana liniowość 
+                        i dokładność przetwarzania oraz spełnione są warunki: \( R_{g} &lt;&lt; 1/G_{x} \) i \( R_{m} &lt;&lt; 1/G_{x} \), to 
+                        można przyjąć, że \( U_{g} &asymp; E_{g} \), zatem
+
+                        $$ U_{m} \approx G_{x} E_{g} R_{m} $$
+                    </p>
+                    <p>
+                        Przy ustalonym napięciu \( E_{g} \) źródła wystarczy wtedy mierzyć spadek napięcia \( U_{m} \),
+                        który jest w przybliżeniu proporcjonalny do mierzonej konduktancji \( G_{x} \). Jeżeli 
+                        nieliniowość powodowana skończonymi wartościami rezystancji \( R_{g} \) i \( R_{m} \) jest zbyt duża, 
+                        można zastosować nieliniową podziałkę (w przyrządach analogowych) lub
+                        linearyzację wskazań (w przyrządach cyfrowych). Okresowa kalibracja układu za pomocą 
+                        rezystorów wzorcowych zapewnia minimalizację wpływów wolnozmiennych, zwłaszcza 
+                        niestałości amplitudy źródła \( E_{g} \).
+                    </p>
+                    <p>
+                        Właściwości metrologiczne układu pomiarowego z rys. 4.27a można poprawić, 
+                        wprowadzając do niego wzmacniacz z silnym ujemnym sprzężeniem zwrotnym.
+                        Uzyskuje się w ten sposób przetwornik konduktancji na napięcie (\( U_{m} = G_{x}E_{g}R{m} \)), z 
+                        rezystorem pomiarowym \( R_{m} \) poza obwodem czujnika (rys. 4.27b i c). Nie trzeba wtedy 
+                        minimalizować rezystancji rezystora wzorcowego, co ułatwia jego wykonanie 
+                        i umożliwia poprawę jego dokładności. Ponadto, w układzie z rys. 4.27c źródło Eg jest 
+                        dołączone do drugiego, nieodwracającego wejścia wzmacniacza różnicowego, zatem 
+                        w gałęzi czujnika nie występuje już rezystancja źródła. Usunięcie rezystora 
+                        wzorcowego i rezystancji źródła poza obwód czujnika umożliwia uzyskiwanie dobrej 
+                        liniowości i dokładności przetwarzania również w pomiarach dużych konduktancji. 
+                        W układzie z rys. 4.27c napięcie wyjściowe \( U_{m} = I_{m}R{m} \), może być mierzone
+                        różnicowo, jak na rys. 4.27c [124, 150], lub też łącznie z SEM \( E_{g} \) i dopiero później 
+                        wyodrębnione [28]. W omawianych układach zmiana zakresu pomiarowego następuje przez 
+                        zmianę wartości rezystora \( R_{m} \). W zakresie konduktancji mniejszych od 100 mS można, 
+                        bez większych trudności, uzyskać błąd przetwarzania konduktancji na napięcie
+                        (łącznie z błędem nieliniowości) mniejszy od ±0,5%. W pomiarach większych 
+                        konduktancji trzeba uwzględniać rezystancje przewodów.
+
+                        <figure id="img53" class="tfl-center">
+                            <img src="images/rys-4-28.jpg" class="img-fluid" alt="Sposób połączenia czujnika konduktometrycznego z układem pomiarowym, 
+                            umożliwiąjący minimalizację wpływu pasożytniczych pojemności połączeń w pomiarach 
+                            roztworów słabo przewodzących [94]"/>
+                            <figcaption>
+                                Rys. 4.28. Sposób połączenia czujnika konduktometrycznego z układem pomiarowym, 
+                                umożliwiąjący minimalizację wpływu pasożytniczych pojemności połączeń w pomiarach 
+                                roztworów słabo przewodzących [94] 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        W pomiarach małych konduktancji, rzędu 10 \( \mu S \) i mniejszych, zaczyna być 
+                        zauważalny wpływ pojemności pasożytniczych, zwłaszcza pojemności \( C_{k} \) kabla 
+                        łączącego czujnik z przyrządem. Można ten wpływ znacznie ograniczyć, stosując sposób 
+                        połączenia czujnika z układem pomiarowym pokazany na rys. 4.28 [94]. Elektroda A 
+                        czujnika jest połączona z zaciskiem \( A^{\prime} \) układu przewodem ekranowanym A, którego 
+                        ekran jest z kolei połączony z masą układu. Natomiast elektroda B czujnika jest 
+                        połączona z zaciskiem \( B^{\prime} \) układu przewodem nieekranowanym B, prowadzonym
+                        równolegle do ww. przewodu ekranowanego A. Ponieważ zacisk \( B^{\prime} \) znajduje się na potencjale 
+                        wirtualnej masy, pomiędzy przewodem B i masą układu występuje tylko niewielka 
+                        pojemność C, a pomiędzy przewodem B i wewnętrznym przewodem A — niewielka 
+                        pojemność \( C_{k}^{\prime} \). Największa z pojemności pasożytniczych, \( C_{k} \), występująca między 
+                        wewnętrznym przewodem A i jego ekranem, obciąża tylko źródło \( E_{g} \)
+                    </p>
+                    <p>
+                        W przetwornikach konduktometrycznych można stosować również układ mostka 
+                        Wheatstone'a, zarówno zrównoważonego (równoważenie automatyczne), jak i 
+                        niezrównoważonego. Elementem równoważącym mostek może być np. tranzystor 
+                        poIowy JFET pracujący jako zmienna rezystancja, sterowany w pętli ujemnego 
+                        sprzężenia zwrotnego napięciem proporcjonalnym do napięcia rozrównoważenia mostka 
+                        [16]. Uzyskuje się wtedy liniowe przetwarzanie konduktancji na napięcie, z błędem 
+                        nieliniowości ±0,3%. Liniowym przetwornikiem konduktancji na napięcie jest także 
+                        wzmacniacz operacyjny pracujący w układzie mostkowym (mostek 
+                        niezrównoważony) [41] — rys. 4.29. Po wstępnym zrównoważeniu mostka (przy \( G_{x} = G_{0} \), gdzie \( G_{0} \)
+                        to pewna początkowa wartość konduktancji) napięcie wyjściowe Uwy układu jest 
+                        proporcjonalne do zmian \( \Delta G_{x} \) konduktancji:
+
+                        $$ U_{\mathrm{wy}}=-E_{g} \frac{R_{2} R_{3}}{R_{3}+R_{4}} \Delta G_{x} $$
+                    </p>
+                    <p>
+                        Kondensator \( C_{3} \), o niewielkiej pojemności, służy do równoważenia składowej 
+                        reaktancyjnej impedancji czujnika. Zakres pomiarowy jest ustalony przez zmianę wartości rezystancji \( R_{2} \)
+
+                        <figure id="img54" class="tfl-center">
+                            <img src="images/rys-4-29.jpg" class="img-fluid" alt="Przetwornik mostkowy do pomiaru zmian konduktancji [41]  "/>
+                            <figcaption>
+                                Rys. 4.29. Przetwornik mostkowy do pomiaru zmian konduktancji [41]  
+                            </figcaption>
+                        </figure>
+                        <p>
+                            a)
+                            <figure id="img55" class="tfl-center">
+                                <img src="images/rys-4-30a.jpg" class="img-fluid"
+                                   alt=""/>
+                                <figcaption>
+                                </figcaption>
+                            </figure>
+                            b)
+                            <figure id="img56" class="tfl-center">
+                                <img src="images/rys-4-30b.jpg" class="img-fluid"
+                                   alt=""/>
+                                <figcaption>
+                                </figcaption>
+                            </figure>
+                            c)
+                            <figure id="img57" class="tfl-center">
+                                <img src="images/rys-4-30c.jpg" class="img-fluid"
+                                   alt=""/>
+                                <figcaption>
+                                </figcaption>
+                            </figure>
+                            <figcaption>
+                                Rys. 4.30. Układy do pomiaru: a) różnicy, b) stosunku, c) względnych zmian konduktancji, 
+                                gdzie: \( G_{1} \) i \( G_{2} \) — odpowiednio, konduktancja roztworu mierzonego i odniesienia 
+                            </figcaption>
+                        </p>
+                    </p>
+                    <p>
+                        W pewnych zastosowaniach, np. w kontroli przebiegu procesów 
+                        technologicznych, w miareczkowaniach konduktometrycznych itp., występuje potrzeba 
+                        określania różnicy konduktancji, stosunku konduktancji lub względnych zmian 
+                        konduktancji roztworów mierzonych za pomocą dwóch oddzielnych czujników. Umożliwiają 
+                        to wprost specjalne układy pomiarowe przedstawione na rys. 4.30. Jeden z
+                        czujników pełni w nich funkcję czujnika pomiarowego, drugi czujnika odniesienia
+                        (odpowiednio: \( G_{1} \) i \( G_{2} \) na rys. 4.30, chociaż można przyjąć odwrotnie). W pracy [265] 
+                        opisany jest układ z rys. 4.30b, stosowany w badaniach oceanograficznych do
+                        pomiaru względnego zasolenia wody morskiej w określaniu profilów termoklin
+                        (granica pomiędzy górną, zmieszaną warstwą wody oraz dolną, chłodniejszą wodą). 
+                        Czujnik odniesienia, napełniony standardową wodą morską, spełnia jednocześnie funkcję 
+                        kompensatora wpływu zmian temperatury wody. Z kolei układ z rys. 4.30c jest
+                        szczególnie przydatny do określania zmian konduktancji w miareczkowaniach 
+                        konduktometrycznych.
+                    </p>
+                    <p>
+                        Układ z rys. 4.30a, aczkolwiek pozwala mierzyć różnice konduktancji, nie jest 
+                        odpowiedni do pomiarów konduktywności roztworów metodą różnicową 
+                        (trójelektrodową), gdyż nie spełnia wszystkich warunków sformułowanych w rozdz. 3.3. l. Do 
+                        metody różnicowej potrzebny jest układ odejmujący impedancje dwóch sekcji czujnika trójelektrodowego 
+                        (dwóch oddzielnych czujników dwuelektrodowych), zmierzone 
+                        w warunkach przepływu jednakowego prądu. Takie właściwości ma układ
+                        przedstawiony na rys. 4.31 [122, 123, 127]. Stosowany w nim czujnik trójelektrodowy ma 
+                        dwie sekcje, utworzone z par elektrod 1—2 i 2—3, o znacznie różniących się 
+                        wartościach stałej — \( K_{12} \) i \( K_{23} \). W stanie ustalonym, prądy Il i 12 płynące przez elektrody 1 i 3 
+                        są jednakowe i równe
+                        
+                        $$ I_{1}=I_{2}=I=\frac{E_{g}}{R_{1}-R_{2}}=\frac{E_{g}}{K_{12}-K_{23}} \kappa=\frac{E}{K} \kappa $$
+
+                        gdzie: \( \kappa \) konduktywność mierzonego roztworu, \( R_{1} = K_{12}/\kappa \),
+                        \( R_{2} = K_{23}/\kappa \), \( K = K_{12} - K_{23} \)
+                    </p>
+                    <p>
+                        Układ z zasady eliminuje rezystancje połączeń czujnika.
+
+                        <figure id="img58" class="tfl-center">
+                            <img src="images/rys-4-31.jpg" class="img-fluid"
+                               alt="Układ do pomiaru konduktywności roztworów metodą różnicową 
+                               (trójelektrodową) [122]: 1, 2 i 3 — elektrody, \( K_{12} \) i \( K_{23} \) — stałe sekcji czujnika, 
+                               określone między parami elektrod 1—2 i 2—3"/>
+                            <figcaption>
+                                Rys. 4.31. Układ do pomiaru konduktywności roztworów metodą różnicową 
+                                (trójelektrodową) [122]: 1, 2 i 3 — elektrody, \( K_{12} \) i \( K_{23} \) — stałe sekcji czujnika, 
+                                określone między parami elektrod 1—2 i 2—3 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        W niektórych zastosowaniach, np. w ocenie jakości wody destylowanej i
+                        dejonizowanej, zdolność roztworów do przewodzenia prądu elektrycznego tradycyjnie wyraża 
+                        się nie konduktywnością, lecz rezystywnością. Przedstawione w tym rozdziale układy 
+                        konduktometryczne mogą być stosowane również w pomiarach rezystancji — po 
+                        zamianie miejscami czujnika i rezystora wzorcowego [62] lub czujnika pomiarowego i 
+                        czujnika odniesienia. Ponieważ rezystywność jest odwrotnością konduktywności, mierniki 
+                        rezystancji umożliwiają określanie przewodnictwa w bardzo szerokim zakresie (mocno 
+                        nieliniowa, hiperboliczna zależność), bez potrzeby stosowania podziału na podzakresy. 
+                        Jest to wykorzystywane np. w kontroli pracy kolumn do dejonizacji wody oraz w
+                        kontroli pracy urządzeń myjących, tj. w zastosowaniach nie wymagających wygórowanej 
+                        dokładności pomiaru. Nieliniową charakterystykę przetwornika konduktometrycznego
+                        można uzyskać w jeszcze inny sposób, np. wprowadzając do układu pomiarowego 
+                        dodatkowy rezystor \( R_{w} \), włączony szeregowo — rys. 4.32a (w konduktometrze) bądź 
+                        równolegle — rys. 4.32b (w rezystometrze), w stosunku do czujnika. Wartość rezystancji Rw 
+                        dobiera się tak, żeby otrzymać pożądany kształt krzywej przetwarzania. Wprowadzając 
+                        do przetwornika wzmacniacz logarytmiczny, uzyskuje się logarytmiczną 
+                        charakterystykę przetwarzania [177].
+
+                        <figure id="img59" class="tfl-center">
+                            <img src="images/rys-4-32.jpg" class="img-fluid"
+                               alt="Układy przetwarząjące konduktancję — (a) oraz rezystancję — (b) na napięcie, 
+                               według zależności nieliniowej, \( R_{m} \) — rezystor wzorcowy, \( R_{w} \) — rezystor kształtujący 
+                               charakterystykę przetwarzania"/>
+                            <figcaption>
+                                Rys. 4.32. Układy przetwarząjące konduktancję — (a) oraz rezystancję — (b) na napięcie, 
+                                według zależności nieliniowej, \( R_{m} \) — rezystor wzorcowy, \( R_{w} \) — rezystor kształtujący 
+                                charakterystykę przetwarzania
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        We wszystkich przetwornikach konduktometrycznych przedstawionych w tym 
+                        rozdziale sygnał wyjściowy zależy wprost od sygnału pobudzającego układ
+                        pomiarowy, tj. również od jego niestałości. Można tego uniknąć, określając stosunek sygnału 
+                        wyjściowego do pobudzającego \( U_{m}/E{g} \) (rys. 4.27). Na przestrzeni lat czyniono to na 
+                        różne sposoby: począwszy od stosowania najprostszych, obsługiwanych ręcznie 
+                        układów kalibracyjnych lub mierników logometrycznych (w przyrządach analogowych), 
+                        poprzez wykorzystanie dzielących właściwości całkującego przetwornika a/c, aż po 
+                        cyfrowe dzielenie w układach wyposażonych w mikroprocesor.
+                    </p>
+                    <p>
+                        W charakterze przetworników konduktometrycznych, współpracujących z 
+                        czujnikami dwuelektrodowymi, można stosować również układy generacyjne, które 
+                        przetwarzają konduktancję lub rezystancję na częstotliwość [265] lub wałtość średnią 
+                        generowanego przebiegu [216].
+                    </p>
+                    <h4>4.5.3. UKŁADY POMIAROWE DO CZUJNIKÓW CZTEROELEKTRODOWYCH</h4>
+                    <p>
+                        Przewodnictwo elektryczne roztworów elektrolitów można mierzyć metodą
+                        czteroelektrodową zarówno przy prądzie stałym, jak i zmiennym [1 12, 205, 247, 272],
+                        jednakże ze względu na trudności występujące w pomiarach stałoprądowych 
+                        preferowane są pomiary zmiennoprądowe. Jako układ pomiarowy stosowano dawniej do
+                        tego celu kompensatory napięcia zmiennego (precyzyjny kompensator do pomiaru 
+                        konduktywności roztworów w paśmie częstotliwości 500Hz—8kHz opisano w [4]), 
+                        a obecnie — elektroniczne przetworniki rezystancji lub konduktancji na prąd lub 
+                        napięcie. Wymienione przetworniki działają na dwa podstawowe sposoby (rys. 4.33):
+                        
+                        <figure id="img60" class="tfl-center">
+                            <img src="images/rys-4-33.jpg" class="img-fluid"
+                               alt="Podstawowy układ do pomiaru 
+                               przewodnictwa roztworów metodą czteroelektrodową 
+                               (\( I_{g} \) — prąd źródła, 1 i 4 — elektrody prądowe czujnika, 
+                               2 i 3 — elektrody napięciowe czujnika, \( R_{23} \) — 
+                               rezystancja występująca między elektrodami 
+                               napięciowymi, \( K_{n} \) — stała czujnika zdefiniowana 
+                               dla elektrod napięciowych, \( R_{m} \), — rezystor 
+                               do pomiaru prądu (natężenie prądu 
+                               najczęściej mierzy się pośrednio)"/>
+                            <figcaption>
+                                Rys. 4.33. Podstawowy układ do pomiaru 
+                                przewodnictwa roztworów metodą czteroelektrodową 
+                                (\( I_{g} \) — prąd źródła, 1 i 4 — elektrody prądowe czujnika, 
+                                2 i 3 — elektrody napięciowe czujnika, \( R_{23} \) — 
+                                rezystancja występująca między elektrodami 
+                                napięciowymi, \( K_{n} \) — stała czujnika zdefiniowana 
+                                dla elektrod napięciowych, \( R_{m} \), — rezystor 
+                                do pomiaru prądu (natężenie prądu 
+                                najczęściej mierzy się pośrednio)
+                            </figcaption>
+                        </figure>
+                        <ul>
+                            <li>Przy ustalonej wartości prądu Ip zasilającego elektrody prądowe czujnika (\( I_{p} \) = \( I_{g} \)
+                            = const — zasilanie ze źródła prądowego o stałej wydajności) mierzy się spadek napię- 
+                            cia \( U_{n} \) występujący między elektrodami napięciowymi czujnika. Jest on proporcjonal- 
+                            ny do rezystancji \( R_{23} \) roztworu znajdującego się między elektrodami napięciowymi — 
+                            układ mierzy więc z zasady tę rezystancję (czyli również rezystywność \( \rho \)) roztworu:
+
+                            $$ U_{n}=I_{g} R_{23}=I_{g} K_{n} \rho=\frac{U_{m}}{R_{m}} K_{n} \rho $$
+
+                            gdzie
+
+                            $$ K_{n}=\frac{R_{23}}{\rho}=R_{23} \kappa $$
+
+                            jest stałą czujnika (w przypadku czujników czteroelektrodowych stałą definiuje się dla 
+                            pary elektrod napięciowych — rozdz. 3.3).</li>
+                            <li>
+                                Utrzymując stały spadek napięcia \( U_{n} \) (\( U_{n} \) = const) występujący między 
+                                elektrodami napięciowymi czujnika (w tym celu reguluje się w sposób automatyczny prąd \( I_{g} \)
+                                źródła), mierzy się natężenie prądu \( I_{p} = I_{g} \), płynącego przez elektrody prądowe 
+                                czujnika, które jest proporcjonalne do konduktancji \( G_{23} = 1/R_{23} \) roztworu znajdującego się 
+                                między elektrodami napięciowymi czujnika — układ, z zasady, mierzy więc
+                                konduktancję (konduktywność \( \kappa \)) roztworu:
+
+                                $$ I_{p}=U_{n} G_{23}=U_{n} \frac{1}{K_{n}} \kappa $$
+                            </li>
+                        </ul>
                     </p>
                 </main>
                 <footer>
