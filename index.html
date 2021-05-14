@@ -734,7 +734,7 @@
                         zawartością rozpuszczonych soli. Na rysunku 2.5 pokazano temperaturową zależność 
                         rezystywności wody zdejonizowanej w różnym stopniu [14], parametrem jest 
                         rezystywność P25 w temperaturze \( 25^{\circ} \mathrm{C} \). Wartość \( \rho_{25} \) = 18 \( M\Omega \)cm odpowiada chemicznie 
-                        czystej wodzie, natomiast \( \rho_{25} \) = 2 \( M\Omega \)cm — równoważnemu stężeniu 0,206 ppm Nacł 
+                        czystej wodzie, natomiast \( \rho_{25} \) = 2 \( M\Omega \)cm — równoważnemu stężeniu 0,206 ppm NaCl
                         (&asymp; 0,206 mg/l, co odpowiada wodzie o czystości lepszej niż da się uzyskać przez 
                         destylację). Z kolei względne zmiany (stosunek konduktywności w aktualnej 
                         temperaturze do konduktywności w \( 25^{\circ} \mathrm{C} \)) wody o podobnym i większym zasoleniu 
@@ -3091,9 +3091,558 @@
                                 konduktancję (konduktywność \( \kappa \)) roztworu:
 
                                 $$ I_{p}=U_{n} G_{23}=U_{n} \frac{1}{K_{n}} \kappa $$
+
+                                tzn.
+
+                                $$ U_{m}=I_{p} R_{m}=U_{n} R_{m} \frac{1}{K_{n}} \kappa $$
                             </li>
                         </ul>
                     </p>
+                    <p>
+                        Oba wymienione sposoby są sobie równoważne, zarówno z punktu widzenia teorii 
+                        obwodów elektrycznych, jak i ze względu na uwarunkowania fizykochemiczne [247]. 
+                        Jednakże, ze względów praktycznych, do pomiaru konduktywności korzystniejszy jest 
+                        sposób drugi, w którym mniejsze konduktancje mierzy się przy mniejszym prądzie niż 
+                        duże (a tym samym następuje ograniczenie mocy wydzielanej w czujniku w czasie 
+                        pomiaru). W obu sposobach niestabilność zasilania, a więc i wielkości regulowanej 
+                        (prądu lub napięcia), przenosi się wprost na wynik pomiaru. Można tego uniknąć,
+                        obliczając stosunek Un/Um lub odwrotny [46, 162].
+
+                        <figure id="img61" class="tfl-center">
+                            <img src="images/rys-4-34.jpg" class="img-fluid"
+                               alt="Przetwornik konduktometryczny w układzie potencjostatu: 
+                               1 i 4 — elektrody prądowe czujnika, 2 i 3 — elektrody napięciowe czujnika, 
+                               kRn — rezystancja roztworu pomiędzy elektrodami prądowymi i napięciowymi 
+                               czujnika, Rz— rezystancja polaryzacji i zanieczyszczeń, AU — wzmocnienie 
+                               napięciowe układu z otwartą pętlą, \( \psilon \) — błąd statyzmu"/>
+                            <figcaption>
+                                Rys. 4.34. Przetwornik konduktometryczny w układzie potencjostatu: 
+                                1 i 4 — elektrody prądowe czujnika, 2 i 3 — elektrody napięciowe czujnika, 
+                                kRn — rezystancja roztworu pomiędzy elektrodami prądowymi i napięciowymi 
+                                czujnika, Rz— rezystancja polaryzacji i zanieczyszczeń, AU — wzmocnienie 
+                                napięciowe układu z otwartą pętlą, \( \epsilon \) — błąd statyzmu 
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Sposób drugi, w którym sygnał wyjściowy jest wprost proporcjonalny do
+                        mierzonej konduktancji, znalazł powszechne zastosowanie w przetwornikach
+                        konduktometrycznych o działaniu analogowym. Typowe rozwiązanie takiego przetwornika to 
+                        samorównoważący się układ typu statycznego — rys. 4.34. [36, 49, 122, 166, 247]. 
+                        W elektrochemii ma on nazwę potencjostatu (szczegółowe rozwiązania różnią się 
+                        między sobą przede wszystkim sposobem realizacji pętli sprzężenia zwrotnego). 
+                    </p>
+                    <p>
+                        Napięcie Up zasilające czujnik powstaje w wyniku wzmocnienia różnicy \( \epsilon \) pomię- 
+                        dzy napięciem Eg źródła oraz napięciem Un sprzężenia zwrotnego, tzn.
+
+                        $$ U_{p}=\varepsilon A_{U}=\varepsilon\left(E_{g}-U_{n}\right) $$
+
+                        Ponieważ
+
+                        $$ U_{p}=I_{p}\left(R_{Z}+k R_{n}+R_{n}\right) \quad \text { oraz } \quad U_{n}=I_{p} R_{n} $$
+
+                        zatem
+
+                        $$ I_{p}=\frac{E_{g}}{R_{n}} \frac{1}{1+\frac{R_{Z} / R_{n}+k+1}{A_{U}}} $$
+                    </p>
+                    <p>
+                        Tylko w przypadku nieskończenie dużej wartości wzmocnienia (\( A_{U} \rightarrow \infty \)) prąd Ip 
+                        przyjmuje wałtość Ip = Eg/Rn, niezależnie od wartości rezystancji Rz reprezentującej 
+                        polaryzację i zanieczyszczenia elektrod prądowych czujnika. Skończona wartość 
+                        wzmocnienia powoduje błąd odwzorowania mierzonej konduktancji Gn (rezystancji 
+                        Rn) przez prąd Ip. Ten błąd, charakterystyczny dla wszystkich układów typu 
+                        statycznego (błąd statyzmu), wynosi
+
+                        $$ \delta I_{p}=-\frac{1}{1+A_{U} /\left(R_{Z} / R_{n}+k+1\right)} $$
+                    </p>
+                    <p>
+                        Przyjmując przykładowo, iż: AU = 1000 V/V, k = 1, Rz/Rn = 1—10 (w zastosowa- 
+                        niach przemysłowych ten stosunek może być nawet większy), uzyskuje się \( \delta I_{p} \) &asymp; -1%
+                        Dowolne zwiększanie wzmocnienia AU nie jest możliwe ze względu na
+                        niebezpieczeństwo utraty stabilności przez układ.
+
+                        <figure id="img62" class="tfl-center">
+                            <img src="images/rys-4-35.jpg" class="img-fluid"
+                               alt="Układ pomiarowy przemysłowego konduktometru z czujnikiem 
+                               czteroelektrodowym [166]: 1 — generator, 2 — wzmacniacz mocy, 3 — wzmacniacz 
+                               regulujący, 4 — czujnik konduktometryczny (T — czujnik temperatury), 
+                               5 — wzmacniacz pomiarowy i układ kompensacji temperaturowej, 6 — transformator 
+                               izolujący, 7 — detektor fazoczuły, 8 — przetwornik napięcia na znormalizowany prąd"/>
+                            <figcaption>
+                                Rys. 4.35. Układ pomiarowy przemysłowego konduktometru z czujnikiem 
+                                czteroelektrodowym [166]: 1 — generator, 2 — wzmacniacz mocy, 3 — wzmacniacz 
+                                regulujący, 4 — czujnik konduktometryczny (T — czujnik temperatury), 
+                                5 — wzmacniacz pomiarowy i układ kompensacji temperaturowej, 6 — transformator 
+                                izolujący, 7 — detektor fazoczuły, 8 — przetwornik napięcia na znormalizowany prąd
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Przykładowy układ pomiarowy omówionego tu rodzaju pokazano na rys. 4.35. 
+                        Może on być stosowany jako samodzielny konduktometr przemysłowy lub jako]
+                        modułowy przetwornik systemowy (rys. 4.36) [89, 163, 164, 169, 277].
+
+                        <figure id="img63" class="tfl-center">
+                            <img src="images/rys-4-36.jpg" class="img-fluid"
+                               alt="Przemysłowe czujniki czteroelektrodowe oraz współpracujące 
+                               z nimi przetworniki konduktometryczne [151, 164, 167, 169]"/>
+                            <figcaption>
+                                Rys. 4.36. Przemysłowe czujniki czteroelektrodowe oraz współpracujące 
+                                z nimi przetworniki konduktometryczne [151, 164, 167, 169]
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        Błąd statyzmu nie ma znaczenia w przyrządach z przeliczaniem, w których
+                        każdorazowo oblicza się stosunek odpowiednich wielkości (w omawianym przypadku 
+                        Um/Un). Należy tu wyjaśnić, iż również wiele konduktometrów z przeliczaniem 
+                        (mikroprocesorowych) zawiera podobny układ przetwornika statycznego, który jest 
+                        w nich wykorzystywany do wstępnego doboru prądu pomiarowego [81].
+                    </p>
+                    <p>
+                        Inne elementy analizy układów pomiarowych stosowanych w realizacji metody 
+                        czteroelektrodowej, np. analizę wpływu parametrów resztkowych układu, można 
+                        znaleźć w rozdz. 6.3 oraz w pracy autora [122].
+                    </p>
+                <h2>5. KONDUKTOMETRIA BEZELEKTRODOWA 
+                    Z WYKORZYSTANIEM METODY 
+                    TRANSFORMATOROWEJ</h2>
+                <p>
+                    Wśród metod bezelektrodowych największe zastosowanie w konduktometrii 
+                    znalazła metoda transformatorowa [112, 139, 141, 178]. O jej popularności 
+                    zadecydowały takie czynniki, jak: wyjątkowa odporność na szkodliwe wpływy mierzonego 
+                    ośrodka, szeroki zakres pomiarowy, możliwość wykonywania pomiarów przy
+                    małych częstotliwościach (już od 50 Hz) i dobra dokładność. Jest stosowana zwłaszcza 
+                    w przemyśle chemicznym i spożywczym, w kontroli wód i ścieków, pomiarach 
+                    szlamów, badaniach oceanograficznych [l l]. Nadaje się również do pomiarów 
+                    precyzyjnych, gdyż czujniki transformatorowe charakteryzują się doskonałą
+                    stabilnością parametrów i mogą w naturalny sposób współpracować bezpośrednio z 
+                    transformatorowymi mostkami impedancji jako ich część [22]. Konduktometry z czujnikami 
+                    transformatorowymi mogą mierzyć konduktywność w bardzo szerokim zakresie, np. 
+                    od 0-100 \( \mu S \cdot cm^{-1} \) do 0-200 mS \( \cdot cm^{-1} \) lub 0—500 
+                    \( \mu S \cdot cm^{-1} \) do 0-2 S \( \cdot cm^{-1} \) (podano 
+                    najmniejszy i największy podzakres) [42, 54, 56, 211, 212, 228, 275], z błędem 
+                    podstawowym ±0,5%—2% aktualnego podzakresu, lub nawet lepiej.
+                </p>
+                <p>
+                    Czujniki transformatorowe mają i pewne wady: nie pokrywają zakresu bardzo 
+                    małych konduktywności (rzędu pojedynczych \( \muS \cdot cm^{-1} \) i mniejszych), występujących 
+                    w pomiarach czystej wody i roztworów niewodnych, w porównaniu z czujnikami 
+                    kontaktowymi i innymi czujnikami bezelektrodowymi są one dużo większe i cięższe, 
+                    poza tym ich cena jest stosunkowo wysoka. Wymienione wady, wynikające z 
+                    ograniczeń natury konstrukcyjnej i technologicznej, są zazwyczaj mniej istotne od uprzednio 
+                    podanych zalet.
+                </p>
+                <h3>5.1. TRANSFORMATOROWE CZUJNIKI 
+                    KONDUKTOMETRYCZNE</h3>
+                <p>
+                    Transformatorowy czujnik konduktometryczny, zrealizowany według koncepcji 
+                    przedstawionej w rozdziale 3.2, w typowym wykonaniu składa się z dwóch cewek
+                    indukcyjnych odpowiednio nawiniętych na toroidalnych rdzeniach magnetycznych (stąd 
+                    jego inna nazwa: „czujnik toroidalny”), tak umieszczonych względem siebie, że nie są 
+                    sprzężone magnetycznie [5, 7, 22]. Pomiędzy cewkami występuje natomiast
+                    sprzężenie pochodzące od prądu, który płynie w pojedynczym zwoju utworzonym z
+                    mierzonej cieczy i obejmującym oba toroidy — rys. 3.2. Powstaje w ten sposób układ dwóch 
+                    transformatorów: zasilającego — T1 oraz pomiarowego — T2, a zwój cieczowy jest
+                    jednocześnie uzwojeniem wtórnym transformatora Tl i uzwojeniem pierwotnym 
+                    transformatora T2 (stąd jeszcze inne określenie czujnika: „dwutransformatorowy” [196]).
+                    Czujnik jest zasilany napięciem sinusoidalnie zmiennym o małej częstotliwości, 
+                    najczęściej z zakresu od 50 HZ do 5 kHz. Miarą konduktywności cieczy jest w tej
+                    metodzie rezystancja R2 zwoju cieczowego, całkowicie lub częściowo ograniczonego
+                    naczyniem wykonanym z materiału o właściwościach izolatora elektrycznego
+
+                    $$ R_{2}=\frac{l}{S \kappa}=\frac{K}{\kappa} $$
+
+                    gdzie: l i S — długość i pole powierzchni przekroju strug prądu w zwoju cieczowym, 
+                    mierzona konduktywność ośrodka wypełniającego ten zwój, \( \kappa \) — stała zwoju cie- 
+                    czowego, wiążąca rezystancję R2 z konduktywnością \( \kappa \) (odpowiada ona stałej czuj- 
+                    nika konduktometrycznego zdefiniowanej w rozdziałach 3.1 i 3.3). Od zakładanego 
+                    zakresu pomiaru konduktywności zależą więc wymiary zastosowanych w czujniku 
+                    rdzeni — chcąc mierzyć małe konduktywności, trzeba użyć dużych rdzeni, o dużym 
+                    oknie.
+
+                    <figure id="img64" class="tfl-center">
+                        <img src="images/rys-5-1.jpg" class="img-fluid"
+                           alt="Transformatorowe czujniki konduktometryczne — przykładowe wykonania [212]"/>
+                        <figcaption>
+                            Rys. 5. 1. Transformatorowe czujniki konduktometryczne — przykładowe wykonania [212]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Przykładowe wykonania czujników przedstawiono na rys. 5.1. Zwój cieczowy 
+                    można wykonać na trzy podstawowe sposoby: jako naczynie tworzące pełną 
+                    zamkniętą pętlę [22, 264] — rys. 5.2a, jako odcinek rurki, najczęściej cylindrycznej, 
+                    otwartej po obu stronach do przestrzeni otaczającej czujnik — rys. 5.2b [274, 275], 
+                    lub jako odcinek rurki wmontowanej w rurociąg, z dodatkowym przewodem
+                    metalowym zamykającym obwód elektryczny zwoju [Il, 12, 211] — rys. 5.2c. Pierwsze 
+                    rozwiązanie może być stosowane w czujnikach typu przepływowego lub
+                    napełnianego. Jest odpowiednie do pomiarów precyzyjnych, ponieważ strugi prądu nie
+                    wychodzą poza obszar naczynia-zwoju. W jednym z klasycznych wykonań szklany
+
+                    <figure id="img65" class="tfl-center">
+                        <img src="images/rys-5-2.jpg" class="img-fluid"
+                           alt="Podstawowe sposoby wykonania zwoju cieczowego 
+                           w czujnikach transformatorowych [178]: a) czujnik napełniany, 
+                           b) czujnik zanurzeniowy, c) czujnik przepływowy (l i S — długość 
+                           i pole powierzchni przekroju strug prądu w zwoju cieczowym, 
+                           T1 i T1 — uzwojenie zasilające i pomiarowe czujnika)"/>
+                        <figcaption>
+                            Rys. 5.2. Podstawowe sposoby wykonania zwoju cieczowego 
+                            w czujnikach transformatorowych [178]: a) czujnik napełniany, 
+                            b) czujnik zanurzeniowy, c) czujnik przepływowy (l i S — długość 
+                            i pole powierzchni przekroju strug prądu w zwoju cieczowym, 
+                            T1 i T1 — uzwojenie zasilające i pomiarowe czujnika)
+                        </figcaption>
+                    </figure>
+
+                    zwój składa się z dwóch części (dzięki temu jest wymienny), łączonych z użyciem
+                    szlifowanych korków [264]. Rozwiązanie drugie jest stosowane w czujnikach 
+                    zanurzeniowych, przeznaczonych do pomiarów zarówno w zbiornikach, jak i rurociągach. Stała 
+                    takiego czujnika zależy nie tylko od średnicy i długości cylindrycznego otworu 
+                    czujnika, ale w dużym stopniu również od bliskości ścian naczynia, w którym jest
+                    wykonywany pomiar — rys. 5.3. [274, 275], gdyż drogi strug prądu zamykają się przez przestrzeń 
+                    otaczającą czujnik. Jeżeli czujnik tego typu nie jest umieszczony odpowiednio daleko od 
+                    ścian zbiornika, należy go wzorcować już po zamocowaniu w miejscu pomiaru. 
+                    Rozwiązanie trzecie jest typowe dla przepływowych czujników przemysłowych.
+
+                    <figure id="img66" class="tfl-center">
+                        <img src="images/rys-5-3.jpg" class="img-fluid"
+                           alt="Współczynnik instalacyjny dla czujnika transformatorowego 
+                           typu zanurzeniowego IC 40 [274] (można uniknąć kalibracji on-line, 
+                           nastawiając wstępnie wartość współczynnika w przetworniku IC 200)"/>
+                        <figcaption>
+                            Rys. 5.3. Współczynnik instalacyjny dla czujnika transformatorowego 
+                            typu zanurzeniowego IC 40 [274] (można uniknąć kalibracji on-line, 
+                            nastawiając wstępnie wartość współczynnika w przetworniku IC 200)
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Również w zwoju cieczowym, pomiędzy cieczą i naczyniem, występuje 
+                    warstwa graniczna (może to być np. osad), której wpływ może się przejawiać 
+                    zmniejszeniem przekroju zwoju cieczowego lub bocznikowaniem rezystancji mierzonej 
+                    cieczy. W większości praktycznych zastosowań nie stwarza to problemów, gdyż 
+                    przekrój zwoju cieczowego można odpowiednio zwiększyć [178], a rezystancję 
+                    powierzchniową materiału naczynia można pominąć ze względu na jej bardzo dużą 
+                    wartość [5].
+                </p>
+                <p>
+                    Rzeczywisty czujnik konduktometryczny typu transformatorowego można 
+                    zamodelować układem zastępczym przedstawionym na rys. 5.4, w którym uwzględniono 
+                    również parametry resztkowe czujnika [7].
+
+                    <figure id="img67" class="tfl-center">
+                        <img src="images/rys-5-4.jpg" class="img-fluid"
+                           alt="Układ zastępczy czujnika transformatorowego [7], 
+                           z uwzględnieniem parametrów resztkowych"/>
+                        <figcaption>
+                            Rys. 5.4. Układ zastępczy czujnika transformatorowego [7], 
+                            z uwzględnieniem parametrów resztkowych
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Oznaczenia na rysunku 5.4: Rz — rezystancja źródła, R1 i R3 — rezystancje uzwojeń, 
+                    R2 — rezystancja zwoju cieczowego, R0 — rezystancja obciążenia czujnika, N1, N2 i N3 
+                    liczby zwojów uzwojeń (w dalszych rozważaniach przyjęto N2 = 1, gdyż w praktyce 
+                    zazwyczaj nie stosuje się inaczej), L1, L2 i L3 — indukcyjności własne uzwojeń, M12, 
+                    M23, M13 — indukcyjności wzajemne pomiędzy poszczególnymi uzwojeniami, k — 
+                    współczynnik sprzężenia uzwojeń, P1 i P2 — rezystancje strat w rdzeniach, C1 i C3 
+                    pojemności własne uzwojeń, C13 — pojemność pomiędzy cewkami L1 i L3.
+                </p>
+                <p>
+                    Można przyjąć że całe strumienie wzbudzane w rdzeniach przez prądy płynące 
+                    w cewkach L1 i L3 są w pełni objęte strugami prądu płynącego w ośrodku
+                    przewodzącym. Inaczej jest ze strumieniem generowanym przez prąd I2 w zwoju cieczowym. 
+                    Większość tego strumienia zamyka się w rdzeniach i sprzęga uzwojenia o
+                    indukcyjnościach LI i L3, reszta pozostaje jednak poza rdzeniami. Strumień powstający w każdym 
+                    z rdzeni od prądu 12 jest reprezentowany na rys. 5.4 przez indukcyjność kL2. Pozostały 
+                    strumień jest reprezentowany przez indukcyjność rozproszenia (1 — k)L2. 142 jest tu 
+                    indukcyjnością własną zwoju cieczowego, przypadającą na każdy z rdzeni, a k jest 
+                    współczynnikiem sprzężenia (dla tego typu konstrukcji można przyjąć k &nbsp; 0.95 [7]). 
+                    W schemacie na rys. 5.3 indukcyjności L1 i kL2 oraz kL2 i L3 działają zatem jak dwie
+                    idealne indukcyjności wzajemne M12 i M23, o wartościach odpowiednio: (kL1L2) 
+                    i \( (kL2L3)^{1/2} \). Pojemność C13 oraz indukcyjność wzajemna M13, występujące pomiędzy 
+                    cewkami L1 i L3, są istotne jedynie w pomiarach bardzo małych przewodności [7].
+                </p>
+                <h3>5.2. ANALIZA PRACY CZUJNIKA TRANSFORMATOROWEGO</h3>
+                <p>
+                    Mimo dużego rozpowszechnienia czujników transformatorowych, w literaturze 
+                    brak jest pełnej analizy teoretycznej ich działania [196] — to stwierdzenie jest nadal 
+                    aktualne. Wiedza na ten temat jest nie tylko niekompletna, ale i rozproszona, a w
+                    publikacjach najczęściej eksponuje się tylko wybrane aspekty szczegółowe. Poza tym 
+                    w publikacjach na temat czujników transformatorowych stosunkowo często pojawiają 
+                    się niedomówienia lub poważne nieścisłości. Z tych powodów autor zdecydował się 
+                    wprowadzić do monografii obszerne fragmenty takiej analizy. 
+                </p>
+                <p>
+                    W ogólnej analizie pracy czujnika transformatorowego wygodnie jest posłużyć się 
+                    jego uproszczonym układem zastępczym — rys. 5.5, uzyskanym przy założeniu
+                    idealnych właściwości zastosowanych rdzeni ferromagnetycznych (cały strumień
+                    magnetyczny zamknięty w obszarze rdzenia, pomijalne straty, itp.) [5].
+
+                    <figure id="img68" class="tfl-center">
+                        <img src="images/rys-5-5.jpg" class="img-fluid"
+                           alt="Układ zastępczy czujnika transformatorowego [5, 7], 
+                           uproszczony do celów analizy działania"/>
+                        <figcaption>
+                            Rys. 5.5. Układ zastępczy czujnika transformatorowego [5, 7], 
+                            uproszczony do celów analizy działania
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Prąd wyjściowy \( \overline{I_{3}} \) czujnika, obliczony z równań Kirchhoffa opisujących układ 
+                    z rys. 5.5, jest równy
+
+                    $$ \bar{I}_{3}=\frac{-\omega^{2} M_{12} M_{23} \bar{U}_{1}}{\left(R_{Z}+j \omega L_{1}\right)\left(R_{2}+j \omega L_{2}\right)\left(R_{3}+j \omega L_{3}\right)+\omega^{2} M_{12}\left(R_{0}+j \omega L_{3}\right)+\omega^{2} M_{23}\left(R_{Z}+j \omega L_{1}\right)}, $$
+
+                </p>
+                <p>
+                    gdzie: \( \overline{U_{1}}, \overline{U_{3}} \) — napięcia: źródła i wyjściowe, \( \omega \) — pulsacja sygnału pomiarowego, 
+                    \( \overline{I_{1}}, \overline{I_{2}}, \overline{I_{3}} \)— natężenia prądów w poszczególnych oczkach układu, pozostałe oznaczenia 
+                    jak na rys. 5.5. Czujnik można zasilać stałym napięciem \( \overline{U_{1}} \) lub stałym prądem \( \overline{I_{1}} \), 
+                    a na jego wyjściu można mierzyć prąd \( \overline{I_{3}} \) lub napięcie \( \overline{U_{3}} \) — możliwe są więc cztery 
+                    podstawowe warianty pracy czujnika. Warianty z zasilaniem ze źródła prądowego, ze
+                    względu na istotne wady [5], nie są stosowane w praktyce. Praktyczne znaczenie mają 
+                    tylko dwa rozwiązania:
+                </p>
+                <p>
+                    A) Zasilanie ze źródła napięciowego napięciem \( \overline{U_{1}} \) oraz pomiar napięcia 
+                    wyjściowego \( \overline{U_{3}} = \overline{I_{3}} R_{0} \) — zakłada się wtedy \( R_{2} &lt;&lt; \omega L_{1} i R_{0} &gt;&gt; \omega L_{3}\). 
+                    Przyjmując, że (warunek istotny we wszystkich wariantach), w mianowniku wyrażenia (5.2) można 
+                    pominąć wszystkie wyrazy oprócz \( j\omega L_{1}R_{2}R{0} \) i uzyskuje się
+
+                    $$ \frac{\bar{U}_{3}}{\overline{U_{1}}} \approx j \omega \frac{M_{12} M_{23}}{L_{1}} \frac{1}{R_{2}}=j \omega k \sqrt{\frac{L_{3}}{L_{1}}} \frac{L_{2}}{R_{2}}=j \omega C_{u} G_{2}=j \omega \frac{C_{u}}{K} \kappa $$
+                </p>
+                <p>
+                    B) Zasilanie ze źródła napięciowego napięciem \( \overline{U_{1}} \) oraz pomiar pradu wyjsciowego 
+                    \( \overline{I_{3}} \) zakłada się \( R_{Z} &lt;&lt; \omega L_{1} i R_{0} &lt;&lt; \omega L_{3} \). Wtedy
+
+                    $$ \frac{\bar{I}_{3}}{\bar{U}_{1}} \approx \frac{M_{12} M_{23}}{L_{1} L_{2}} \frac{1}{R_{2}}=k \frac{1}{\sqrt{L_{1} L_{3}}} \frac{L_{2}}{R_{2}}=C_{i} G_{2}=\frac{C_{i}}{K} \kappa $$
+                </p>
+                <p>
+                    Cu i Ci oznaczają, odpowiednio, czułość napięciową i prądową czujnika: Cu &asymp;
+                    N3/N1, Ci = 1/(N1N3), k — współczynnik sprzężenia cewek (k = k12 k23). W przyrządach, 
+                    w których nie ma możliwości wykonywania operacji dzielenia, stabilizuje się zasilanie 
+                    czujnika i mierzy prąd lub napięcie wyjściowe. Ponieważ niektóre z parametrów
+                    występujących w (5.3) i (5.4) są trudne do dokładnego określenia w sposób teoretyczny, 
+                    w pomiarach dokładnych stałe Cu i Ci trzeba wyznaczać doświadczalnie.
+                </p>
+                <p>
+                    O liniowości przetwarzania konduktancji G2 zwoju cieczowego na odpowiednią 
+                    transmitancję decyduje spełnienie warunku  \( R_{2} &gt;&gt; \omega L_{2} \) .Jest to możliwe przy 
+                    ograniczeniu, od góry, maksymalnej częstotliwości pomiarowej oraz, od dołu, minimalnej 
+                    rezystancji R2 zwoju cieczowego (to ostatnie odpowiada ograniczeniu maksymalnej 
+                    konduktywności, jaką można mierzyć czujnikiem o danej stałej K zwoju cieczowego). 
+                </p>
+                <p>
+                    Do celów praktycznych korzystniejszy jest wariant B [5, 7, 8, 54, 139], gdyż:
+                    <ul>
+                        <li>sygnał wyjściowy jest w fazie z napięciem zasilającym i nie zależy od częstotli- 
+                        wości, indukcja magnetyczna w próbce jest równa 0, </li>
+                        <li>można stosować małą częstotliwość pomiarową bez straty czułości pomiaru; 
+                        przy małej częstotliwości łatwo jest spełnić warunek \( R_{2} &gt;&gt; \omega L_{2} \) nawet w przypadku 
+                        bardzo dobrze przewodzących cieczy, mały jest wtedy również wpływ pojemności 
+                        resztkowych, </li>
+                        <li>praca w warunkach zwarcia na wyjściu zapewnia mały wpływ rezystancji strat 
+                        P2 w rdzeniu pomiarowym oraz pojemności własnej C3 uzwojenia pomiarowego, </li>
+                        <li>czujnik nie jest, z zasady, wrażliwy na temperaturową zmianę przenikalności 
+                        rdzeni (we wzorze (5.4) występuje tylko stosunek indukcyjności). 
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Obszerniejsze omówienie tego wariantu można znaleźć w pracy [7].
+                </p>
+                <p>
+                    Wariant A [22, 250] jest mniej korzystny, bo:
+                    <ul>
+                        <li>wykorzystuje się prądy wirowe indukowane w próbce, sygnał wyjściowy jest 
+                        przesunięty w fazie o 90&deg; względem napięcia zasilającego i zależy od częstotliwości, 
+                        indukcja magnetyczna w próbce ma skończoną wartość, cewka pomiarowa mierzy 
+                        również magnetyzację próbki (można ją wprawdzie oddzielić stosując detekcję fazo- 
+                        czułą, lecz w pewnych przypadkach mogą wystąpić trudności [7]), </li>
+                        <li>praca w warunkach rozwarcia na wyjściu wiąże się z dużym wpływem rezystancji 
+                        strat P2 w rdzeniu pomiarowym oraz pojemności własnej C3 uzwojenia pomiarowego, </li>
+                        <li>zwiększanie częstotliwości pracy, wskazane ze względu na czułość, jest szkodli- 
+                        we ze względu na wpływy parametrów resztkowych czujnika oraz spełnienie warunku \( R_{2} &gt;&gt; \omega L_{2} \)
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Wariant A jest bardziej znany i częściej publikowany. Umożliwia on uzyskiwanie, 
+                    w stosunkowo prosty sposób, dużych sygnałów wyjściowych (dużych wartości
+                    mierzonej transmitancji — wzór (5.3)), np. przez dobór dużego stosunku N3/N1 oraz dużej 
+                    częstotliwości pomiarowej. Może być rozwiązaniem odpowiednim do pomiarów 
+                    średnich wartości konduktywności. W zakresie bardzo dużych konduktywności trudno jest 
+                    w nim spełnić warunek \( R_{2} &gt;&gt; \omega L_{2} \) ,natomiast w zakresie bardzo małych 
+                    konduktywności zasadnicze znaczenie zaczynają mieć pojemności własne i wzajemne uzwojeń. 
+                    Wpływ tych pojemności można w dużym stopniu ograniczyć, stosując odpowiedni 
+                    sposób nawijania oraz elektrostatycznego ekranowania uzwojeń. Szczegółowy opis 
+                    rozwiązań według tego wariantu można znaleźć w pracach [250] oraz [51].
+                </p>
+                <p>
+                    Niezależnie od przyjętego wariantu pracy, skupienie całego strumienia magnetycznego 
+                    w obrębie rdzeni wymaga wykonania ich z materiału o bardzo dużej przenikalności 
+                    magnetycznej. Wybór wariantu pracy czujnika rzutuje na dobór częstotliwości pomiarowej, 
+                    a ta z kolei — na dobór rodzaju materiału rdzenia. Do wariantu A korzystniejsze są rdzenie 
+                    ferrytowe [250], dobrze pracujące przy większych częstotliwościach, natomiast do
+                    wariantu B — rdzenie ze specjalnych stopów ferromagnetycznych, które wykazują największą 
+                    przenikalność magnetyczną przy małych częstotliwościach (ze wzrostem częstotliwości 
+                    następuje znaczne zmniejszenie ich przenikalności). Przykładowe charakterystyki 
+                    częstotliwościowe cewek z rdzeniami ze stopu permalloy przedstawiono na rys. 5.6 (badania 
+                    własne autora). Rdzenie wykonano jako pakiety, z blachy o grubości 0,5 mm. Względna 
+                    przenikalność magnetyczna tych rdzeni, przy częstotliwości 1000 Hz, wynosi 3200.
+                    Mocną zależność indukcyjności własnej cewek od częstotliwości można przypisać głównie 
+                    zmianie przenikalności magnetycznej rdzeni.
+                </p>
+                <p>
+                    Ogólnie można stwierdzić, iż w tych przypadkach, gdzie jest wymagana dobra
+                    dokładność pomiaru w szerokim zakresie zmian konduktywności, wariant B jest
+                    wyraźnie korzystniejszy. Czujniki pracujące według tego wariantu są łatwiejsze do 
+                    wykonania, co wynika przede wszystkim z możliwości ich pracy w zakresie małych 
+                    częstotliwości, gdzie wpływy sprzężeń pojemnościowych stają się pomijalnie małe. 
+                    Efekty pasożytnicze wynikające ze sprzężeń przez pole magnetyczne nie zależą od 
+                    wariantu realizacji.
+
+                    <div class="flex-container">
+                        <figure id="img69" class="tfl-left flex-item-left">
+                            <img src="images/rys-5-6a.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figure id="img69" class="tfl-left flex-item-right">
+                            <img src="images/rys-5-6b.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figcaption>
+                            Rys. 5.6. Indukcyjności własne i rezystancje strat cewek z rdzeniami ze stopu peramlloy: 
+                            a) 115 zwojów oraz b) 560 zwojów, zmierzone w funkcji częstotliwości, 
+                            w szeregowym (LS, RS) oraz w równoległym (Lr, Rr) układzie zastępczym
+                        </figcaption>
+                        
+                        </div>
+                </p>
+                <h3>5.3. UKŁADY POMIAROWE DO CZUJNIKÓW 
+                    TRANSFORMATOROWYCH</h3>
+                <p>
+                    Podstawowy układ pomiarowy współpracujący z czujnikiem transformatorowym 
+                    przedstawiono na rys. 5.7. Zawiera on: generator napięcia sinusoidalnie zmiennego, 
+                    czujnik, rezystor R0 obciążający wyjście czujnika, wzmacniacz oraz synchroniczny 
+                    detektor fazoczuły. W zależności od przyjętego wariantu pracy, A lub B, rezystor Ro 
+                    ma wartość bardzo dużą lub bardzo małą w stosunku do impedancji wyjściowej 
+                    czujnika. W pierwszym przypadku (wariant A) potrzebny jest wzmacniacz napięciowy, 
+                    w drugim (wariant B) — prądowy. W wariancie A detektor synchroniczny jest 
+                    sterowany napięciem przesuniętym w fazie 90&deg; w stosunku do napięcia zasilającego 
+                    czujnik, w wariancie B — napięciem o fazie zgodnej z napięciem zasilającym.
+                    Najczęsciej w czujniku umieszcza się dodatkowy zwój przewodu, zamykany rezystorem
+                    wzorcowym Rk, który służy do sprawdzania „na sucho” (bez cieczy w zwoju pomia- 
+                    rowym) poprawności działania konduktometru.
+                    <figure id="img70" class="tfl-center">
+                        <img src="images/rys-5-7.jpg" class="img-fluid"
+                           alt="Podstawowy układ pomiarowy konduktometru bezelektrodowego 
+                           z czujnikiem transformatorowym"/>
+                        <figcaption>
+                            Rys. 5.7. Podstawowy układ pomiarowy konduktometru bezelektrodowego 
+                            z czujnikiem transformatorowym
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Generator zasilający czujnik powinien mieć bardzo małą impedancję wyjściową. 
+                    Dobór maksymalnej wartości napięcia i minimalnej częstotliwości zasilania czujnika 
+                    jest ograniczony maksymalną dopuszczalną wartością prądu w uzwojeniu pierwotnym 
+                    cewki zasilającej czujnika — prądu, przy którym rdzeń nie wchodzi jeszcze w 
+                    nasycenie. Sposób określenia optymalnej częstotliwości zasilania opisano w pracy [7].
+                </p>
+                <p>
+                    Rzeczywisty czujnik oraz współpracujący z nim układ pomiarowy często zawie- 
+                    rają dodatkowe elementy, przeznaczone do kompensacji wpływów sygnałów 
+                    pasożytniczych, pochodzących od niepożądanego sprzężenia pojemnościowego i
+                    magnetycznego. Teoretyczne określenie tych wpływów wymaga analizy znacznie bardziej 
+                    szczegółowej od przedstawionej w rozdziale 5.2. Wpływ pojemności pasożytniczych 
+                    można skompensować, wprowadzając pewną początkową przewodność zwoju
+                    sprzęgającego, a wpływ pasożytniczego strumienia magnetycznego przez włączenie w
+                    obwód zasilania dodatkowego zwoju odpowiednio umieszczonego przy cewce 
+                    zasilającej [196]. O kompensacjach trzeba pamiętać już w czasie konstruowania czujnika, 
+                    gdyż tylko wtedy można wprowadzić do czujnika niezbędne elementy kompensacyj- 
+                    ne. Sygnał pasożytniczy można również kompensować na wyjściu detektora 
+                    fazoczułego, przez wprowadzenie odpowiedniego napięcia dodatkowego.
+                </p>
+                <p>
+                    Opis rozwiązania zrealizowanego przez autora według wariantu B można znaleźć 
+                    w jego pracach [139, 141]. O zaletach wariantu B może świadczyć to, iż w 
+                    wymienionym rozwiązaniu, bez stosowania jakichkolwiek specjalnych środków, czułość 
+                    prądowa Cl takiego układu pomiarowego (opisana wzorem (5.4)), w szerokim 
+                    zakresie konduktancji, w bardzo małym stopniu zależy od mierzonej konduktancji.
+                    Ilustruje to wykres przedstawiony na rys. 5.8. Czułość prądowa Ci wyznaczona
+                    doświadczalnie przy częstotliwości 300 HZ wynosi 1,43 \( \mu A/(V\ cdot S) \) i praktycznie nie 
+                    zależy od częstotliwości pomiarowej. Stała K zwoju cieczowego omawianego
+                    czujnika ma wartość 1,23 \( cm^{-1} \)
+
+                    <figure id="img71" class="tfl-center">
+                        <img src="images/rys-5-8.jpg" class="img-fluid"
+                           alt="Czułość prądowa Ci czujnika transformatorowego pracującego 
+                           według wariantu B, w funkcji mierzonej konduktancji (wyniki własne, 
+                           czułość prądowa odniesiona do wartości odpowiadającej 
+                           pomiarowi konduktancji 10 mS)"/>
+                        <figcaption>
+                            Rys. 5.8. Czułość prądowa Ci czujnika transformatorowego pracującego 
+                            według wariantu B, w funkcji mierzonej konduktancji (wyniki własne, 
+                            czułość prądowa odniesiona do wartości odpowiadającej 
+                            pomiarowi konduktancji 10 mS)
+                        </figcaption>
+                    </figure>
+                    <figure id="img72" class="tfl-center">
+                        <img src="images/rys-5-9.jpg" class="img-fluid"
+                           alt="Konduktometr z czujnikiem transformatorowym wyposażonym 
+                           w pomocnicze uzwojenia kompensacyjne [11]"/>
+                        <figcaption>
+                            Rys. 5.9. Konduktometr z czujnikiem transformatorowym wyposażonym 
+                            w pomocnicze uzwojenia kompensacyjne [11]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Czujnik transformatorowy można stosować również w pomiarach wykonywanych 
+                    metodą różnicową oraz zerową. Należy w tym celu zaopatrzyć każdy z 
+                    transformatorów, T1 i T2, w dodatkowe uzwojenie pomocnicze, i połączyć te uzwojenia 
+                    przeciwsobnie — jak na rys. 5.9 [11]. W rdzeniu transformatora pomiarowego T2 indukowany
+                    jest wtedy dodatkowy strumień magnetyczny, o zwrocie przeciwnym w stosunku do 
+                    strumienia indukowanego przez zwój cieczowy. Wartość strumienia dodatkowego 
+                    można regulować, np. za pomocą potencjometru R sprzęgającego uzwojenia
+                    pomocnicze. W skrajnym przypadku oba strumienie mogą być sobie równe, wtedy na wyjściu 
+                    czujnika uzyskuje się sygnał zerowy. Takim przyrządem można mierzyć przyrosty 
+                    konduktywności w stosunku do pewnej zadanej wartości, przy której wstępnie
+                    zrównoważono układ.
+
+                    <figure id="img73" class="tfl-center">
+                        <img src="images/rys-5-10.jpg" class="img-fluid"
+                           alt="Inteligentny przetwornik z czujnikiem transformatorowym 
+                           w systemie pomiarowym [212]"/>
+                        <figcaption>
+                            Rys. 5.10. Inteligentny przetwornik z czujnikiem transformatorowym 
+                            w systemie pomiarowym [212]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    W praktyce układy pomiarowe do czujników transformatorowych wykonywane są 
+                    jako kompletne przetworniki pomiarowe, często inteligentne, przystosowane do pracy 
+                    w systemach pomiarowych — rys. 5.10 [212] (przemysł jest największym odbiorcą 
+                    takich czujników). Inteligentny przetwornik, poza innymi funkcjami, sam wykonuje 
+                    niezbędne korekcje, kalibracje i testy.
+                </p>
+                <h2>6. METODA VAN DER PAUWA W POMIARACH 
+                    KONDUKTYWNOŚCI CIECZY</h2>
+                <h3>6.1. TEORETYCZNE PODSTAWY I WŁAŚCIWOŚCI METODY 
+                    ORAZ SPOSOBY REALIZACJI CZUJNIKA</h3>
                 </main>
                 <footer>
                     <p>Publikacja została zaadaptowana zgodnie z WCAG 2.1 na poziomie AA. Obecnie wersja v1.1. Szablon
