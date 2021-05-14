@@ -3643,6 +3643,770 @@
                     KONDUKTYWNOŚCI CIECZY</h2>
                 <h3>6.1. TEORETYCZNE PODSTAWY I WŁAŚCIWOŚCI METODY 
                     ORAZ SPOSOBY REALIZACJI CZUJNIKA</h3>
+                <p>
+                    Metoda sondy czteropunktowej, opracowana przez van der Pauwa z pierwotnym 
+                    przeznaczeniem do określania rezystywności materiałów półprzewodnikowych [255, 
+                    256], może być z powodzeniem stosowana również w pomiarach konduktywności 
+                    przewodników jonowych, w szczególności roztworów elektrolitów [146, 182]. Ma ona 
+                    tę istotną cechę, iż nie jest w niej wymagana znajomość rozpływu strug prądowych 
+                    (kształt próbki, a w przypadku cieczy — kształt naczynia pomiarowego, może być 
+                    dowolny), jeżeli próbka ma jednorodną grubość, elektrody znajdują się na obwodzie 
+                    próbki i są pomijalnie małe, a powierzchnia próbki jest obszarem jednospójnym. 
+                </p>
+                <p>
+                    W oryginalnych zastosowaniach metody van der Pauwa głównymi źródłami
+                    błędów są: niejednorodna grubość próbki, skończone wymiary elektrod oraz 
+                    niedokładność ich rozmieszczenia na obwodzie próbki [179, 182, 255]. W pomiarach 
+                    przewodników jonowych należy ponadto rozważyć wpływ impedancji elektrodowych [146, 
+                    161], zwłaszcza jeżeli są one znacznie większe od mierzonej rezystancji roztworu. 
+                    W przypadku stosunkowo dużej grubości próbki i występowania dużych 
+                    niejednorodności powierzchni elektrod, rozpływ strug prądu i rozkład potencjału w
+                    poszczególnych warstwach próbki może być niejednakowy i zmienny w zależności od warunków 
+                    pomiaru (powierzchnie rzeczywistych elektrod nie są z zasady ekwipotencjalne).
+
+                    <figure id="img74" class="tfl-center">
+                        <img src="images/rys-6-1.jpg" class="img-fluid"
+                           alt="Czujniki do pomiarów konduktywności roztworów metodą van der Pauwa: 
+                           a) z elektrodami prętowymi, b) z elektrodami paskowymi [179]"/>
+                        <figcaption>
+                            Rys. 6.1. Czujniki do pomiarów konduktywności roztworów metodą van der Pauwa: 
+                            a) z elektrodami prętowymi, b) z elektrodami paskowymi [179]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    W praktycznych wykonaniach czujników konduktometrycznych zrealizowanych 
+                    według założeń metody van der Pauwa elektrody mogą mieć postać cienkich prętów 
+                    umieszczonych w pobliżu ścianki korpusu tworzącego naczynie pomiarowe czujnika
+                    (rys. 6. la) [179, 182] lub cienkich pasków wpuszczonych w rowki wykonane w tej 
+                    ściance (rys.6.lb) [146, 157, 179]. Drugie rozwiązanie jest korzystniejsze, gdyż lepiej 
+                    spełnia założenia metody i elektrody mają ustalone położenia, jest jednak także 
+                    trudniejsze w realizacji. Możliwe jest i trzecie rozwiązanie, polegające na umieszczeniu 
+                    elektrod w indywidualnych komorach, oddzielonych od naczynia pomiarowego
+                    wąSkimi szczelinami s (rys. 6.4) — tj. na utworzeniu elektrod wirtualnych [135, 137, 146, 
+                    159]. Jest to koncepcja analogiczna do głębokich nacięć w próbkach 
+                    półprzewodników [255]. Trzecie rozwiązanie ma kilka zalet: o wartości stałej czujnika decyduje 
+                    tylko jeden element czujnika — jego korpus tworzący naczynie pomiarowe, elektrody 
+                    można wyjmować, są łatwe do mocowania i mogą mieć duże pola powierzchni (co 
+                    zmniejsza gęstość prądu na powierzchni oraz impedancję elektrodową). Jeśli
+                    zastosujemy to rozwiązanie, to możemy sprowadzić do wartości pomijalnie małych zarówno 
+                    wpływy wielkości elektrod oraz ich położenia, jak i niejednorodności impedancji 
+                    elektrodowych. Obecność wąskich szczelin zwiększa wprawdzie rezystancję obwodu 
+                    prądowego czujnika, jednakże korzyści wynikające z separującego działania szczelin 
+                    wydają się przeważać. Dotyczy to zarówno elektrod prądowych (mniejszy wpływ 
+                    niejednorodności warstwy elektrodowej w różnych miejscach wysokości naczynia 
+                    pomiarowego), jak i napięciowych (umieszczone w obszarze małego zagęszczenia 
+                    linii sił pola, słabiej deformują to pole).
+                </p>
+                <p>
+                    Jeżeli rezystancje \( R_{AB,CD} \) i \( R_{BC,DA} \) nie są równe, jak założono we wzorze (3.16a), 
+                    zamiast R należy podstawić do wzoru (3.16a) równoważną wartość średnią Rm, 
+                    obliczoną jako 
+
+                    $$ R_{m}=\frac{f\left(R_{A B, C D}+R_{B C, D A}\right)}{2} $$
+
+                    gdzie f jest pewnym współczynnikiem zależnym od stosunku \( R_{AB,CD}/R_{BC,DA} \) (gdy ten 
+                    stosunek osiąga 1, również współczynnik f zbliża się do 1 — rys. 6.2) [255]. W razie 
+                    potrzeby zawsze można skorzystać bezpośrednio z wzoru (3.12).
+
+                    <figure id="img75" class="tfl-center">
+                        <img src="images/rys-6-2.jpg" class="img-fluid"
+                           alt="Czujniki do pomiarów konduktywności roztworów metodą van der Pauwa: 
+                           a) z elektrodami prętowymi, b) z elektrodami paskowymi [179]"/>
+                        <figcaption>
+                            Rys. 6.2 Zależność współczynnika f od stosunku rezystancji \( R_{AB,CD}/R_{BC,DA} \) (wg [255] ) 
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Jeżeli mierzony roztwór nie jest ograniczony z obu stron równoległymi 
+                    płaszczyznami — np. system elektrod jest zanurzony w naczyniu, ale nie sięga dna (rys. 6.3) — 
+                    można wykonać dwa pomiary, przy dwóch różnych głębokościach zanurzenia, h1 i h2, 
+                    i obliczyć mierzoną konduktywność z różnicy rezystancji [182]. Jeżeli elektrody są 
+                    rozmieszczone symetrycznie \( R_{AB,CD} = R_{BC,DA} = R \), to
+
+                    $$ \kappa=\frac{K}{R}=\frac{\ln 2}{\pi h\left(R_{2}-R_{1}\right)} $$
+
+                    gdzie: h = h1 - h2, R1 i R2 — wartości rezystancji R zmierzone przy głębokościach zanurzenia h1 i h2.
+
+                    <figure id="img76" class="tfl-center">
+                        <img src="images/rys-6-3.jpg" class="img-fluid"
+                           alt="Czujniki do pomiarów konduktywności roztworów metodą van der Pauwa: 
+                           a) z elektrodami prętowymi, b) z elektrodami paskowymi [179]"/>
+                        <figcaption>
+                            Rys. 6.3. Różnicowy pomiar konduktywności cieczy metodą van der Pauwa [182] — 
+                            pomiaru rezystancji \( R_{AB,CD} \) i \( /R_{BC,DA} \)dokonuje się przy dwóch głębokościach zanurzenia, h1 i h2
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Zmiana konfiguracji pomiarowej elektrod nie musi oznaczać mechanicznego 
+                    przełączania elementów układu pomiarowego — pomiary w dwóch różnych 
+                    konfiguracjach można wykonywać jednocześnie, stosując dwie różne częstotliwości pomiarowe 
+                    [91]. Ma to duże znaczenie praktyczne, gdyż przełączanie elektrod może w pewnych 
+                    warunkach sprawiać trudności (np. ze względu na stany nieustalone w przełączanych 
+                    obwodach [215] oraz rezystancje elementów przełączających — w pomiarach bardzo 
+                    małych rezystancji).
+                </p>
+                <h3>6.2. WŁAŚCIWOŚCI RZECZYWISTYCH CZUJNIKÓW 
+                    KONDUKTOMETRYCZNYCH TYPU VAN DER PAUWA</h3>
+                <p>
+                    Autor przeprowadził badania doświadczalne czujników typu van der Pauwa 
+                    wykonanych w trzech wariantach: z elektrodami paskowymi zagłębionymi w ściankę 
+                    i z otwartym naczyniem pomiarowym (nr 1) [157], jak poprzednio, lecz z naczyniem
+                    zamkniętym po obu stronach (nr 2) [158] oraz z elektrodami umieszczonymi w
+                    komorach oddzielonych od naczynia pomiarowego wąskimi szczelinami, z naczyniem 
+                    zamkniętym po obu stronach (nr 3) [159]. Ostatni wariant jest konstrukcją nową, 
+                    pomysłu autora [135, 137, 144, 146]. Korpusy wszystkich czujników zostały wykonane 
+                    z polimetakrylanu metylu, elektrody ze stali nierdzewnej. We wszystkich trzech 
+                    czujnikach elektrody (lub szczeliny) mają bardzo małą szerokość w porównaniu z 
+                    obwodem naczynia pomiarowego czujnika. W przypadku czujnika nr 3 pokazanego na rys. 
+                    6.4 wpływ skończonej szerokości szczelin (wirtualnych elektrod) oszacowano jako 
+                    mniejszy od 0,06%. Opis badań doświadczalnych można znaleźć w [143, 146, 159]. 
+                    Jako podstawowe kryterium oceny czujników przyjęto zgodność pomiędzy 
+                    wartościami stałej, obliczonymi oraz określonymi doświadczalnie przy użyciu roztworów 
+                    KCl i NaCl o stężeniach 0,01 i 0,1 kmol/m3. W przypadku czujnika nr 1 uzyskiwana 
+                    zgodność jest nie lepsza od 0,5—1%, głównie ze względu na parowanie i wpływ 
+                    menisku oraz niestabilność temperatury i niepewność jej określenia. Wyniki badań 
+                    czujników nr 2 i nr 3 dają zgodność w granicach 0,1% — 0,5%.
+
+                    <figure id="img77" class="tfl-center">
+                        <img src="images/rys-6-4.jpg" class="img-fluid"
+                           alt="Korpus czujnika konduktometrycznego nowej konstrukcji (nr 3): 
+                           a) widok z góry, b) przekrój poprzeczny (Ah = ± 0,05 mm) [159]"/>
+                        <figcaption>
+                            Rys. 6.4. Korpus czujnika konduktometrycznego nowej konstrukcji (nr 3): 
+                            a) widok z góry, b) przekrój poprzeczny (Ah = ± 0,05 mm) [159]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Najlepszą zgodność i powtarzalność wyników uzyskano w badaniach czujnika nr 3, 
+                    w których poprawiono niepewność pomiaru temperatury, zmniejszając ją do około 
+                    ±0,05 oc. Wyniki tych badań, uzyskane przy użyciu roztworów Nacł o stężeniach 
+                    0,01 oraz 0,1 kmol/m przedstawiono na rys. 6.5 i 6.6. Poprawne (teoretyczne)
+                    wartości rezystancji określono z wartości stałej obliczonej teoretycznie z wysokości h 
+                    naczynia czujnika (h = 20,00 ± 0,05 mm, tzn. stała czujnika K = 0,1103 ± 0,0003 cm 1) 
+                    oraz z tablicowych wartości konduktywności roztworów [30, 83, 104, 205]. Pomiędzy 
+                    danymi tablicowymi roztworu 0,01 kmol/m występują pewne rozbieżności — jako
+                    odniesienie przyjęto wartości podane w [104], które uznano za najbardziej wiarygodne. 
+                    Liniami przerywanymi zaznaczono na wykresach z rys. 6.5 i 6.6 granice niepewności 
+                    określenia stałej czujnika z wysokości h naczynia pomiarowego.
+
+                    <figure id="img78" class="tfl-center">
+                        <img src="images/rys-6-5.jpg" class="img-fluid"
+                           alt="Korpus czujnika konduktometrycznego nowej konstrukcji (nr 3): 
+                           a) widok z góry, b) przekrój poprzeczny (Ah = ± 0,05 mm) [159]"/>
+                        <figcaption>
+                            Rys. 6.5. Rezystancje czujnika nr 3, napełnionego roztworem 0,1 kmol/m3
+                            NaCl (Ra, Rb, Re, Rd oznaczają rezystancje zmierzone 
+                            w poszczególnych konfiguracjach elektrod) [144]
+                        </figcaption>
+                    </figure>
+                    <figure id="img79" class="tfl-center">
+                        <img src="images/rys-6-6.jpg" class="img-fluid"
+                           alt="Korpus czujnika konduktometrycznego nowej konstrukcji (nr 3): 
+                           a) widok z góry, b) przekrój poprzeczny (Ah = ± 0,05 mm) [159]"/>
+                        <figcaption>
+                            Rys. 6.6. Rezystancje czujnika nr 3, napełnionego roztworem 0,01 kmol/m3
+                            NaCl (Ra, Rb, Re, Rd oznacząją rezystancje zmierzone 
+                            w poszczególnych konfiguracjach elektrod) [144]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Chociaż wartości rezystancji uzyskane w poszczególnych pojedynczych pomiarach, 
+                    dla poszczególnych konfiguracji elektrod, różnią się od wartości teoretycznych nawet 
+                    o ponad ±l % (można to przypisać niesymetrycznemu rozmieszczeniu szczelin w 
+                    korpusie czujnika), wartości średnie obliczone z tych rezystancji (wzór (6. l)) różnią się od 
+                    teoretycznych o mniej niż ±0,25%, tj. w granicach niepewności określenia stałej
+                    czujnika. Krzywe Rab i Red przedstawiają wartości uśrednione metodą van der Pauwa w 
+                    konfiguracjach pomiarowych z zamienionymi miejscami elektrodami prądowymi i
+                    napięciowymi. Rozbieżności obserwowane między tymi krzywymi można przypisać 
+                    różnicom w impedancjach elektrodowych poszczególnych elektrod, błędom
+                    instrumentalnym oraz niestabilności warunków pomiaru (zgodnie z twierdzeniem o od- 
+                    wracalności czwórników rezystancje Rab i Rcd powinny być jednakowe).
+                </p>
+                <p>
+                    Zmiana położenia którejkolwiek z elektrod, od współosiowego z komorą do 
+                    maksymalnie odchylonego od jej osi, powoduje zmianę rezystancji średniej Rm mniejszą 
+                    od 0,05%. Mierzone rezystancje wykazują pewną zmienność w funkcji częstotliwości 
+                    pomiarowej: &lt;0,2% dla roztworu 0,1 kmol/m3 oraz &lt;0,4% dla 0,01 kmol/m3, w paśmie 
+                    częstotliwości 30—1000 Hz. Częstotliwości, przy których rezystancje czujnika osiągają 
+                    wartości teoretyczne wynoszą, odpowiednio, 30 HZ i 60 Hz. W całym zakresie 
+                    zastosowanych częstotliwości pomiarowych zgodność wyników doświadczalnych i
+                    teoretycznych jest lepsza od całkowitej niepewności pomiarów, oszacowanej jako ±0,34% 
+                    (wartość średniokwadratowa z niepewności cząstkowych). Wyraźnie lepszą zgodność uzyskano
+                    dla roztworu 0,1 kmol/m3.
+                </p>
+                <h3>6.3. ANALIZA WPŁYWU CZĘSTOTLIWOŚCI POMIAROWEJ</h3>
+                <p>
+                    W wynikach badań czujników wykonanych we wszystkich trzech wariantach 
+                    można zauważyć systematyczną zmienność rezystancji w funkcji częstotliwości
+                    pomiarowej, wyraźnie większą dla roztworów o mniejszej konduktywności (rys. 6.5 
+                    i 6.6) [146, 157, 158, 159]. Charakter zmienności sugeruje występowanie połączonych 
+                    wpływów impedancji elektrodowych i parametrów resztkowych układu pomiarowego, 
+                    zwłaszcza pojemności pasożytniczych. Autor sprawdził tę hipotezę drogą symulacji 
+                    komputerowej [145], przy użyciu programu PSpice (MicroSim Corporation), 
+                    przeznaczonego do symulacji i analizy układów elektronicznych.
+                </p>
+                <p>
+                    Czujnik nr 3, łącznie z układem pomiarowym, zamodelowano obwodem 
+                    elektrycznym o parametrach skupionych — rys. 6.7 [145, 146] (model zawiera pewne 
+                    uproszczenia w reprezentacji właściwości warstwy elektrodowej, które jednak nie 
+                    mają istotnego znaczenia w niniejszych rozważaniach). Linią przerywaną otoczono 
+                    elementy reprezentujące: źródło napięcia zasilającego obwód pomiarowy, impedancje 
+                    elektrodowe (IE) czujnika oraz obwody wejściowe woltomierzy. Kondensatory G, 
+                    C10, C11, C14, C15 i C17 reprezentują pojemności przewodów łączących czujnik z resztą 
+                    układu pomiarowego. Drogę przepływu prądu zaznaczono linią pogrubioną.
+                </p>
+                <p>
+                    Działanie całego systemu zasymulowano w funkcji częstotliwości sygnału 
+                    pomiarowego. Poszczególnym elementom modelu nadawano wartości rzeczywiste, tj. 
+                    wyznaczone doświadczalnie, z wyjątkiem rezystancji R4, R5 i R6, reprezentujących 
+                    roztwór w czujniku. Tym ostatnim przypisano wartości obliczone z teoretycznych 
+                    parametrów czujnika oraz z tablicowych wartości konduktywności. Celem pomiaru 
+                    jest dokładne określenie rezystancji RS. W omawianym modelowaniu jej wartość 
+                    obliczano ze spadków napięć mierzonych między elektrodami napięciowymi 
+                    czujnika (C i D na rys. 6.7) oraz na rezystorze wzorcowym Rw włączonym w szereg z 
+                    jedną z elektrod prądowych czujnika (A na rys. 6.7). 
+                    <figure id="img80" class="tfl-center">
+                        <img src="images/rys-6-7.jpg" class="img-fluid"
+                           alt="Schemat obwodu modelującego czujnik czteroelektrodowy łącznie z układem pomiarowym 
+                           (program PSpice) [145]: AB — elektrody prądowe, CD — elektrody napięciowe (podane wartości 
+                           elementów odpowiadają pomiarom roztworu 0,1 kmol/m3 NaCl)"/>
+                        <figcaption>
+                            Rys. 6.7. Schemat obwodu modelującego czujnik czteroelektrodowy łącznie z układem pomiarowym 
+                            (program PSpice) [145]: AB — elektrody prądowe, CD — elektrody napięciowe (podane wartości 
+                            elementów odpowiadają pomiarom roztworu 0,1 kmol/m3 NaCl)
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Wyniki analizy przedstawiono w formie wykresów na rys. 6.8, 6.9 i 6.10, gdzie: 
+                    <ul>
+                        <li>Krzywe a na rys. 6.8 i 6.9 przedstawiają rezystancje zmierzone (wartości średnie 
+                        obliczone z wyników uzyskanych we wszystkich czterech możliwych konfiguracjach), 
+                        natomiast krzywe b — wyniki symulacji uzyskane po wprowadzeniu do modelu 
+                        rzeczywistych wartości parametrów obwodu.
+                    
+                        <figure id="img81" class="tfl-center">
+                            <img src="images/rys-6-8.jpg" class="img-fluid"
+                               alt="Schemat obwodu modelującego czujnik czteroelektrodowy łącznie z układem pomiarowym 
+                               (program PSpice) [145]: AB — elektrody prądowe, CD — elektrody napięciowe (podane wartości 
+                               elementów odpowiadają pomiarom roztworu 0,1 kmol/m3 NaCl)"/>
+                            <figcaption>
+                                Rys. 6.8. Rezystancje czujnika nr 3 napełnionego roztworem 0,1 kmol/m3 NaCl, 
+                                w funkcji częstotliwości: a — zmierzone i b, e — symulowane [145]
+                            </figcaption>
+                        </figure>
+                        </li>
+                        <li>
+                            Wykres c (rys. 6.9) — wynik symulacji wykonanej dla czujnika o idealnych 
+                            elektrodach, tj. bez występowania impedancji elektrodowych (pozostałe warunki 
+                            symulacji jak poprzednio).
+
+                            <figure id="img82" class="tfl-center">
+                                <img src="images/rys-6-9.jpg" class="img-fluid"
+                                   alt="Rezystancje czujnika nr 3 napełnionego roztworem 0,01 kmol/m3 NaCl, 
+                                   w funkcji częstotliwości: a — zmierzone i b, c, d, e — symulowane [145]"/>
+                                <figcaption>
+                                    Rys. 6.9. Rezystancje czujnika nr 3 napełnionego roztworem 0,01 kmol/m3 NaCl, 
+                                    w funkcji częstotliwości: a — zmierzone i b, c, d, e — symulowane [145]
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            Wykres d (rys. 6.9) — wynik symulacji rzeczywistego czujnika, lecz przy 
+                            założeniu zmniejszenia pojemności wejściowych woltomierza V1 mierzącego spadek 
+                            napięcia między elektrodami napięciowymi czujnika: Cr do 10 pF i Cas do 15 pF, przy nie 
+                            zmienionych pojemnościach przewodów i rezystancjach wejściowych woltomierzy 
+                            (\( R_{we} = 1 M\Omega \)).
+                        </li>
+                        <li>
+                            Krzywe e na rys. 6.8 i 6.9 przedstawiają wyniki symulacji, uzyskane po zwiększe- 
+                            niu do \( 10 M\Omega \) rezystancji wejściowej woltomierza V1, przy pozostałych warunkach jak 
+                            poprzednio (wykres d). Rezystancja czujnika napełnionego roztworem 0,1 kmol/m3 
+                            NaCl osiąga w tych warunkach wartość teoretyczną przy 400 Hz, a jej zmienność w pa- 
+                            śmie częstotliwości 30—1000 HZ wynosi tylko 0,03%. W przypadku czujnika napełnio- 
+                            nego roztworem 0,01 kmol/m3 NaCl wartości te wynoszą odpowiednio 200 HZ 
+                            i 0,045%. Zwiększając Rwe do \( 50 M\Omega \) oraz zmniejszając wszystkie pojemności (również 
+                            przewodów) do 10 pF, można oczekiwać dalszego ograniczenia zmienności tych rezy- 
+                            stancji w funkcji częstotliwości — poniżej 0,01%. Jednakże wtedy trzeba uwzględnić 
+                            również wpływ skończonej wartości współczynnika tłumienia sygnału sumacyjnego 
+                            (CMMR) woltomierza VI — w modelu z rys. 6.7 nie uwzględniono go, gdyż w rzeczywi- 
+                            stych warunkach wykonywania pomiarów jego udział był pomijalny.</li>
+                    </ul>
+                </p>
+                <p>       
+                    Sugerowane modyfikacje układu pomiarowego są stosunkowo łatwe do wykona- 
+                    nia: przez odpowiednie ekranowanie przewodów oraz zastosowanie na wej ściu wol- 
+                    tomierza VI dobrej jakości wzmacniacza różnicowego, o dużej rezystancji wejściowej. 
+                    Woltomierz 1/2, używany do pomiaru prądu, jest mniej krytyczny ze względu na małą 
+                    wartość rezystancji rezystora wzorcowego Rs.
+                </p>        
+                <p>WNIOSKI WYNIKAJĄCE Z ANALIZY</p>
+                    <ul>
+                        <li>
+                            Zmienność rezystancji czujnika typu van der Pauwa, obserwowana w zależności 
+                            od częstotliwości pomiarowej, nie reprezentuje zmian rezystancji roztworu 
+                            wypełniającego czujnik, lecz jest wynikiem łącznego wpływu kilku czynników: impedancji 
+                            elektrodowych, pojemności pasożytniczych występujących w układzie pomiarowym 
+                            oraz zbyt małej rezystancji wejściowej woltomierza używanego do pomiaru spadku 
+                            napięcia między elektrodami napięciowymi czujnika.
+                        </li>
+                        <li>
+                            Ww. zmienność rezystancji czujnika można zmniejszyć do wartości pomijalnie 
+                            małej przez odpowiednie zwiększenie rezystancji wejściowej woltomierza oraz 
+                            zmniejszenie pojemności pasożytniczych występujących w układzie pomiarowym. 
+                            Dobrym sprawdzianem osiągnięcia takiego stanu jest charakterystyka 
+                            częstotliwościowa stosunku rezystancji czujnika wypełnionego roztworami o dwóch różnych 
+                            stężeniach. Niezależnie od częstotliwości pomiarowej, ten stosunek powinien być równy 
+                            odwrotności stosunku konduktywności obu roztworów. Wykres stosunku = 
+                            Ro (Ro,oł, — odpowiednio, rezystancje czujnika napełnionego roztworami 
+                            0,01 kmol/m i 0,1 kmol/m Nacł ), wyznaczonego dla czujnika nr 3, przedstawiono 
+                            na rys. 6.10. Krzywa a reprezentuje wyniki pomiarów wykonanych w opisanym 
+                            układzie pomiarowym, a krzywa b — wyniki symulacji działania układu pomiarowego po 
+                            wprowadzeniu do niego sugerowanych uprzednio usprawnień. Wykres a wykazuje
+                            pewien systematyczny wzrost stosunku z częstotliwością. W zakresie 
+                            częstotliwości 30—1000 HZ ten stosunek różni się od poprawnej wartości 9,007 [83, 104] 
+                            o +0,17% i —0,07%, a najlepsza zgodność występuje przy częstotliwości około 80 Hz. 
+                            Wyniki przedstawione na wykresie b praktycznie nie zależą od częstotliwości i różnią 
+                            się od wartości poprawnej o mniej niż ±0,02%.
+
+                            <figure id="img83" class="tfl-center">
+                                <img src="images/rys-6-10.jpg" class="img-fluid"
+                                   alt="Stosunek rezystancji czujnika nr 3 napełnionego roztworami 0,01 
+                                   i 0,1 kmol/m3 NaCl, w 25&deg;C, w funkcji częstotliwości: zmierzony — wykres a 
+                                   oraz wynik symulacji dla skorygowanego układu pomiarowego — wykres b [145]"/>
+                                <figcaption>
+                                    Rys. 6.10. Stosunek rezystancji czujnika nr 3 napełnionego roztworami 0,01 
+                                    i 0,1 kmol/m3 NaCl, w 25&deg;C, w funkcji częstotliwości: zmierzony — wykres a 
+                                    oraz wynik symulacji dla skorygowanego układu pomiarowego — wykres b [145]
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                <h3>6.4. OSZACOWANIE NIEPEWNOŚCI POMIARÓW</h3>
+                <p>
+                    Sposób szacowania niepewności wyników pomiarów w konduktometrii, według 
+                    zaleceń ISO [60], zostanie przedstawiony na przykładzie pomiarów rezystancji oraz 
+                    stałej czujnika typu van der Pauwa, nr 3 (opisanego w p. 6.2), napełnionego 
+                    roztworem wodnym 0,1 kmol/m3 NaCl (wartość rezystancji jak na wykresie na rys. 6.5). 
+                    Pomiary wykonywano w układzie pokazanym schematycznie na rys. 6.7. W czasie badań 
+                    czujnik był zanurzony w kąpieli wodnej o stałej temperaturze, utrzymywanej za 
+                    pomocą ultratermostatu.
+                </p>
+                <p>
+                    Rezystancję czujnika wyznaczano ze wzoru
+                    
+                    $$ R=\frac{U_{C}}{U_{W}} R_{W} $$
+
+                    gdzie: Rw — rezystancja rezystora wzorcowego używanego do pomiaru prądu 
+                    zasilającego czujnik, Uc — spadek napięcia mierzony między elektrodami napięciowymi 
+                    czujnika (woltomierz V1 na rys. 6.7), Uw — spadek napięcia na rezystorze 
+                    wzorcowym (woltomierz V2).
+                </p>
+                <p>Wartość stałej czujnika można obliczyć jako
+                    
+                    $$ K=R \kappa=\frac{U_{C}}{U_{W}} R_{W} \kappa $$
+
+                    gdzie \( \kappa \) jest konduktywnością roztworu. 
+                </p>
+                <p>
+                    Używane narzędzia pomiarowe:
+                    <ul style="list-style-type: none">
+                        <li>— Pomiary napięć wykonywano multimetrami HP 34401 A, na zakresie 100 mV AC. 
+                        W paśmie częstotliwości 10 Hz—20 kHz dokładność pomiaru napięcia jest zdefinio- 
+                        wana jako: 0,06% wartości mierzonej + 0,04% wartości zakresowej. </li>
+                        <li>— Temperaturę mierzono termometrem rtęciowym o zakresie 15—25 &deg;C, działce 
+                        elementarnej 0,01 oc i błędzie podstawowym 0,05 &deg;C. </li>
+                        <li>— Jako rezystor wzorcowy stosowano rezystor dekadowy klasy 0,05. </li>
+                        <li>— Roztwory sporządzano z naważek analitycznych o dokładności 0,2%</li>
+                    </ul>
+                </p>
+                <p>
+                    W omawianym przykładzie pomiary wykonano przy prądzie 4 mA i częstotliwości 
+                    200 Hz, dla czterech możliwych konfiguracji połączeń czujnika. Wartość napięcia Uc, 
+                    średnia dla wszystkich konfiguracji, wynosi 41,382 m V, a napięcia Uw — 40,000 mV 
+                    (każdorazowo doregulowano wartość prądu zasilającego).
+                </p>
+                <p>
+                    Niepewność [60] określenia rezystancji R ma składową pochodzącą od czynników 
+                    losowych (niepewność typu A) oraz trzy składowe systematyczne (niepewność typu 
+                    B), wynikające z niedokładności narzędzi pomiarowych: woltomierzy używanych do 
+                    pomiaru napięć Uc i Uw oraz rezystora wzorcowego. Niepewność określenia stałej 
+                    czujnika zawiera dodatkowo dwie składowe systematyczne, pochodzące z 
+                    niedokładności sporządzenia roztworu o znanym stężeniu (tablicową wartość konduktywności 
+                    roztworu o danym stężeniu można tu przyjąć za bezbłędną) oraz z niedokładności 
+                    pomiaru temperatury, która z kolei przenosi się na konduktywność poprzez 
+                    współczynnik temperaturowy zmian konduktywności.
+                </p>
+                <p>
+                    Poszczególne składowe niepewności złożonej określenia rezystancji R są n
+                    astępujące:
+                    <ul>
+                        <li>Składowa niepewności od czynników losowych (niepewność standardowa typu 
+                        A) została określona z odchylenia standardowego wartości średniej napięcia Uc zmie- 
+                        rzonego sześciokrotnie w każdej konfiguracji, dla tego samego roztworu, w tych sa- 
+                        mych warunkach. Wynosi ona \( u_{A}(U_{C}) \) = 0,022 mV (w postaci względnej: 0,054%).</li>
+                        <li>Niepewności pomiaru napięć Uc i Uw obliczono z błędu multimetru, dzieląc go 
+                        przez (założono jednostajny rozkład prawdopodobieństwa). Wynoszą one, odpowied- 
+                        nio: \( u_{B}(U_{C}) = 0,065/\sqrt{3} = 0,038 mV (0,091%) \)  oraz \( u_{B}(U_{W}) = 0,064/\sqrt{3} = 0,037\) mV 
+                        (0,092%).</li>
+                        <li>
+                            Niepewność określenia rezystancji wzorcowej Rw obliczono z klasy rezystora, 
+                            dzieląc ją przez \( \sqrt{3} \)(założono jednostajny rozkład prawdopodobieństwa). Wynosi 
+                            ona: \( u_{B}(R_{W}) = 0,05/\sqrt{3} = 0,029% \).
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Niepewność standardowa złożona określenia rezystancji R, obliczona zgodnie 
+                    z zaleceniami ISO [60], wynosi
+
+                    $$ u_{C}(R)=\sqrt{u_{A}^{2}\left(U_{C}\right)+u_{B}^{2}\left(U_{C}\right)+u_{B}^{2} U_{W}+u_{B}^{2}\left(R_{W}\right)} $$
+                </p>
+                <p>
+                    Po podstawieniu wartości liczbowych poszczególnych składowych niepewności 
+                    uzyskuje się \( u_{c}(R) \) = 0,143% &nbsp; 0,15%.
+                </p>
+                <p>
+                    Niepewność rozszerzoną uzyskuje się przez pomnożenie niepewności 
+                    standardowej \( u_{c}(R) \) przez współczynnik kp rozszerzenia, w tym przypadku równy \( \sqrt{3} \)
+                    (dominują składowe niepewności typu B, rozkład jednostajny). Jej wartość wynosi 
+                    0,143% = 0,248% &nbsp; 0,25% (odpowiada ona błędowi granicznemu określenia 
+                    rezystancji R). Zmierzona rezystancja wynosi więc 10,35±0,03\( \Omega \). 
+                </p>
+                <p>
+                    W przypadku stałej czujnika, niepewność standardowa złożona wynosi
+
+                    $$ u_{C}(K)=\sqrt{u_{A}^{2}\left(U_{C}\right)+u_{B}^{2}\left(U_{C}\right)+u_{B}^{2}\left(U_{W}\right)+u_{B}^{2}\left(R_{W}\right)+u_{B}^{2}(c)+u_{B}^{2}(\alpha \Delta t)} $$
+                </p>
+                <p>
+                    gdzie: \( u_{B}(c) \) — niepewność standardowa określenia stężenia roztworu, \( u_{B}(\alpha \cdot \Delta t) \) —
+                    niepewność standardowa wynikająca z niedokładności określenia temperatury roztworu. W
+                    rozpatrywanym przykładzie: \( u_{B}(c) = 0,2/ \sqrt{3} % \) = 0,115% , \( u_{B} ( \alpha \cdot \Delta t) = 2,2 \)%/&deg;C \( \cdot 0,05 &deg; C /\sqrt{3} = 0,063 \)%
+                    (niepewność pochodząca od zmienności temperatury roztworu została już 
+                    uwzględniona w niepewności \( u_{A}(U_{C}) \), gdyż serie pomiarów wykonywano w 
+                    stosunkowo długim czasie). Zatem niepewność standardowa złożona określenia stałej 
+                    czujnika wynosi 0,194% &nbsp; 0,20%, a niepewność rozszerzona jest równa 0,194% \( \cdot \sqrt{3} \) = 0,336% &nbsp; 0,34%. 
+                    Przyjmując, iż konduktywność roztworu 0,1 kmol/m3 NaCl 
+                    w temperaturze 25&deg;C wynosi \( 10,674 \cdot 10^{-3} S\cdot cm^{-1} \) [104], uzyskuje się stałą czujnika 
+                    \( K = 10,346 \Omega \cdot 10,674 \cdot 10^{-3} S\cdot cm^{-1} = 0,11043 cm^{-1} \), co po uwzględnieniu obliczonej 
+                    wcześniej niepewności rozszerzonej daje \( 0,1104 cm^{-1} \) ± \( 0,0004cm^{-1} \)
+                </p>
+                <h3>6.5. DYSKUSJA I WNIOSKI</h3>
+                <p>
+                    Przedstawione wyniki badań można uznać za potwierdzenie możliwości
+                    rozszerzenia zakresu zastosowań metody van der Pauwa na pomiary konduktywności
+                    elektrycznej roztworów elektrolitów. Rozbieżności obserwowane pomiędzy wynikami
+                    rozważań teoretycznych i eksperymentów można przypisać ograniczonym 
+                    możliwościom stosowanych środków technicznych, zwłaszcza nieidealnym właściwościom 
+                    urządzeń pomiarowych. W opisanych doświadczeniach używano przyrządów średniej 
+                    klasy, ogólnego przeznaczenia, np. do pomiarów wielkości elektrycznych — 
+                    multimetrów HP 34401A. 
+                </p>
+                <p>
+                    Czujniki konduktometryczne skonstruowane i stosowane zgodnie z zaleceniami 
+                    metody van der Pauwa są pod wieloma względami korzystniejsze od innych 
+                    czujników liczalnych. Mogą być używane zarówno do określania wzorców przewodników 
+                    jonowych, jak i w charakterze czujników użytkowych do pomiarów bezwzględnych, 
+                    tj. nie wymagających wzorcowania za pomocą wzorców materialnych.
+                </p>
+                <p>
+                    Szczególne właściwości omawianych czujników mogą być jednak również 
+                    źródłem kłopotów. Wynikająca z założeń metody mała powierzchnia elektrod jest 
+                    wprawdzie korzystna ze względu na małe zniekształcanie przez elektrody rozkładu 
+                    potencjału w roztworze, ale jest jednocześnie przyczyną powstawania dużych 
+                    rezystancji przyelektrodowych, będących skutkiem mocnego zagęszczenia linii sił pola 
+                    w pobliżu elektrod oraz występowania dużych impedancji elektrodowych. Powoduje 
+                    to wzrost rezystancji zarówno w obwodzie prądowym, jak i napięciowym czujnika. 
+                    A to kolei pociąga za sobą potrzebę zwiększenia impedancji wejściowej oraz współ 
+                    czynnika tłumienia sygnału sumacyjnego woltomierza używanego do pomiaru
+                    spadku napięcia występującego między elektrodami napięciowymi czujnika. 
+                    Zwiększenie rezystancji elektrod prądowych powoduje wzrost ilości ciepła wydzielanego 
+                    w czujniku, a tym samym jest czynnikiem ograniczającym wartość stosowanego 
+                    prądu pomiarowego.
+                </p>
+                <p>
+                    Badania wykonane przez autora wykazały, że pod względem rezystancji
+                    obszarów przyelektrodowych nie ma zasadniczego znaczenia, czy czujnik ma elektrody 
+                    paskowe, wpuszczane w ścianki korpusu (czujnik nr 2), czy też elektrody są 
+                    umieszczone w oddzielnych komorach połączonych z naczyniem pomiarowym 
+                    szczelinami (czujnik nr 3). W obu czujnikach, wypełnionych roztworami soli o 
+                    stężeniu 0,1 kmol/m3 oraz 0,01 kmol/m3 , stosunek rezystancji roztworu występującego 
+                    między elektrodami prądowymi do rezystancji roztworu mierzonej między 
+                    elektrodami napięciowymi ma zbliżoną wartość i wynosi od 21 do 23,5 (rozrzuty tych 
+                    wartości można wytłumaczyć niedokładnością aproksymacji). Można z tego
+                    wnioskować, iż zgęszczenie linii sił pola w pobliżu elektrod czujnika nr 2 i szczelin
+                    czujnika nr 3 jest podobne, i że to ono właśnie decyduje o przyroście rezystancji obwodu 
+                    prądowego czujnika (poza zależną od częstotliwości rezystancją polaryzacji). 
+                    Rezystancje roztworu występującego między elektrodami prądowymi wyznaczono drogą 
+                    ekstrapolacji w funkcji częstotliwości pomiarowej (dokładniej: w funkcji (D 1/2) — 
+                    w sposób przedstawiony na rys. 6.11. W sumie, uwzględniając również rezystancję 
+                    polaryzacji, w omawianych czujnikach rezystancja obwodu prądowego może być 
+                    30+80 razy (zależy to od zastosowanej częstotliwości pomiarowej) większa od 
+                    rezystancji roztworu mierzonej między elektrodami napięciowymi czujnika.
+                    <p>
+                        a)
+                        <figure id="img84" class="tfl-center">
+                            <img src="images/rys-6-11a.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        b)
+                        <figure id="img85" class="tfl-center">
+                            <img src="images/rys-6-11b.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                        <figcaption>
+                            Rys. 6.11. Rezystancje zmierzone między elektrodami prądowymi czujników konduktometrycznych 
+                            typu van der Pauwa, ekstrapolowane do częstotliwości nieskończenie dużej: a) czujnik nr 2, 
+                            b) czujnik nr 3 (krzyżykiem zaznaczono wynik ekstrapolacji) — wyniki autora 
+                        </figcaption>
+                    </p>
+                </p>
+                <p>
+                    Wprawdzie istnieją doniesienia [173] o eksperymentalnym urządzeniu do
+                    praktycznej realizacji wzorca konduktywności roztworów elektrolitów metodą van der Pauwa, 
+                    z oczekiwaną niepewnością całkowitą 0,05-0,07%, nie zawierają one jednak żadnych 
+                    szczegółów. Z prac autora wynika, iż realne jest uzyskanie mniejszej niepewności. 
+                    Przede wszystkim czujnik należy wykonać z odpowiedniego materiału, np. ze szkła 
+                    dobrej jakości — tzn. odpowiednio wytrzymałego mechanicznie, łatwego do obróbki i 
+                    charakteryzującego się małym współczynnikiem a rozszerzalności liniowej. Szkło ma 
+                    ten współczynnik 10&divide;25 razy mniejszy niż stosowany w dotychczasowych badaniach 
+                    autora polimetakrylan metylu (dla polimetakrylanu metylu \( \alpha = 8\cdot 10^{-5} \) &deg;\( C^{-1} \), tj. 
+                    0,08%/10 &deg;C, dla szkła sodowego \( \alpha = 8,5\cdot 10^{-6} \) &deg;\( C^{-1} \), dla szkła pyrex
+                    \( \alpha = 3\cdot 10^{-6} \) &deg;\( C^{-1} \)[83, 273]). 
+                    Proponowane wymiary czujnika: średnica wewnętrzna 100 mm (jeśli 
+                    naczynie czujnika ma kształt cylindra — co nie jest konieczne), wysokość 20 mm,
+                    elektrody lub szczeliny o szerokości 1 mm (wpływ skończonej szerokości szczelin będzie 
+                    wtedy mniejszy od 0,004% — błąd od tego wpływu jest proporcjonalny do \( (s/D)^{2} \) [255] 
+                    oznaczenia z rys. 6.4). Zakładając możliwości wykonawcze opisane w [273], tj. 
+                    osiągalną w praktyce dokładność wyrównania wysokości w obrębie całego czujnika 
+                    oraz niepewność jej określenia ±2 \( \mu \)m, można przyjąć, że realne jest wytworzenie 
+                    czujnika, którego stałą można, szacując ostrożnie, określić teoretycznie z 
+                    niepewnością nie przekraczającą ±0,014%. Zwiększając wysokość czujnika do 100 mm, można 
+                    tę niepewność zmniejszyć do ±0,006%. W tym drugim przypadku uzyskuje się
+                    stosunkowo małą wartość stałej czujnika — około 0,02 c\( m^{-1} \) , co ogranicza zakres jego
+                    zastosowań do roztworów słabo i średnio przewodzących. Nie jest to jednak wadą, gdyż 
+                    zapotrzebowanie na takie pomiary stale wzrasta, a problemy ze sporządzaniem, 
+                    przechowaniem i stosowaniem wzorców małych konduktywności są duże [271, 226]. 
+                    Podane niepewności można jeszcze zmniejszyć po wprowadzeniu odpowiednich
+                    poprawek uwzględniających skończoną szerokość szczelin. Pewne szczegóły
+                    konstrukcyjne zaproponowanego przez autora czujnika wymagają dopracowania — ze
+                    sprawdzeniem drogą modelowania komputerowego włącznie.
+                </p>
+                <p>
+                    Analiza symulacyjna wskazuje, że obserwowana doświadczalnie zmienność 
+                    rezystancji czujnika w funkcji częstotliwości pomiarowej wynika z niedoskonałości 
+                    układu pomiarowego, oraz że błąd wprowadzany przez układ pomiarowy można 
+                    stosunkowo łatwo zredukować do 0,01%.
+                </p>
+                <p>
+                    W dalszych pracach nad wykorzystaniem czujnika liczalnego omawianego typu 
+                    jako wzorca konduktometrycznego oddzielnym problemem do rozwiązania jest
+                    określanie, z wymaganą niepewnością, temperatury roztworu oraz jego stężenia [273, 69]. 
+                    Stosowane w dotychczasowych pracach autora środki służące tym celom są 
+                    niewystarczające do badań czujnika o konstrukcji udoskonalonej według przedstawionej 
+                    propozycji. Docelowo należy również przewidzieć sprawdzenie czujnika wzorcowego 
+                    omawianego typu w nawiązaniu do odpowiedniego wzorca zagranicznego (w kraju 
+                    brak jest dotychczas takiego wzorca).
+                </p>
+                <h2>7. UWZGLĘDNIANIE WPŁYWU TEMPERATURY 
+                    W POMIARACH KONDUKTYWNOŚCI CIECZY</h2>
+                <h3>7.1. SPOSOBY UWZGLĘDNIANIA WPŁYWU TEMPERATURY</h3>
+                <p>
+                    Silny wpływ temperatury na mechanizm przewodzenia jest jednym z 
+                    trudniejszych problemów występujących w pomiarach przewodności elektrycznej zarówno 
+                    roztworów elektrolitów, jak i wszystkich przewodników jonowych (rozdz. 2.3). Bez 
+                    uwzględniania temperaturowych zmian przewodności nie jest możliwe 
+                    porównywanie wyników pomiarów tej wielkości uzyskiwanych w różnych temperaturach, ani 
+                    też bezpośrednie wzorcowanie konduktometrów w jednostkach mierzonego stężenia 
+                    rozpuszczonej substancji. Z kolei niewłaściwe uwzględnianie tych zmian może być 
+                    źródłem poważnego błędu, zwłaszcza gdy zmiany temperatury są duże. Często nie 
+                    zauważa się, że w konduktometrii ten błąd może znacznie przekraczać błędy 
+                    instru-mentalne. Problem można rozwiązać na trzy sposoby [21, 129, 140, 142]:
+                    <ul style="list-style-type: decimal;">
+                        <li>) wykonywać pomiary w stałej, znanej temperaturze, najlepiej w temperaturze 
+                        odniesienia,</li>
+                        <li>) kompensować wpływ temperatury, dodając do konduktometru drugi czujnik 
+                        odniesienia, wypełniony roztworem podobnym do mierzonego [217, 265], </li>
+                        <li>) uwzględniać wpływ temperatury, przekształcając (przeliczając) wyniki pomia- 
+                        rów uzyskiwane w różnych temperaturach na równoważne wartości, odpowiadające 
+                        przyjętej temperaturze odniesienia.</li>
+                    </ul>
+                </p>
+                <p>
+                    Pierwszy sposób nie jest realny w większości zastosowań praktycznych, gdyż 
+                    termostatowanie zazwyczaj stosuje się tylko w badaniach laboratoryjnych. Drugi 
+                    z kolei sposób ma zakres zastosowań ograniczony do tych przypadków, w których 
+                    przedmiotem pomiarów jest jeden określony rodzaj roztworu lub roztwory o 
+                    zbliżonych właściwościach temperaturowych, np. woda morska w badaniach
+                    oceanograficznych [265]. Poza tym jest kłopotliwy w technicznej realizacji. Powszechnie 
+                    stosowany w praktyce laboratoryjnej i przemysłowej jest trzeci sposób, zwyczajowo 
+                    również nazywany kompensacją temperaturową — chociaż jest to forma korekcji 
+                    wyników uzyskiwanych w różnych temperaturach (taką korekcję można realizować 
+                    na różne sposoby, modyfikując odpowiednio wartości sygnałów występujących 
+                    w układzie pomiarowym lub też wynik końcowy pomiaru). Celem kompensacji 
+                    temperaturowej jest zazwyczaj określanie konduktywności \( \kappa(t_{r}) \) odpowiadającej 
+                    temperaturze tr odniesienia, gdy znana jest konduktywność \( \kappa(t) \) zmierzona w
+                    aktualnej temperaturze t, chociaż czasami może być i odwrotnie — tj. określanie \( \kappa(t) \) na 
+                    podstawie \( \kappa(t_{r}) \)). W obu przypadkach niezbędna jest znajomość temperatur t i tr.
+                </p>
+                <p>
+                    W pewnych przypadkach, ze względu na bardzo duże zróżnicowanie 
+                    właściwości poszczególnych jonów występujących w mierzonym roztworze (rozdz. 2.3), 
+                    niezbędna jest oddzielna kompensacja dla każdego rodzaju jonów. Dobrym przykładem 
+                    zastosowania takiej zasady kompensacji jest woda zdemineralizowana, która
+                    zawiera głównie jony pochodzące z chemicznie czystej wody oraz niewielką ilość jonów 
+                    pochodzących z rozpuszczonych soli. Zasadę takiej „złożonej” kompensacji 
+                    (złożonej — bo wynik uzyskuje się jako złożenie, sumę skompensowanych temperaturowo 
+                    konduktywności poszczególnych składników) wyjaśniono na rys. 7.1 [21].
+                    Warunkiem poprawności takiej kompensacji jest addytywność udziałów korygowanych 
+                    oddzielnie składników, zatem może ona być stosowana tylko w zakresie małych 
+                    stężeń jonów rozpuszczonej substancji.
+                    <figure id="img86" class="tfl-center">
+                        <img src="images/rys-7-1.jpg" class="img-fluid"
+                           alt="Wyjaśnienie zasady kompensacji złożonej — 
+                           oddzielnej dla poszczególnych jonów, na przykładzie czystej wody [21]"/>
+                        <figcaption>
+                            Rys. 7.1. Wyjaśnienie zasady kompensacji złożonej — 
+                            oddzielnej dla poszczególnych jonów, na przykładzie czystej wody [21]
+                        </figcaption>
+                    </figure>
+                </p>
+                <h3>7.2. METODY KOMPENSACJI WPŁYWU TEMPERATURY</h3>
+                <p>
+                    Zależność konduktywności roztworów elektrolitów od temperatury opisuje się 
+                    wzorami empirycznymi, uzyskiwanymi z aproksymacji wyników doświadczalnych 
+                    [21, 129, 210] — rozdz. 2.3. Zbiór wiarygodnych danych doświadczalnych jest więc 
+                    elementem pierwotnym, o podstawowym znaczeniu, sposób jego wykorzystania jest 
+                    natomiast sprawą wtórną. Kompensację temperaturową można przeprowadzać na dwa 
+                    podstawowe sposoby: metodą analityczną i tablicową [140, 142]. Metoda analityczna 
+                    polega na wyznaczaniu wartości \( \kappa(t_{r}) \) z funkcji odwrotnej do funkcji opisującej 
+                    temperaturową zależność konduktywności \( \kappa(t) \) — jeżeli jest to wzór (2.17), to
+
+                    $$ \kappa_{t_{r}}=\frac{\kappa_{t}}{1+\alpha \Delta t+\beta(\Delta t)^{2}+\gamma(\Delta t)^{3}+\ldots} $$
+                </p>
+                <p>
+                    Z kolei w metodzie tablicowej korzysta się z mapy danych (tablicy), w której
+                    każdej parze wartości temperatury i konduktywności w przyjętej temperaturze odniesienia 
+                    jest przyporządkowana określona wartość konduktywności odpowiadająca aktualnej 
+                    temperaturze. Metoda polega na odpowiednim przeszukiwaniu tablicy (look-up table 
+                    method) [14].
+                </p>
+                <p>
+                    Kompensację analityczną można realizować zarówno sprzętowo — za pomocą 
+                    układu analogowego wykonującego odpowiednie operacje matematyczne na 
+                    sygnałach elektrycznych występujących w układzie pomiarowym [121, 125, 128], jak i
+                    programowo — za pomocą procesora cyfrowego wykonującego operacje na liczbowych 
+                    reprezentacjach tych sygnałów. W metodzie tablicowej użycie procesora cyfrowego 
+                    jest niezbędne.
+                </p>
+                <p>
+                    Jeżeli zachodzi potrzeba równoczesnego wprowadzania kilku korekcji, np. 
+                    linearyzacji, kompensacji temperaturowej i kompensacji innych wpływów, mogą
+                    występować interakcje między zmiennymi, prowadzące do obliczeń iteracyjnych lub/i 
+                    wielokrotnego przeszukiwania tablic. W wyniku tego procedury korekcji cyfrowej 
+                    komplikują się, a czas ich realizacji ulega znacznemu wydłużeniu. W takich
+                    przypadkach możliwe są co najmniej dwa skuteczne rozwiązania: zastosowanie korekcji
+                    mieszanej, analogowo-cyfrowej lub wprowadzanie korekcji cyfrowej wykonywanej
+                    oddzielnie dla poszczególnych wpływów, kolejno, w porządku odwrotnym do ich 
+                    występowania [278].
+                </p>
+                <h4>7.2.1. KOMPENSACJA ANALOGOWA</h4>
+                <p>
+                    Kompensacja temperaturowa typu analogowego polega na modyfikacji sygnału 
+                    pomiarowego według funkcji odwrotnej do funkcji opisującej temperaturową 
+                    zależność konduktywności, np. według wzoru (7.1). Można ją realizować na co najmniej 
+                    dwa sposoby:
+                    <ul style="list-style-type:decimal">
+                        <li>) za pomocą dwójników rezystancyjnych o odpowiednio ukształtowanych cha- 
+                        rakterystykach temperaturowych [12, 244, 279],</li>
+                        <li>) za pomocą układów korekcyjnych w postaci czwórników aktywnych o regulo- 
+                        wanych charakterystykach temperaturowych [121, 125, 128, 138].</li>
+                    </ul>
+                    <figure id="img87" class="tfl-center">
+                        <img src="images/rys-7-2.jpg" class="img-fluid"
+                           alt="Układ mostka do pomiaru stężenia kwasu siarkowego 
+                           z termistorowym kompensatorem wpływu temperatury [244]"/>
+                        <figcaption>
+                            Rys. 7.2. Układ mostka do pomiaru stężenia kwasu siarkowego 
+                            z termistorowym kompensatorem wpływu temperatury [244]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Pierwszy sposób jest pod względem układowym prostszy (najczęściej dwójnik jest 
+                    włączany wprost w obwód czujnika — rys. 7.2), jednak ma istotne wady: wymaga 
+                    stosowania elementów nieliniowych (termistorów), a dwójnik kompensacyjny musi być 
+                    indywidualnie dobierany do każdego zastosowania i nie wszystkie przypadki
+                    kompensacji można w ten sposób zrealizować.
+                </p>
+                <p>
+                    Drugie rozwiązanie ma charakter bardziej uniwersalny. Umożliwia kompensację 
+                    według funkcji liniowej lub wielomianu algebraicznego, zazwyczaj drugiego stopnia 
+                    (teoretycznie i wyższego, ale jest to raczej niepraktyczne) — przykładowe wyniki 
+                    takiej kompensacji przedstawiono w [129, 140]. Należy podkreślić, iż w tym 
+                    przypadku efekt kompensacji nieliniowej uzyskuje się stosując czujniki temperatury 
+                    o liniowych charakterystykach — dokładniej, w kompensacji parabolicznej stosuje 
+                    się dwa takie czujniki, włączone w dwie oddzielne pętle sprzężenia zwrotnego [128, 
+                    136] — rys. 7.3. Nie ma ograniczeń odnośnie wartości i znaku uzyskiwanych 
+                    współczynników temperaturowych, \( \alpha \) i \( \beta \) — wzór (7. l) — ich wartości można ustalać przez 
+                    odpowiednie nastawy rezystorów \( R_{\alpha} \) i \( R_{\beta} \), a znak — przez odpowiednie przełączenie 
+                    wejść wzmacniaczy. W razie potrzeby można ten sam układ, po odpowiednim prze- 
+                    łączeniu elementów, wykorzystać do kompensacji odwrotnej, tj. z \( \kappa(t_{r}) \) na \( \kappa(t) \).
+
+                    <figure id="img88" class="tfl-center">
+                        <img src="images/rys-7-3.jpg" class="img-fluid"
+                           alt="Uniwersalny układ do kompensacji temperaturowej według funkcji wielomianu 
+                           drugiego stopnia: \( U_{wy} &prop; \kappa(t_{r}) = \kappa(t)/[1+\alpha(t-t_{r} + \beta(t-t_{r})^{2})] \) [128, 136]"/>
+                        <figcaption>
+                            Rys. 7.3. Uniwersalny układ do kompensacji temperaturowej według funkcji wielomianu 
+                            drugiego stopnia: \( U_{wy} &prop; \kappa(t_{r}) = \kappa(t)/[1+\alpha(t-t_{r} + \beta(t-t_{r})^{2})] \) [128, 136]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Kompensacja analogowa, wywodząca się z przyrządów klasycznych, tj. nie 
+                    zawierających mikroprocesora, nie powinna być z góry zarzucana jako coś gorszego. 
+                    W niektórych przypadkach może ona skutecznie konkurować z kompensacjami typu 
+                    cyfrowego lub też stanowić ich uzupełnienie [20, 278]. Dotyczy to zwłaszcza tych 
+                    zastosowań, w których zachodzi potrzeba równoczesnej kompensacji kilku
+                    wpływów i istotna jest szybkość działania. Układem analogowym można realizować 
+                    również kompensację złożoną, podwójną — oddzielną dla poszczególnych 
+                    składników — np. według algorytmu podanego w [129].
+                </p>
+                <h4>7.2.2. KOMPENSACJA TEMPERATUROWA METODAMI CYFROWYMI</h4>
+                <p>
+                    Dobrym przykładem stosowania kompensacji cyfrowej z wykorzystaniem tablic 
+                    danych są pomiary konduktywności czystej wody. Ze względów omówionych w 
+                    rozdziałach 2.3 i 7.1, niezbędna jest w nich kompensacja złożona, oddzielna dla czystej 
+                    wody i dla rozpuszczonych soli, opisana w [21, 129] — rys. 7.1. W rozwiązaniu 
+                    przedstawionym w [14] korzysta się z interaktywnej tablicy, której mały fragment pokazano 
+                    na rys. 7.4. Tablica zawiera zbiór wartości współczynników temperaturowych czystej 
+                    wody (\( Q_{w} \)) oraz rozpuszczonych soli (\( Q_{s} \)), odpowiadających poszczególnym
+                    wartościom temperatury z zakresu 0-100&deg;C, co 0,025&deg;C, oraz zbiór wartości rezystywno- 
+                    ści \( \rho \)(w M\( \Omega \cdot cm\)) w tych temperaturach, odpowiadający zakresowi pomiaru 
+                    konduktywności \( \kappa_{25} = 0-10 \mu S \cdot cm^{-1} \). Rezystywności \( \rho_{t} \) obliczono z równania
+
+                    $$ \kappa_{t}=\kappa_{25} Q_{s}-\frac{\left(Q_{s}-Q_{w}\right)}{\rho_{w 25}} $$
+                </p>
+                <p>
+                    Korzystanie z tablicy polega na znajdywaniu wartości \( \rho_{25} \) odpowiadającej 
+                    zmierzonym wartościom temperatury t i rezystywności \( \rho_{t} \) w tej temperaturze. Zaletą
+                    takiego rozwiązania jest, oprócz prostoty w korzystaniu, bardzo dobra dokładność
+                    kompensacji. Przy dokładności pomiaru aktualnej temperatury nie gorszej od ± 0,1 oc 
+                    całkowity błąd pomiaru konduktywności skompensowanej do temperatury odniesienia 
+                    25 &deg;C jest mniejszy od ± 1%. Do jego wad można zaliczyć stosunkowo dużą 
+                    pojemność wymaganej pamięci (obecnie przestaje to być wadą), wynikającą z bardzo
+                    małych inkrementów temperatury oraz rezystywności, np. 0,1 M\( \Omega \)cm.
+                </p>
                 </main>
                 <footer>
                     <p>Publikacja została zaadaptowana zgodnie z WCAG 2.1 na poziomie AA. Obecnie wersja v1.1. Szablon
