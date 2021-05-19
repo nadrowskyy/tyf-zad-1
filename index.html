@@ -4532,7 +4532,612 @@
                     </table>
                 </div>
                 <a href="#tab1">Powrót do tabeli</a>
+                <p>
+                    Z kolei w rozwiązaniu przedstawionym w [82] wynik oblicza się każdorazowo 
+                    według algorytmu podanego na rys. 7.5, z użyciem danych z dwóch tablic: 
+                    konduktywności \( \kappa_{w}(t) \) chemicznie czystej wody w funkcji temperatury oraz 
+                    temperaturowych współczynników S(t) zmian konduktywności rozcieńczonego roztworu soli 
+                    (w rozpatrywanym zakresie stężeń, 0-100 ppm NaCl, i temperatury, 0—100 &deg;C, 
+                    można przyjąć że te współczynniki są niezależne od stężenia). Tablice są 
+                    stosunkowo rzadkie, a wartości pośrednie uzyskuje się drogą interpolacji liniowej. Takie 
+                    rozwiązanie można zrealizować za pomocą bardzo prostego mikroprocesora z 
+                    niewielką pamięcią.
+                    <figure id="img89" class="tfl-center">
+                        <img src="images/rys-7-5.jpg" class="img-fluid"
+                           alt="Algorytm kompensacji złożonej, oddzielnej dla poszczególnych składników, 
+                           zastosowany w mierniku konduktywności wody zdemineralizowanej [82, 129]"/>
+                        <figcaption>
+                            Rys. 7.5. Algorytm kompensacji złożonej, oddzielnej dla poszczególnych składników, 
+                            zastosowany w mierniku konduktywności wody zdemineralizowanej [82, 129]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Kompensacja przebiega w trzech etapach (rys. 7.5):
+                    <ul style="list-style-type: decimal;">
+                        <li>) od zmierzonej konduktywności wody odejmuje się konduktywność \( \kappa_{wt} \) 
+                            czystej wody w temperaturze t pomiaru, wyznaczoną z tablicy \( \kappa_{w}(t) \) — uzyskuje się 
+                            w ten sposób konduktywność reprezentującą przewodnictwo jonów soli w tej 
+                            temperaturze,</li>
+                        <li>) z tablicy S(t) przelicza się konduktywność \( \kappa_{st} \) jonów soli w temperaturze t 
+                            pomiaru na konduktywność \( \kappa_{sr} \) jonów soli w temperaturze tr odniesienia,</li>
+                        <li>) sumując konduktywności \( \kappa_{sr} \) jonów soli i konduktywność czystej wody 
+                    odpowiadające temperaturze tr odniesienia (w tr = 25 &deg;C \( \kappa_{wr} \) = 0,055 \( \mu S \cdot cm^{-1}\)), uzy- 
+                    skuje się poszukiwaną konduktywność \( \kappa_{r} \) mierzonej wody w temperaturze odniesienia.</li>
+                    </ul>
+                </p>
+                <p>
+                    W omówieniu przedstawionych rozwiązań, dla uproszczenia, pominięto niektóre 
+                    z operacji wykonywanych przez mikroprocesor, np. przeliczanie konduktywności na 
+                    równoważne zasolenie. 
+                </p>
+                <p>PODSUMOWANIE </p>
+                <p>
+                    Kompensacja wpływu zmian temperatury ma w konduktometrii znaczenie 
+                    zasadnicze, zwłaszcza gdy pomiary są wykonywane w temperaturach znacząco różnych od 
+                    temperatury odniesienia. Głównymi czynnikami ograniczającymi dokładność 
+                    kompensacji, niezależnie od sposobu jej realizacji, są: błędy danych doświadczalnych, na 
+                    podstawie których opracowano wzory aproksymujące lub tablice oraz błąd pomiaru 
+                    temperatury. Ze względu na bardzo duże wartości występujących współczynników 
+                    temperaturowych wymagana jest bardzo dobra dokładność pomiaru temperatury. 
+                    W metodzie analitycznej dochodzą błędy wynikające z aproksymacji, a w metodzie 
+                    tablic — błędy związane z przekształceniami tablic oraz interpolacją. Nie można
+                    jednoznacznie wskazać, który sposób lub technika realizacji kompensacji temperaturowej są 
+                    bezwzględnie najlepsze, zależy to od zastosowania. Obecnie najczęściej stosowana 
+                    jest metoda tablic. Jeżeli zachodzi potrzeba jednoczesnego stosowania kilku korekcji, 
+                    należy zastanowić się nad korekcją mieszaną, tj. analogowo-cyfrową. 
+                </p>
+                <h2>8. ŹRÓDŁA DODATKOWYCH BŁĘDÓW W POMIARACH KONDUKTYWNOŚCI CIECZY</h2>
+                <p>
+                    W poprzednich rozdziałach przedstawiono główne różnice między pomiarami
+                    konduktywności cieczy, zwłaszcza roztworów elektrolitów, i ciał stałych. Nie 
+                    uwzględniono jednak kilku zjawisk występujących tylko w pomiarach cieczy — a bardzo
+                    istotnych, bo mogących generować duże błędy, a nawet uniemożliwiać pomiary. Należą 
+                    do nich: zmieniający się rozkład konduktywności ośrodka [225, 241], wpływ 
+                    pęcherzyków gazów pokrywających elektrody [59, 92, 176, 261] oraz wpływ cząsteczek 
+                    zawiesiny w pomiarach konduktywności lokalnych [175, 260]. 
+                </p>
+                <h3>8.1. CO MIERZYMY W RZECZYWISTOŚCI MIERZĄC KONDUKTYWNOŚĆ?</h3>
+                <p>
+                    Przez pomiar konduktywności najczęściej rozumie się pomiar średniej
+                    konduktywności ośrodka znajdującego się w równowadze. W ogólnym przypadku 
+                    konduktywność ośrodka może być funkcją czasu i położenia w przestrzeni. Mówimy wtedy 
+                    o pomiarze zmian konduktywności albo o pomiarze konduktywności lokalnych i/lub 
+                    ich rozkładu [107, 225, 241]. Niejednorodny rozkład konduktywności cieczy, w 
+                    dodatku zmienny w czasie, występuje w konduktometrii często — np. podczas mieszania, 
+                    podgrzewania, rozcieńczania i zatężania roztworów, miareczkowań, kontroli 
+                    przebiegu reakcji, itp. [98, 107]. Jeżeli zależy nam na określeniu wartości średniej, trzeba 
+                    uprzednio dokonać uśrednienia fluktuacji [192].
+                </p>
+                <p>
+                    O tym, czy mierzy się konduktywność średnią, czy konduktywności lokalne, 
+                    decydują przede wszystkim wymiary użytego czujnika. Jeżeli w ośrodku występują 
+                    makroskopowe niejednorodności konduktywności, to wartość średnią uzyskuje się zawsze 
+                    jako pewną wartość ważoną — z niektórymi obszarami uwzględnianymi mocniej niż 
+                    pozostałe [99]. Funkcja wagowa (funkcja rozkładu konduktywności w naczyniu 
+                    pomiarowym czujnika) zależy od geometrii czujnika oraz od sposobu wykonywania 
+                    pomiaru. Tylko czujniki z jednorodnym polem elektrycznym charakteryzują się stałą, 
+                    jednakową w całej objętości naczynia pomiarowego czułością na konduktywność i jej 
+                    zmiany. Znajomość funkcji wagowej umożliwia minimalizację błędów uśredniania, 
+                    wynikających z niejednorodności ośrodka. W pewnych konfiguracjach czujników 
+                    mogą występować obszary o ujemnych wagach (rys. 8.1a i b), co przy dużych 
+                    niejednorodnościach może dawać wyniki niepoprawne fizycznie (np. ujemną
+                    konduktywność) [99]. Dotyczy to czujników do pomiaru metodą czteroelektrodową, w których są 
+                    rozdzielone funkcje elektrod zasilających i pomiarowych patrz p. 3.3. Można
+                    wykazać, iż pomiar czujnikiem czteroelektrodowym, z elektrodami rozmieszczonymi
+                    w czworobok, z uśrednianiem metodą van der Pauwa (dwa niezależne pomiary), jest 
+                    w badaniach ośrodków o niejednorodnym rozkładzie konduktywności korzystniejszy 
+                    od pomiaru czujnikiem o liniowym rozmieszczeniu elektrod, gdyż eliminuje, z zasady, 
+                    obszary o ujemnych wagach (rys. 8. 1c i d) [99].
+                    <div class="flex-container">
+                        <figure id="img90" class="tfl-left flex-item-left">
+                            <img src="images/rys-8-1a.jpg" class="img-fluid"
+                               alt=""/>
+                            <figcaption>a)</figcaption>
+                        </figure>
+                        <figure id="img91" class="tfl-left flex-item-right">
+                            <img src="images/rys-8-1b.jpg" class="img-fluid"
+                               alt=""/>
+                               <figcaption>b)</figcaption>
+                        </figure>
+                    </div>
+                    <div class="flex-container">
+                        <figure id="img92" class="tfl-left flex-item-left">
+                            <img src="images/rys-8-1c.jpg" class="img-fluid"
+                               alt=""/>
+                               <figcaption>c)</figcaption>
+                        </figure>
+                        <figure id="img93" class="tfl-left flex-item-right">
+                            <img src="images/rys-8-1d.jpg" class="img-fluid"
+                               alt=""/>
+                               <figcaption>d)</figcaption>
+                        </figure>
+                    </div>
+                    <figcaption>
+                        Rys. 8.1. Wykresy funkcji wagowej f (x, y) dla rezystywności określonej pojedynczym pomiarem 
+                        wykonanym czujnikiem czteroelektrodowym o liniowym (a) i kwadratowym (b) układzie elektrod, 
+                        oraz w przypadku określania rezystywności jako średniej z dwóch pomiarów wykonanych 
+                        w różnych konfiguracjach — odpowiednio (c) i (d) (d — uśrednienie techniką van der Pauwa) [99]
+                    </figcaption>
+                </p>
+                <h3>8.2. WPŁYW PĘCHERZYKÓW POWIETRZA POKRYWAJĄCYCH ELEKTRODY</h3>
+                <p>
+                    Źródłem poważnych błędów w konduktometrii kontaktowej mogą być pęcherzyki 
+                    gazów pokrywające część powierzchni elektrod czujnika (jest to tzw. efekt kurtyny 
+                    pęcherzykowej — <i>bubble-curtain effect</i>) [92, 261]. Pęcherzyki mogą pochodzić z 
+                    gazów rozpuszczonych w cieczy lub być wydzielane przez elektrody. Ich występowanie 
+                    powoduje zmniejszenie efektywnej powierzchni elektrod i zmianę rozpływu strug 
+                    prądu w cieczy, tym samym zmianę rezystancji międzyelektrodowej, a więc i stałej 
+                    czujnika. Omawiany efekt ma istotne znaczenie zwłaszcza w zastosowaniach 
+                    wymagających używania elektrod z gładkiego metalu, np. w pomiarach medycznych — ze 
+                    względu na sterylność, w pomiarach przemysłowych wykonywanych on-line, w 
+                    przepływającej cieczy — gdzie jest wymagana szybka reakcja czujnika na zmiany 
+                    konduktywności itp.
+                </p>
+                <p>
+                    W przypadku czujnika dwuelektrodowego efekt kurtyny pęcherzykowej można 
+                    scharakteryzować dwoma parametrami: przyrostem rezystancji międzyelektrodowej 
+                    oraz zmianą pojemności międzyelektrodowej. Informacje o skutkach tego zjawiska są 
+                    użyteczne w projektowaniu czujników — ich kształtu, wielkości elektrod oraz 
+                    wymaganej obróbki powierzchni elektrod (np. trawienie lub pokrycie czernią platynową).
+                </p>
+                <p>
+                    Skutki występowania efektu kurtyny pęcherzykowej można szacować ilościowo 
+                    korzystając z modeli analitycznych. Jeden z modeli omawianego efektu, sprawdzony 
+                    doświadczalnie, został przedstawiony w [92, 176]. Rozpatruje się w nim układ dwóch 
+                    płasko-równoległych elektrod umieszczonych w zbiorniku wypełnionym roztworem 
+                    elektrolitu zawierającym pęcherzyki gazu. Zakłada się, że całą objętość 
+                    międzyelektrodową można podzielić na dwa wyraźnie różne obszary: jeden — zawierający tylko 
+                    roztwór, i drugi, przy powierzchni elektrod — utworzony przez mieszaninę roztworu 
+                    i chaotycznie nieuporządkowanych pęcherzyków. Przyrost AR rezystancji
+                    międzyelektrodowej wywołany adhezją pęcherzyków na elektrodach można wtedy zapisać:
 
+                    $$ \Delta R=R_{i}-R_{i 0}=\frac{4 R_{M}}{A k_{L}}\left(\frac{k_{L}}{k_{e}}-1\right) $$
+
+                    gdzie: \( R_{i} \) i \( R_{i0} \) — odpowiednio, rezystancja międzyelektrodowa w roztworze z pęche- 
+                    rzykami i bez pęcherzyków (analiza ma charakter przybliżony — pomija się efekty 
+                    brzegowe), A i L — pole powierzchni elektrod i odległość międzyelektrodowa czujnika, 
+                    \( R_{M} \) — średni promień pęcherzyków, kL i ke — odpowiednio, efektywne konduktywności 
+                    roztworu oraz obszaru zajmowanego przez pęcherzyki. Efektywną wartość stosunku 
+                    kL/ke można obliczyć ze wzoru [92, 176]
+
+                    $$ \frac{k_{L}}{k_{e}}=1-N_{C}\left\{\exp \left[-\exp \left(\frac{2}{3} \alpha \theta_{s}\right)\right]-\frac{1}{e}\right\} $$
+
+                    w którym: Nc — liczba sąsiadujących pęcherzyków, z którymi dany pęcherzyk może 
+                    być w bezpośrednim kontakcie (równa 6 dla kształtu sferycznego), \( \theta_{S} \) — ułamek 
+                    powierzchni pokrytej przez pęcherzyki, \( \aplha \) — stała proporcjonalności, równa 0,46480, 
+                    e = 2,7183. Równanie (8.2) uzyskano przy założeniu losowego charakteru rozkładu 
+                    pęcherzyków w roztworze oraz przyjmując, że pęcherzyki tworzą na elektrodzie gęstą 
+                    warstwę pojedynczą o grubości 2RM.
+                </p>
+                <p>
+                    Przyrost \( \Delta \)R rezystancji oszacowany równaniem (8.1) reprezentuje kumulacyjny 
+                    wzrost rezystancji międzyelektrodowej spowodowany losową adhezją pęcherzyków 
+                    na powierzchniach elektrod, a równanie (8.2) jest zapisem stochastycznego modelu 
+                    omawianego zjawiska. Poprawność przedstawionego modelu oraz jego dokładność 
+                    sprawdzono doświadczalnie, zastępując pęcherzyki gazu kuleczkami z pianki 
+                    polistyrenowej (ze względu na praktyczną niemożliwość uzyskania kontrolowanej 
+                    adhezji pęcherzyków gazu na elektrodach), przyklejanymi do elektrod w różnych 
+                    liczbach i w różnym, losowym rozmieszczeniu. Kuleczki, o średniej średnicy 6,1 mm, 
+                    miały gładką powierzchnię i były nienasiąkliwe. Pomiary wykonano w dwóch 
+                    różnych roztworach KCl, o konduktywności 30 i 34,5 \( m \cdot S \cdot cm_{-1} \), w paśmie 
+                    częstotliwości 400—700 Hz. Wyznaczone doświadczalnie wartości względne błędu
+                    systematycznego powodowanego występowaniem kurtyny pęcherzykowej (\Delta R/_{i0} \cdot 100%) 
+                    oraz przedziały niepewności ich określenia przedstawiono na wykresie (rys. 8.2), 
+                    w funkcji ułamka powierzchni elektrod pokrytej pęcherzykami. Na tymże wykresie 
+                    podano również, dla porównania, wartości obliczone teoretycznie według opisanego 
+                    tu modelu oraz według modeli innych autorów. Wykonane doświadczenia 
+                    potwierdziły hipotezę, że tworzenie się i utrzymywanie pęcherzyków ma charakter
+                    stacjonarny, a ich rozkład jest losowy.
+                    <figure id="img94" class="tfl-center">
+                        <img src="images/rys-8-2.jpg" class="img-fluid"
+                           alt="Procentowy błąd systematyczny określenia rezystancji roztworu powodowany 
+                           adhezją pęcherzyków, w funkcji ułamka powierzchni elektrody pokrytej pęcherzykami [176]"/>
+                        <figcaption>
+                            Rys. 8.2. Procentowy błąd systematyczny określenia rezystancji roztworu powodowany 
+                            adhezją pęcherzyków, w funkcji ułamka powierzchni elektrody pokrytej pęcherzykami [176]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    W czujniku dwuelektrodowym, stosowanym w warunkach niewystępowania 
+                    pęcherzyków, efekty pojemnościowe są związane z pojemnością międzyelektrodową Cg oraz 
+                    pojemnością polaryzacji Cp. Na ogół pojemność Cp dominuje, a jej wałtość zależy od 
+                    częstotliwości. Eksperymenty wykonane przez autorów [92, 176] wykazały, iż w warunkach 
+                    występowania pęcherzyków powodowana tym zmiana \( \Delta \)C wypadkowej pojemności czujnika 
+                    jest tak mała, iż dominujący wpływ na impedancję czujnika ma przyrost AR rezystancji. 
+                    Podobnie jak poprzednio, pęcherzyki symulowano kuleczkami z pianki polistyrenowej. 
+                </p>
+                <p>
+                    Omawiany efekt może występować również w czujnikach czteroelektrodowych, 
+                    przy czym zasadnicze znaczenie ma pokrycie pęcherzykami elektrod prądowych.
+                </p>
+                <h3>8.3. WPŁYW CZĄSTECZEK ZAWIESINY W POMIARACH 
+                    KONDUKTYWNOŚCI LOKALNYCH</h3>
+                <p>
+                    Potrzeba pomiaru lokalnych zmian stężenia w różnych miejscach pola przepływu 
+                    występuje np. w badaniach mieszania turbulentnego. Jeżeli jednym z mieszanych 
+                    płynów jest ciecz przewodząca — roztwór elektrolitu, można w tym celu mierzyć lokalne 
+                    zmiany konduktywności. Analiza statystyczna sygnału zmian stężenia dostarcza 
+                    informacji o cechach mieszania, jak: rozmieszczenie dodawanej masy, mechanizm 
+                    mieszania i czas mieszania [260]. Znajomość stężenia w danym punkcie umożliwia 
+                    obliczenie intensywności segregacji, która jest ilościową miarą stopnia wymieszania.
+                </p>
+                <p>
+                    Czujnik konduktometryczny przeznaczony do pomiarów lokalnych zmian stężenia 
+                    charakteryzuje się dwoma parametrami: rozdzielczością objętościową i odpowiedzią 
+                    czasową. Rozdzielczość objętościowa określa najmniejszy wykrywalny przez czujnik 
+                    dodatek masy niewymieszanej. Odpowiedź czasowa czujnika określa, jak szybko 
+                    czujnik reaguje na gwałtowne zmiany masy.
+                </p>
+                <p>
+                    W tego rodzaju pomiarach stosuje się czujnik konduktometryczny o specjalnej 
+                    konstrukcji, z bardzo małą elektrodą detekcyjną — w formie kulki o średnicy rzędu 200 gm 
+                    (rys. 8.3), wykonaną najczęściej z platyny. Uzyskuje się wtedy rozdzielczość objętościową 
+                    rzędu \( 10^{-4}cm^{-3} \) oraz odpowiedź czasową w zakresie częstotliwości 400—700 Hz. Czujnik 
+                    należy zasilać sygnałem o odpowiednio dużej częstotliwości, np. 30 kHz, i wykonywać 
+                    pomiary (próbkować) z odpowiednią częstością - np. 2000 HZ [260].
+                    <figure id="img95" class="tfl-center">
+                        <img src="images/rys-8-3.jpg" class="img-fluid"
+                           alt="Czujnik konduktometryczny stosowany w badaniach chwilowych 
+                           wartości lokalnych stężeń [260]"/>
+                        <figcaption>
+                            Rys. 8.3. Czujnik konduktometryczny stosowany w badaniach chwilowych 
+                            wartości lokalnych stężeń [260]
+                        </figcaption>
+                    </figure>
+                    <figure id="img96" class="tfl-center">
+                        <img src="images/rys-8-4.jpg" class="img-fluid"
+                           alt="Krzywe kalibracyjne (napięcie wyjściowe w funkcji stężenia 
+                           molowego roztworu) czujnika konduktometrycznego z rys. 8.2 — 
+                           dla różnych wartości ułamka objętościowego cząsteczek zawiesiny [260]"/>
+                        <figcaption>
+                            Rys. 8.4. Krzywe kalibracyjne (napięcie wyjściowe w funkcji stężenia 
+                            molowego roztworu) czujnika konduktometrycznego z rys. 8.2 — 
+                            dla różnych wartości ułamka objętościowego cząsteczek zawiesiny [260]
+                        </figcaption>
+                    </figure>
+                    <figure id="img97" class="tfl-center">
+                        <img src="images/rys-8-5.jpg" class="img-fluid"
+                           alt="Względny błąd procentowy określenia średniej wartości 
+                           stężenia elektrolitu w funkcji wartości ułamka objętościowego 
+                           cząsteczek zawiesiny [260]"/>
+                        <figcaption>
+                            Rys. 8.5. Względny błąd procentowy określenia średniej wartości 
+                            stężenia elektrolitu w funkcji wartości ułamka objętościowego 
+                            cząsteczek zawiesiny [260]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    Omawiany czujnik wymaga wzorcowania w miejscu pomiaru. Wszystko, co może 
+                    zmienić powierzchnię elektrody detekcyjnej, powoduje zmianę krzywej kalibracji. 
+                    Takim czynnikiem mogą być np. obecne w cieczy cząsteczki zawiesiny ciała stałego, 
+                    zwłaszcza przy dużych ich zawartościach (dużych wartościach ułamka 
+                    objętościowego) — pokazano to na rys. 8.4. Błąd określenia średniego stężenia elektrolitu
+                    wynikający z obecności dużej ilości cząsteczek zawiesiny może być znaczny (rys. 8.5.). 
+                    Powyżej 40% zawartości zawiesiny błąd gwałtownie rośnie, co można wytłumaczyć
+                    złożonymi interakcjami między cząsteczkami i elektrodą. Można go znacznie zmniejszyć, 
+                    wzorcując czujnik w mieszaninie z przewidywaną zawartością cząsteczek zawiesiny 
+                    (rys. 8.4).
+                </p>
+                <p>
+                    Cząsteczki o większych rozmiarach mają większy wpływ na pomiar 
+                    konduktywności, gdyż bardziej blokują elektrodę detekcyjną. Wpływ prędkości ruchu cząsteczek 
+                    na mierzoną zmianę konduktywności (stężenia), aczkolwiek zauważalny, jest nieduży. 
+                    Jeżeli cząsteczki zawiesiny mają konduktywność dużo mniejszą niż roztwór (np. 
+                    cząsteczki \( C_{a}CO_{3} \) w wodzie), to ich wpływ na sygnał zmiany stężenia jest bardzo silny.
+                </p>
+                <p>
+                    Przykładem zastosowania omawianych pomiarów może być reaktor procesowy, 
+                    w którym zachodzi mieszanie dwóch cieczy, w obecności katalizatora w postaci 
+                    cząsteczek zawiesiny. Istotna jest informacja, w jaki sposób te cząsteczki wpływają na 
+                    pomiar stopnia wymieszania obu cieczy.
+                </p>
+                <p>
+                    Innym obszarem zastosowań czujników podobnych do omówionego są pomiary 
+                    udziału pustki w przepływach dwufazowych gaz/ciecz [108].
+                </p>
+                <h2>9. WYBRANE ZASTOSOWANIA KONDUKTOMETRII</h2>
+                <h3>9.1. OKREŚLANIE STĘŽEŃ ROZTWORÓW ELEKTROLITÓW 
+                    BEZPOŚREDNIO Z ICH KONDUKTYWNOŚCI</h3>
+                <p>
+                    Zależność konduktywności roztworu od stężenia elektrolitu można w sposób
+                    bezpośredni wykorzystywać do określania stężeń. Ze względu na prostą i tanią realizację 
+                    oraz dobrą dokładność jest to metoda atrakcyjna — i dlatego często stosowana w 
+                    technice [87]. Brak selektywności (w przewodzeniu prądu elektrycznego przez roztwór 
+                    uczestniczą wszystkie jony obecne w roztworze) ogranicza jednak zakres jej 
+                    zastosowań do roztworów jednoskładnikowych, mieszanin roztworów o stałych proporcjach 
+                    oraz mieszanin, w których zmienia się stężenie tylko jednego składnika [21, 153].
+                    Ponieważ przewodnictwo roztworów bardzo mocno zależy od temperatury, uwzględnia- 
+                    nie wpływu temperatury ma w tej metodzie znaczenie zasadnicze (rozdz. 2.2.3 i 7). 
+                    Dalsze ograniczenia oraz komplikacje wynikają z tego, że:
+                    <ul>
+                        <li>zależność konduktywności roztworu od stężenia jest różna dla różnych roztworów, 
+                        w szerokim zakresie stężeń jest nieliniowa, może być i niemonotoniczna — i w zasadzie nie 
+                        jest możliwa do teoretycznego wyprowadzenia,</li>
+                        <li>konduktywności poszczególnych składników mieszanin roztworów są addytywne jedynie w zakresie małych stężeń,</li>
+                        <li>roztwory mają różne charakterystyki temperaturowe konduktywności, również 
+                        zależne od stężenia i często nieliniowe.</li>
+                    </ul>
+                </p>
+                <p>
+                    W ten sposób nie można mierzyć stężeń w zakresie niejednoznacznej 
+                    charakterystyki stężenie—konduktywność, ani też bliskich nasycenia. Ponadto niezbędne jest
+                    oddzielne dla każdego roztworu wzorcowanie przyrządu — konduktometru-stężeniomierza. 
+                    Można posługiwać się odpowiednimi wzorami obliczeniowymi (metoda analityczna) 
+                    lub tablicami. Podstawowym problemem jest uzyskanie odpowiednio gęstego zbioru 
+                    pierwotnych, wiarygodnych danych wzorcowych. Ponadto, ponieważ w tej metodzie 
+                    konduktywność roztworu musi być traktowana jako funkcja dwóch zmiennych — 
+                    stężenia i aktualnej temperatury, każdorazowo potrzebne są więc dwa pomiary: aktualnej 
+                    temperatury roztworu oraz konduktywności roztworu w tej temperaturze.
+                </p>
+                <p>
+                    W metodzie analitycznej korzysta się z funkcji wiążącej stężenie roztworu z jego 
+                    konduktywnością i temperaturą, np. o postaci [153]:
+                    
+                    $$ c(\kappa, t)=k_{0}+k_{1} \kappa+k_{2} t+k_{11} \kappa^{2}+k_{22} t^{2}+k_{12} \kappa t $$
+
+                    gdzie \( k_{ij} \) są pewnymi stałymi współczynnikami. Reprezentacją takiej funkcji jest 
+                    powierzchnia rozpięta w przestrzeni \( \kappa \), c, t — rys. 9.1. Tego rodzaju postępowanie 
+                    nie dotyczy przyrządów bez mikroprocesora, gdyż wymagałoby zbyt skomplikowanego sprzętowego 
+                    przetwarzania sygnałów. Dodatkowym utrudnieniem jest brak odpowiednich danych dotyczących 
+                    różnych roztworów, np. tablic współczynników 
+                    równania (9.1). Jedynym w zasadzie rozwiązaniem jest wówczas operowanie funkcjami j
+                    ednej zmiennej: \( /kappa = f(t) \) oraz \( \kappa F(c)_{t=const} \) które są przekrojami powierzchni 
+                    płaszczyznami c = const oraz t = const. Do określenia stężenia potrzebne są wtedy 
+                    dwie operacje:
+                    <ul>
+                        <li>przejście z wartości \( \kappa = f(t)_{c=const} \) na wartość \( \kappa = f(t) \), tj. kompensacja 
+                            temperaturowa konduktywności do temperatury odniesienia tr,</li>
+                        <li>uzyskanie wartości stężenia z krzywej \( \kappa = F(c)_{t=t_{r} = const} \) 
+                        tj. utworzenie funkcji odwrotnej \( c = F^{-1}(\kappa_{r}) \).</li>
+                    </ul>
+                    <figure id="img98" class="tfl-center">
+                        <img src="images/rys-9-1.jpg" class="img-fluid"
+                           alt="Powierzchnia \( c(\kappa, t) \) oraz jej przekroje płaszczyznami \( t_{r} \) = const, c = const [153]"/>
+                        <figcaption>
+                            Rys. 9.1. Powierzchnia \( c(\kappa, t) \) oraz jej przekroje płaszczyznami \( t_{r} \) = const, c = const [153]
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>
+                    W taki sposób działają konduktometryczne stężeniomierze, które nie są
+                    wyposażone w mikroprocesor, np. analogowe. Najprostszy jest przypadek, gdy krzywe 
+                    \( \kappa \) = f(t), tj. przekroje powierzchni c(\( \kappa \), t) płaszczyzną c = const, nie zależą od wartości c 
+                    (co oznacza, iż współczynniki temperaturowe są stałe, niezależne od stężenia).
+                    W przypadku ogólnym problem analitycznego określania stężenia na podstawie 
+                    znajomości konduktywności i temperatury jest nieliniowy ze względu na t i c, a czasami 
+                    również uwikłany ze względu na c. Przyrządy bez mikroprocesora nie umożliwiają 
+                    rozwiązywania przypadków uwikłanych.
+                </p>
+                <p>
+                    W metodzie tablicowej korzysta się z trójwymiarowej (co najmniej) tablicy 
+                    danych, która zawiera wartości konduktywności roztworu odpowiadające różnym
+                    wartościom stężenia i temperatury. Te dane tworzą siatkę K(c,t) rozpiętą w przestrzeni c, t, \( \kappa \)
+                    rys. 9.2. Metoda polega na odpowiednim przeszukiwaniu tablicy, w celu 
+                    znalezienia stężenia \( c_{x} \) odpowiadającego parze zmierzonych wartości temperatury \( t_{x} \) i 
+                    konduktywności \( \kappa_{x} \)[131, 149]. Pomiędzy punktami siatki (wartościami tablicowymi) 
+                    dokonuje się podwójnej interpolacji — po t i po \( \kappa \). Przy gęstej siatce danych (gęstej
+                    tablicy) wystarcza interpolacja liniowa. Jeżeli siatka danych wzorcowych jest zbyt rzadka, 
+                    można stosować na bieżąco interpolację nieliniową [131, 202, 233] (również
+                    podwójną: według krzywej \( \kappa(t) |_{c = const} \) oraz według krzywej \( c(\kappa) |_{t = const} \)
+                    Ponieważ interpolacja po \( \kappa \) odbywa się z zastosowaniem funkcji odwrotnej do krzywej kalibracyjnej 
+                    \( \kappa(c) |_{t=const} \), ta ostatnia musi być monotoniczna. Bardziej uniwersalne jest korzystanie 
+                    z gęstej tablicy i interpolacji liniowej. W razie potrzeby można odpowiednio zagęścić 
+                    tablicę, generując jej dodatkowe elementy przy użyciu specjalnych wzorów 
+                    interpolacyjnych [133]. Metoda tablicowa jest łatwa i wygodna w realizacji: nie trzeba 
+                    stosować skomplikowanych obliczeń, np. wykonywać oddzielnej kompensacji
+                    temperaturowej czy tworzyć dodatkowych tablic współczynników, a algorytm postępowania 
+                    może być jednakowy, niezależnie od rodzaju roztworu i zakresu mierzonych stężeń. 
+                    W razie potrzeby można zwiększyć liczbę wymiarów tablicy — np. w celu 
+                    uwzględnienia wpływu dodatku drugiego składnika roztworu. Stosowanie tej metody nie jest 
+                    możliwe bez użycia mikroprocesora.
+                    <figure id="img99" class="tfl-center">
+                        <img src="images/rys-9-2.jpg" class="img-fluid"
+                           alt="Trójwymiarowe wzorcowanie \( \kappa = \kappa(c, t) \)
+                           oraz trójwymiarowa interpolacja \( c_{x} = c(\kappa_{x}, t_{x}) \)"/>
+                        <figcaption>
+                            Rys. 9.2. Trójwymiarowe wzorcowanie \( \kappa = \kappa(c, t) \)
+                            oraz trójwymiarowa interpolacja \( c_{x} = c(\kappa_{x}, t_{x}) \)
+                        </figcaption>
+                    </figure>
+                </p>
+                <h3>9.2. WZORY DO INTERPOLACJI PRZEWODNICTWA 
+                    ROZTWORÓW ELEKTROLITÓW W SZEROKIM 
+                    ZAKRESIE STĘŻEŃ</h3>
+                <p>
+                    Jak już wspominano, podstawą określania stężeń roztworów elektrolitów 
+                    bezpośrednio z ich konduktywności jest wzorcowanie, wykonane z użyciem danych 
+                    uzyskanych doświadczalnie. Teoretyczne zależności wiążące konduktywność roztworu 
+                    z jego stężeniem są znane jedynie dla niektórych elektrolitów typu I—I, w dodatku 
+                    tylko w zakresie małych stężeń. Pierwotne dane wzorcowe są, z konieczności, mało 
+                    liczne — wymagają więc interpolacji z użyciem odpowiednich wyrażeń
+                    matematycznych. Typowe postępowanie w takim przypadku polega na szukaniu krzywej, ciągłej 
+                    lub odcinkowo-łamanej, najlepiej dopasowanej (najczęściej metodą najmniejszych 
+                    kwadratów) do wartości wzorcowych. Nie wystarcza tu podejście czysto formalne, 
+                    matematyczne. Niezbędne jest uwzględnianie istoty zjawiska oraz jego modelu
+                    fizycznego, zwłaszcza gdy zakres zmienności stężeń jest bardzo szeroki, a wymagana 
+                    dokładność interpolacji duża. Zbyt słabe nawiązanie do modeli fizycznych może być 
+                    przyczyną poważnych błędów (utrata punktów charakterystycznych krzywej 
+                    reprezentującej zjawisko, fałszywe „falowanie” krzywej pomiędzy punktami wzorcowymi 
+                    itp.). Uwagi te dotyczą zwłaszcza przypadków, w których do aproksymacji mało
+                    licznych danych pomiarowych używa się wielomianów algebraicznych wyższych stopni 
+                    lub funkcji sklejanych. Najlepszym rozwiązaniem jest znalezienie takiego wyrażenia 
+                    matematycznego, które nie tylko aproksymuje z wymaganą dokładnością zbiór 
+                    punkłów wzorcowych, ale również odpowiada fizycznemu modelowi przewodzenia prądu 
+                    elektrycznego przez roztwory elektrolitów [63, 132, 133]. Taki wzór umożliwia 
+                    dokładne wygładzanie i interpolowanie danych wzorcowych nawet wtedy, gdy nieliczne 
+                    punkty kalibracyjne są rozłożone w dowolny sposób i nie obejmują wszystkich punk- 
+                    łów charakterystycznych krzywej opisującej dany roztwór (przebieg krzywej
+                    opisującej najczęściej nie jest znany <i>a priori</i>).
+                </p>
+                <p>
+                    Znane z literatury wzory teoretyczne i półempiryczne, przydatne do aproksymacji 
+                    zależności stężenie-przewodnictwo molowe (korzystniej jest aproksymować tę
+                    zależność, a nie stężenie-konduktywność) obejmują jedynie zakres małych i najwyżej 
+                    średnich stężeń. Zakres dużych stężeń pokrywają półempiryczne rozszerzenia wzorów
+                    teoretycznych, uzyskiwane drogą aproksymacji przedziałowej, np. [63]. W aproksymacji 
+                    przedziałowej istotnym utrudnieniem jest nieznajomość a priori dokładnej 
+                    charakterystyki roztworu, stąd i sposobu przeprowadzenia podziału na podzakresy, oraz 
+                    niebezpieczeństwo generowania dużych błędów na końcach podzakresów. Wymienionych 
+                    wad nie mają wzory zaproponowane przez autora [132, 133]. Umożliwiają one
+                    interpolację doświadczalnie uzyskanych wartości przewodnictwa wodnych roztworów 
+                    wielu mocnych elektrolitów, w szerokim zakresie stężeń, bez potrzeby podziału na 
+                    jakiekolwiek podzakresy, z dokładnością rzędu 0, 1%, często i lepszą. Są to 
+                    kombinacje znanych wzorów mających uzasadnienie teoretyczne, poszerzone i uzupełnione 
+                    empirycznie (wzory czysto empiryczne pominięto celowo, zakładając że z zasady nie 
+                    są one ogólne). Pokrywają one zakres stężeń od zera do kilku kmol/m3 (według 
+                    przewidywań autora i szerszy) i mają tę zaletę, iż nie wymagają znajomości szczególnych 
+                    właściwościach roztworu, innych niż ogólnie dostępne w literaturze.
+                </p>
+                <p>
+                    Pierwszy z wzorów opracowanych przez autora ma postać
+
+                    $$ \Lambda=\frac{\Lambda^{0}+\left(E c+G c^{3 / 2}\right) \log c-S c^{1 / 2}+A c+B c^{3 / 2}+C c^{2}+D c^{5 / 2}}{1+A_{1} c^{1 / 2}+A_{2} c} $$
+                </p>
+                <p>
+                    Jego podstawowym elementem jest teoretyczne równanie (2.13) Fuossa i 
+                    Onsagera, uzupełnione empirycznie o dalsze wyrazy rozwinięcia szeregu, \( Cc^{2} \) i \( Dc^{5/2} \).
+                    Nowymi elementami są w nim wyrazy: \( Gc^{3/2}logc \) — w liczniku oraz \( 1+A_{1}c^{1/2} + A_{2}c \) — w 
+                    mianowniku. Pierwszy z nich można wyjaśnić na bazie termodynamiki [63], drugi 
+                    uwzględnia zmianę lepkości rozpuszczalnika w funkcji stężenia roztworu. Współ- 
+                    czynniki S i E mają wartości teoretyczne, natomiast współczynniki G, A, B, C, D są 
+                    w pełni empiryczne (współczynniki A i B różnią się od J1 i J2 ze wzoru (2.9)). 
+                </p>
+                <p>
+                    Wzór (9.2) ma 10 parametrów. Zakładając znajomość trzech z nich: \( \Lambda^{0}, S i E \) (są to 
+                    stałe teoretycznie liczalne), pozostaje nadal siedem niewiadomych, tj. stopni swobody 
+                    — więcej niż w podobnych wzorach znanych z literatury. Dzięki temu wzór (9.2) ma 
+                    charakter ogólniejszy. Te siedem współczynników trzeba wyznaczyć z dopasowania 
+                    danych doświadczalnych. W pewnych przypadkach niektóre z nich można pominąć ze 
+                    względu na znikomy wpływ na dokładność dopasowania, np. przy małych stężeniach 
+                    nieistotne są wyrazy \( Cc^{2} \) i \( Dc^{3/2} \) . Jeżeli zakres analizy obejmuje również duże stężenia, 
+                    nie da się z góry przewidzieć, które z wyrazów równania (9.2) są zbędne, zatem 
+                    analizę trzeba zaczynać od pełnego wzoru (9.2).
+                </p>
+                <p>
+                    Istotną częścią wzoru (9.2) są wyrazy szeregu potęgowego: c, \( c^{3/2} \), \( c^{2} \)
+                    itp., które 
+                    można zastąpić funkcją ilorazową. Funkcje ilorazowe (funkcje wymierne) w wielu 
+                    przypadkach umożliwiają uzyskanie lepszej dokładności aproksymacji niż wielomiany 
+                    [233]. Wynika to z ich właściwości — mogą być bardziej elastyczne niż wielomiany 
+                    i nie wprowadzają fałszywego falowania. Są szczególnie przydatne w aproksymacji 
+                    funkcji mających asymptoty (a do takich należy \( \Lambda \), gdy \( c \rightarrow 0 \)). 
+                    Wprowadzając do zależności (9.2) funkcję ilorazową, można uzyskać wzór interpolacyjny o postaci:
+                    
+                    $$ \Lambda=\frac{\Lambda^{0}+\frac{\left(E c+g c^{3 / 2}\right) \log c-S c^{1 / 2}\left(a c+b c^{1 / 2}+1\right)}{d c+e c^{1 / 2}+1}}{1+a_{1} c^{1 / 2}+a_{2} c} $$
+                
+                    gdzie: g, a, b, d, e, a1, a2 — współczynniki empiryczne (zapisano je małymi literami dla 
+                    odróżnienia ich od współczynników równania (9.2), które mają inne wartości).
+                </p>
+                <p>
+                    Skuteczność wzorów (9.2) i (9.3) sprawdzono na przykładzie wielu roztworów 
+                    elektrolitów, korzystając z danych literaturowych. Wybrane wyniki przedstawiono 
+                    w tablicach 9.1, 9.2 i 9.3 (Dodatki 3—5): w tablicy 9.1 — uzyskane dla zakresu małych 
+                    stężeń, w tablicach 9.2 i 9.3 — dla szerokiego zakresu stężeń. Na ich podstawie można 
+                    sformułować następujące wnioski:
+                    <ul>
+                        <li>Uzupełnienie wzoru Fuossa i Onsagera (2.9) o wyraz \( Gc_{3/2}logc \) poprawia do- 
+                        kładność aproksymacji, do 0,01—0,02%, ale tylko w zakresie stężeń poniżej 
+                        0,1 \( kmol/m^{3} \) i jedynie dla elektrolitów 1—1, dysocjujących na jony jednoatomowe.</li>
+                        <li>Zaproponowane przez autora wzory (9.2) i (9.3) mogą być stosowane w szero- 
+                        kim zakresie stężeń. Wzór (9.3) dotyczy szerszej klasy elektrolitów i umożliwia uzy- 
+                        skanie lepszej dokładności dopasowania (tablice 9.2 i 9.3). Jednakże, w przypadku 
+                        elektrolitów dysocjujących na jony wielowartościowe i wieloatomowe, również i on 
+                        daje błąd dopasowania wyraźnie większy od 0,1%. Trudno powiedzieć, czy to wynika 
+                        z wad tego wzoru, czy też z niedokładności danych tablicowych, którymi się 
+                        posługiwano. Dostępne z publikacji dane dotyczące przewodnictwa roztworów mocno 
+                        stężonych, zwłaszcza tych które zawierają jony o dużych wartościowościach, nie są zbyt 
+                        liczne, a ponadto pomiędzy danymi pochodzącymi z różnych źródeł można napotkać 
+                        duże różnice — dużo większe niż deklarowana dokładność [30, 83, 104, 205].
+                        Poważnym utrudnieniem jest również to, iż wiele danych dostępnych w literaturze jest
+                        wynikiem jakiegoś przetwarzania (wygładzania, interpolacji), najczęściej nie ujawnionego. 
+                        Przedstawione w tablicach 9. l, 9.2 i 9.3 przykładowe wyniki uzyskane z wzorów (9.2) 
+                        i (9.3) należy uznać za dobre, uwzględniając stosunkowo małą (z konieczności) liczbę 
+                        punktów branych do analizy. Jednakże, w pewnych przypadkach — przy bardzo 
+                        dużych zmianach wartości \( \Lambda \) w rozpatrywanym zakresie stężeń, podzielenie całego 
+                        zakresu na podzakresy jest prawdopodobnie jedynym sposobem na dalszą poprawę
+                        dokładności aproksymacji.</li>
+                        <li>W aproksymacji zbiorów danych o dużej liczebności równania (9.2) i (9.3) dają 
+                        jednakowe wyniki. Pokazano to na wykresach błędów względnych aproksymacji, 
+                        obliczonych dla roztworów HCl w 25 &deg;C, w zakresie stężeń 0-5 \( kmol/m^{3} \) (rys. 9.3). 
+                        Wykresy są prawie jednakowe, a maksymalna różnica względna nie przekracza 0,07%. 
+                        Błąd dopasowania wyraźnie wzrasta dla stężeń większych od 2-3 \( kmol/m^{3} \) , co wynika 
+                        prawdopodobnie z zastosowania aproksymacji odcinkowej w generowaniu użytych 
+                        tablic wzorcowych [63] (3 \( kmol/m^{3} \) jest granicą podzakresu).
+                        <figure id="img100" class="tfl-center">
+                            <img src="images/rys-9-3.jpg" class="img-fluid"
+                               alt="Trójwymiarowe wzorcowanie \( \kappa = \kappa(c, t) \)
+                               oraz trójwymiarowa interpolacja \( c_{x} = c(\kappa_{x}, t_{x}) \)"/>
+                            <figcaption>
+                                Rys. 9.3. Błąd względny aproksymacji przy użyciu wzoru (9.2) — wykres a 
+                                oraz (9.3) — wykresy b i c (w wykresie c pominięto wyraz \( gc^{3/2}logc \)), dla HCI w 25 &deg;C; 
+                                w aproksymacji wykorzystano dużą liczbę punktów [133]
+                            </figcaption>
+                        </figure>
+                        </li>
+                        <li>W pewnych przypadkach rezygnacja z teoretycznie liczalnych stałych \( \Lambda^{0} \), S, E 
+                            oraz potraktowanie ich jako zmienne umożliwia osiągnięcie lepszej dokładności 
+                            dopasowania i w dodatku w szerszym zakresie stężeń. 
+                        </li>
+                        <li>
+                            Wzory (9.2) i (9.3) mogą być przydatne również w analizie danych 
+                            konduktometrycznych mieszanin roztworów elektrolitów. Sprawdzono to dla mieszanin 
+                            roztworów KCl + NaCl oraz HCl + KCl.
+                            <figure id="img101" class="tfl-center">
+                                <img src="images/rys-9-4.jpg" class="img-fluid"
+                                   alt="Trójwymiarowe wzorcowanie \( \kappa = \kappa(c, t) \)
+                                   oraz trójwymiarowa interpolacja \( c_{x} = c(\kappa_{x}, t_{x}) \)"/>
+                                <figcaption>
+                                    Rys. 9.4. Błąd względny aproksymacji \( \Lambda \) przy użyciu wzoru (9.2) — wykres a 
+                                    oraz (9.3) — wykres b, dla HCl w 25 &deg;C; w aproksymacji wykorzystano 
+                                    małą liczbę punktów (stężenia: 0,1, 0,5, 1, 2, 4, 6 i 9 \( kmol/m^{3} \)) [133] 
+                                </figcaption>
+                            </figure>
+                            <figure id="img102" class="tfl-center">
+                                <img src="images/rys-9-5.jpg" class="img-fluid"
+                                   alt="Porównanie błędu aproksymacji przewodnictwa HCl w 25 &deg;C [133]: 
+                                   a i b — aproksymacja danych wg [63] wzorami (9.2) i (9.3), 
+                                   c — aproksymacja danych wg [104] wzorem (9.3)"/>
+                                <figcaption>
+                                    Rys.9.5. Porównanie błędu aproksymacji przewodnictwa HCl w 25 &deg;C [133]: 
+                                    a i b — aproksymacja danych wg [63] wzorami (9.2) i (9.3), 
+                                    c — aproksymacja danych wg [104] wzorem (9.3)
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Przykładowe krzywe \( \Lambda(c) \), obliczone z użyciem proponowanych wzorów dla 
+                    małych i dużych stężeń, przedstawiono na rys. 9.6 i 9.7.
+                    <figure id="img103" class="tfl-center">
+                        <img src="images/rys-9-6.jpg" class="img-fluid"
+                           alt="Przewodnictwo molowe roztworów w zakresie małych stężeń, 
+                           obliczone z równania (9.3) [133]: (a) HCl w 25 &deg;C [ 63], (b) HN03 w 18 &deg;C [104]; 
+                           (c) 1/2 H2S04 w 18 &deg;C [104] (zaznaczone punkty pokazują wartości tablicowe) "/>
+                        <figcaption>
+                            Rys. 9.6. Przewodnictwo molowe roztworów w zakresie małych stężeń, 
+                            obliczone z równania (9.3) [133]: (a) HCl w 25 &deg;C [ 63], (b) HN03 w 18 &deg;C [104]; 
+                            (c) 1/2 H2S04 w 18 &deg;C [104] (zaznaczone punkty pokazują wartości tablicowe) 
+                        </figcaption>
+                    </figure>
+                    <figure id="img104" class="tfl-center">
+                        <img src="images/rys-9-7.jpg" class="img-fluid"
+                           alt="Przewodnictwo molowe roztworów w zakresie dużych stężeń, 
+                           obliczone z równania (9.3) [133]: (a) 1/2 H2S04 w 18 &deg;C [104]; (b) NaOH w 25 &deg;C [104]; 
+                           (c) KCl w 25 &deg;C [205]; (d) NaCl w 25 &deg;C [104, 205]; (e) 1/3 H3P04 w 25 &deg;C [104] 
+                           (zaznaczone punkty pokazują wartości tablicowe) "/>
+                        <figcaption>
+                            Rys. 9.7. Przewodnictwo molowe roztworów w zakresie dużych stężeń, 
+                            obliczone z równania (9.3) [133]: (a) 1/2 H2S04 w 18 &deg;C [104]; (b) NaOH w 25 &deg;C [104]; 
+                            (c) KCl w 25 &deg;C [205]; (d) NaCl w 25 &deg;C [104, 205]; (e) 1/3 H3P04 w 25 &deg;C [104] 
+                            (zaznaczone punkty pokazują wartości tablicowe)
+                        </figcaption>
+                    </figure>
+                </p>
+                <p>PODSUMOWANIE</p>
                 </main>
                 <footer>
                     <p>Publikacja została zaadaptowana zgodnie z WCAG 2.1 na poziomie AA. Obecnie wersja v1.1. Szablon
