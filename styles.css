@@ -40,6 +40,10 @@ a {
   word-wrap: break-word;
 }
 
+a:hover {
+	cursor: pointer;
+}
+
 .tfl-side-container {
   height: 100vh;
   display: flex;
